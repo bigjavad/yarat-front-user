@@ -7,7 +7,7 @@
 		padding: 6px 5px 6px 15px;
 		&:before{
 			position: absolute;
-			left: 0;
+			inset-inline-start: 0;
 			top: 4px;
 			font-family: "Font Awesome 5 Free";
 			font-weight: 900;
@@ -23,7 +23,7 @@
 }
 .list-angle-double{
 	li{
-		padding-left: 25px;
+		padding-inline-start: 25px;
 	}
 }
 ul{
@@ -38,7 +38,7 @@ ul{
 			}
 		}
 	}
-	&.list-angle-double{				
+	&.list-angle-double{
 		li{
 			&:before{
 				content: "\f101";
@@ -73,9 +73,9 @@ ul{
 		padding: 10px 15px 10px 60px;
 		min-height: 45px;
 		font-weight: 600;
-		color: var(--title);    
+		color: var(--title);
 		margin-bottom: 15px;
-	
+
 		&:before{
 			content: "\f00c";
 			top: 50%;

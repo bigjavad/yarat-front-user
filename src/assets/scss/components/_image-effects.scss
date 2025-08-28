@@ -17,7 +17,7 @@
 	&.opacity img:hover{
 		opacity: 0.8;
 	}
-	// IMAGE ZOOM 
+	// IMAGE ZOOM
 	&.zoom-slow {
 		img{
 			transition: all 10s;
@@ -33,7 +33,7 @@
 	&.zoom{
 		&:hover img {
 			@include transformScaleMD;
-		}	
+		}
 	}
 	// IMAGE SHRINK
 	&.shrink:hover img {
@@ -41,7 +41,7 @@
 	}
 	// IMAGE SIDE PAN
 	&.side-pan:hover img {
-		margin-left: -11%;
+		margin-inline-start: -11%;
 		@include transformScaleSM;
 	}
 	// IMAGE VERTICAL PAN
@@ -144,7 +144,7 @@
 			-ms-filter: grayscale(0);
 		}
 	}
-	
+
 }
 // IMAGE ROTATE
 .dlab-box:hover .dlab-img-effect.rotate img{

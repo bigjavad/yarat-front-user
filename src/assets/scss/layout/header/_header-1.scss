@@ -4,12 +4,12 @@
 		.extra-cell{
 			display: flex;
 			align-items: center;
-			
+
 			& > a,
 			& > div{
-				margin-left:60px;
+				margin-inline-start:60px;
 				@include respond('wide-desktop'){
-					margin-left:15px;
+					margin-inline-start:15px;
 				}
 			}
 			.login-btn{
@@ -18,14 +18,14 @@
 				}
 				i{
 					font-size: 18px;
-					margin-right: 10px;
+					margin-inline-end: 10px;
 					line-height: 18px;
 				}
 			}
 		}
 		.header-nav{
 			.nav{
-				& > li{ 
+				& > li{
 					font-family:$font-family-title;
 					&> a{
 						font-weight:500;
@@ -46,7 +46,7 @@
 				}
 			}
 		}
-		
+
 		.header-nav .nav > li:hover > a,
 		.header-nav .nav > li.active > a{
 			color: var(--primary);
@@ -54,7 +54,7 @@
 				height:6px;
 			}
 		}
-		
+
 		@include respond('tab-port'){
 			padding-top: 0;
 			position: relative;
@@ -65,13 +65,13 @@
 			font-weight:600; */
 			i{
 				font-size: 24px;
-				margin-right: 15px;
+				margin-inline-end: 15px;
 			}
 			@include respond ('laptop'){
 				font-size:0;
 				padding: 16px 20px;
 				i{
-					margin-right:0;
+					margin-inline-end:0;
 				}
 			}
 			@include respond ('tab-port'){
@@ -93,22 +93,22 @@
 			-webkit-transform: translate(-50%);
 			-o-transform: translate(-50%);
 			position: absolute;
-			left: 50%;
+			inset-inline-start: 50%;
 			text-align: center;
-			@include respond('tab-port'){	
+			@include respond('tab-port'){
 				position: unset;
 				transform:unset;
 				-moz-transform:unset;
 				-webkit-transform: unset;
 				-o-transform: unset;
 				position: unset;
-				left: auto;
-				text-align: left;
+				inset-inline-start: auto;
+				text-align: start;
 			}
 		}
 		.header-nav .nav {
 			display: inline-block;
-			float: left;
+			float: inline-start;
 			width: 40%;
 			@include respond('tab-port'){
 				width: 100%;
@@ -118,27 +118,27 @@
 				display: inline-block;
 			}
 			&.navbar-left {
-				text-align: right;
-				margin-right:100px;
+				text-align: end;
+				margin-inline-end:100px;
 				@include respond('tab-port'){
-					text-align: left;
-					margin-right:0;
+					text-align: start;
+					margin-inline-end:0;
 				}
 			}
 			&.navbar-right {
-				float: right;
-				margin-left:100px;
+				float: inline-end;
+				margin-inline-start:100px;
 				@include respond('tab-port'){
 					float: none;
-					margin-left:0;
+					margin-inline-start:0;
 				}
-				
+
 			}
 		}
 	}
 }
 .extra-icon-box{
-	padding-left: 65px;
+	padding-inline-start: 65px;
     min-height: 50px;
     position: relative;
     display: flex;
@@ -148,7 +148,7 @@
 	@include respond('wide-desktop'){
 		width: 240px;
 	}
-	@include respond('tab-land'){	
+	@include respond('tab-land'){
 		display:none;
 	}
 	i{
@@ -160,7 +160,7 @@
 		color: #fff;
 		position: absolute;
 		border-radius: var(--border-radius-base);
-		left: 0;
+		inset-inline-start: 0;
 		box-shadow: 5px 5px 30px -15px var(--primary);
 		font-size: 22px;
 	}
@@ -169,8 +169,8 @@
 		animation-name: pulse;
 		-webkit-animation-fill-mode: both;
 		animation-fill-mode: both;
-		-webkit-animation-duration: 1.2s;		
-		animation-duration: 1.2s;	
+		-webkit-animation-duration: 1.2s;
+		animation-duration: 1.2s;
 		-webkit-animation-iteration-count: infinite;
 		animation-iteration-count: infinite;
 	}
@@ -182,7 +182,7 @@
 	.title{
 		margin: 0;
 		font-weight: 600;
-		line-height: 1.2;	
+		line-height: 1.2;
 		@include respond('wide-desktop'){
 			font-size: 20px;
 		}
@@ -195,16 +195,16 @@
     height: 45px;
 	box-shadow: none;
 	border-radius:$border-radius;
-	@include respond('wide-desktop'){	
-		margin-left:20px;
+	@include respond('wide-desktop'){
+		margin-inline-start:20px;
 	}
-	@include respond('tab-port'){	
+	@include respond('tab-port'){
 		display:none;
 	}
 	span{
 		background: #212529;
-		left:10px;
-		
+		inset-inline-start:10px;
+
 		&:nth-child(1) {
 			top: 14px;
 			width: 25px;
@@ -224,7 +224,7 @@
 	}
 	&.open span:nth-child(2) {
 	  opacity: 0;
-	  left: -60px;
+	  inset-inline-start: -60px;
 	}
 	&.open span:nth-child(3) {
 		top: 22px;
@@ -239,17 +239,17 @@
 	z-index:99999;
 	background:#fff;
 	top:0;
-	left:-300px;
+	inset-inline-start:-300px;
 	overflow-y:auto;
 	@include transitionMedium;
 	&.active{
-		left:0;
+		inset-inline-start:0;
 	}
 	.logo-contact{
 		margin-bottom:40px;
 		display:block;
 		img{
-			width:180px;	
+			width:180px;
 		}
 	}
 	.dlab-title{
@@ -269,10 +269,10 @@
 	}
 	.icon-bx-wraper{
 		margin-bottom: 20px;
-			
+
 		.icon-md{
 			padding: 0;
-			margin-right: 15px;
+			margin-inline-end: 15px;
 			background: var(--primary);
 			box-shadow: 0px 5px 10px 0 var(--rgba-primary-1);
 			color: #fff;
@@ -281,11 +281,11 @@
 			line-height: 50px;
 			margin-top: 5px;
 			border-radius: var(--border-radius-base);
-			
+
 			i{
 				font-size: 28px;
 			}
-		}	
+		}
 		.tilte{
 			font-family: var(--font-family-title);
 			margin-bottom: 5px;
@@ -303,7 +303,7 @@
 	background: #333;
 	top: 0;
 	opacity: 0.90;
-	left: 0;
+	inset-inline-start: 0;
 	@include transitionMedium;
 	z-index:99998;
 }
@@ -321,13 +321,13 @@
     width: 100%;
 	.main-bar {
 		background-color: #fff;
-		padding-left: 80px;
-		padding-right: 100px;
+		padding-inline-start: 80px;
+		padding-inline-end: 100px;
 		@include custommq ($max:1200px){
-			padding-right:80px;
+			padding-inline-end:80px;
 		}
 		@include respond ('phone-land'){
-			padding-left:20px;
+			padding-inline-start:20px;
 		}
 	}
 	.extra-nav {
@@ -338,7 +338,7 @@
 			display:inline-block;
 			float:unset;
 			transform: rotate(90deg);
-			margin-left: 14px!important;
+			margin-inline-start: 14px!important;
 			font-size: 18px!important;
 			background:transparent;
 			color:#000!important;
@@ -355,9 +355,9 @@
 						color:#000;
 						background-color:transparent;
 						float:unset;
-						padding-left:10px;
+						padding-inline-start:10px;
 					}
-				} 
+				}
 				.sub-menu,
 				.mega-menu{
 					border-top:0;
@@ -371,7 +371,7 @@
 				height:80px;
 				@include respond ('phone'){
 					height:70px;
-					padding-right:10px;
+					padding-inline-end:10px;
 				}
 			}
 			.logo-header{
@@ -406,7 +406,7 @@
 /* SideNav ======= */
 .header-sidenav .full-sidenav{
 	position: fixed;
-	right: -300px;
+	inset-inline-end: -300px;
 	width: 300px;
 	top: 0;
 	z-index: 999988;
@@ -421,7 +421,7 @@
 	-ms-transition:all 0.5s;
 	-moz-transition:all 0.5s;
 	-o-transition:all 0.5s;
-	left: auto;
+	inset-inline-start: auto;
 	padding-top: 90px;
 }
 .header-sidenav .full-sidenav .mCSB_container{
@@ -431,7 +431,7 @@
 	min-height: 100%;
 }
 .header-sidenav .full-sidenav.active{
-	right:0;
+	inset-inline-end:0;
 }
 .header-sidenav .full-sidenav .nav {
 	margin-bottom:auto;
@@ -460,15 +460,15 @@
 	width: 170px;
 	display: block;
 }
-.header-sidenav .header-nav.full-sidenav .nav > li > .sub-menu, 
-.header-sidenav .header-nav.full-sidenav .nav > li:hover > .sub-menu, 
+.header-sidenav .header-nav.full-sidenav .nav > li > .sub-menu,
+.header-sidenav .header-nav.full-sidenav .nav > li:hover > .sub-menu,
 .header-sidenav .header-nav.full-sidenav .nav > li > .mega-menu,
 .header-sidenav .header-nav.full-sidenav .nav > li:hover > .mega-menu{
 	opacity: 1;
 	visibility: visible;
 	position:unset;
 }
-.header-sidenav .header-nav.full-sidenav .nav > li > .sub-menu, 
+.header-sidenav .header-nav.full-sidenav .nav > li > .sub-menu,
 .header-sidenav .header-nav.full-sidenav .nav > li > .mega-menu{
 	box-shadow: none;
 	-webkit-transition: unset;
@@ -483,7 +483,7 @@
 	margin-top: 0;
 	box-shadow:none;
 	transition:none!important;
-	padding-left: 30px
+	padding-inline-start: 30px
 }
 .header-sidenav .header-nav.full-sidenav .nav > li .sub-menu li a {
 	color: rgb(80, 78, 78);
@@ -492,7 +492,7 @@
 	line-height:1;
 }
 .header-sidenav .header-nav.full-sidenav .nav > li{
-	width: 100%;	
+	width: 100%;
 	&.active{
 		&>a{
 			color:var(--primary);
@@ -525,7 +525,7 @@
 .header-sidenav .social-menu ul li a{
 	color: #bbc7cd;
 	font-size: 18px;
-	padding-right: 15px;
+	padding-inline-end: 15px;
 }
 .header-sidenav .social-menu ul li a:hover{
 	color: #8799a3;
@@ -537,7 +537,7 @@
 	color: #fff;
 	font-size: 24px;
 	position: absolute;
-	right: 320px;
+	inset-inline-end: 320px;
 	top: 20px;
 }
 .header-sidenav .menu-close{
@@ -546,8 +546,8 @@
 	width:0;
 	background:#3a3a3a;
 	top:0;
-	left:auto;
-	right:0;
+	inset-inline-start:auto;
+	inset-inline-end:0;
 	opacity:0;
 	transition:all 0.5s;
 	-webkit-transition:all 0.5s;
@@ -569,8 +569,8 @@
     background-color: rgba(255,255,255,0.9);
 }
 .header-sidenav .header-full .container-fluid{
-	padding-left:30px;
-	padding-right:30px;
+	padding-inline-start:30px;
+	padding-inline-end:30px;
 }
 .header-sidenav .site-header ul, .site-header ol {
     margin-bottom: 0;
@@ -584,7 +584,7 @@
 }
 .header-sidenav{
 	.menu-aside {
-		right: 0;
+		inset-inline-end: 0;
 		position: absolute;
 		width: 100px;
 		height: 100vh;
@@ -629,7 +629,7 @@
 			width:70px;
 		}
 	}
-	
+
 	.menu-icon-in {
 		width: 30px;
 		height: 22px;
@@ -650,7 +650,7 @@
 			height: 3px;
 			width: 100%;
 			opacity: 1;
-			left: 0;
+			inset-inline-start: 0;
 			-webkit-transform: rotate(0);
 			-moz-transform: rotate(0);
 			-o-transform: rotate(0);

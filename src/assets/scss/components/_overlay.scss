@@ -10,13 +10,13 @@
 .dlab-img-overlay11,
 .dlab-img-overlay12{
     position: relative;
-	
+
 	&:before,
 	&:after{
 		content: "";
 		background: #282d32;
 		position: absolute;
-		left: 0;
+		inset-inline-start: 0;
 		top: 0;
 		width: 0;
 		height: 0;
@@ -45,11 +45,11 @@
 			width: 100%;
 			height: 100%;
 			top: 0;
-			left: 0;
+			inset-inline-start: 0;
 		}
 		.dlab-img-overlay4:before {
 			width: 100%;
-			left: 0;
+			inset-inline-start: 0;
 		}
 		.dlab-img-overlay5:before {
 			height: 100%;
@@ -95,40 +95,40 @@
     background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%);
     background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%);
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%);
-	
+
     &:hover:before{
 	    opacity: 0.9;
 	}
 }
-// EFFECT 3 
+// EFFECT 3
 .dlab-img-overlay3{
 	&:before {
-		left: 50%;
+		inset-inline-start: 50%;
 		top: 50%;
 	}
 	&:hover:before{
 		width: 100%;
 		height: 100%;
 		top: 0;
-		left: 0;
+		inset-inline-start: 0;
 	}
 }
 // EFFECT 4
 .dlab-img-overlay4{
 	&:before{
-		left: 50%;
+		inset-inline-start: 50%;
 		top: 0;
 		height: 100%;
 	}
 	&:hover:before{
 		width: 100%;
-		left: 0;
+		inset-inline-start: 0;
 	}
 }
 // EFFECT 5
 .dlab-img-overlay5{
 	&:before {
-		left: 0;
+		inset-inline-start: 0;
 		top: 50%;
 		width: 100%;
 	}
@@ -140,7 +140,7 @@
 // EFFECT 6
 .dlab-img-overlay6{
 	&:before {
-		left: 0;
+		inset-inline-start: 0;
 		top: auto;
 		bottom: 0;
 		width: 100%;
@@ -156,8 +156,8 @@
 		height: 100%;
 	}
 	&:after {
-		left: auto;
-		right: 0;
+		inset-inline-start: auto;
+		inset-inline-end: 0;
 	}
 	&:hover:before,
 	&:hover:after{
@@ -171,8 +171,8 @@
 		height: 100%;
 	}
 	&:after {
-		left: auto;
-		right: 0;
+		inset-inline-start: auto;
+		inset-inline-end: 0;
 	}
 	&:hover:before,
 	&:hover:after{
@@ -185,8 +185,8 @@
 .dlab-img-overlay9:after{
 	&:before,
 	&:after{
-		left: auto;
-		right: 0;
+		inset-inline-start: auto;
+		inset-inline-end: 0;
 		top: auto;
 		bottom: 0;
 	}
@@ -212,11 +212,11 @@
 .overlay-primary-dark,
 .overlay-primary {
     position: relative;
-	
+
 	&:before {
 		content: "";
 		position: absolute;
-		left: 0;
+		inset-inline-start: 0;
 		top: 0;
 		width: 100%;
 		height: 100%;
@@ -271,7 +271,7 @@
 // OVERLAY BOX
 .overlay-bx {
     position: absolute;
-    left: 0;
+    inset-inline-start: 0;
     bottom: 0;
     width: 100%;
     height: 100%;
@@ -280,10 +280,10 @@
     opacity: 0;
     visibility: hidden;
 	@include transitionSlow;
-	
+
 	.align-b{
 		height: auto;
-		left: 0;
+		inset-inline-start: 0;
 		list-style: outside none none;
 		margin: 0;
 		position: absolute;
@@ -297,7 +297,7 @@
 	}
 	.align-m {
 		height: auto;
-		left: 50%;
+		inset-inline-start: 50%;
 		list-style: outside none none;
 		margin: 0;
 		position: absolute;
@@ -312,7 +312,7 @@
 }
 .overlay-icon{
     height: auto;
-    left: 50%;
+    inset-inline-start: 50%;
     list-style: outside none none;
     margin: 0;
     position: absolute;
@@ -371,7 +371,7 @@
 	&:before{
 		content: "";
 		position: absolute;
-		left: 0;
+		inset-inline-start: 0;
 		bottom: 0;
 		height: 100%;
 		width: 100%;
@@ -398,7 +398,7 @@
 		&:before {
 			position: absolute;
 			top: 0;
-			left: -85%;
+			inset-inline-start: -85%;
 			z-index: 2;
 			display: block;
 			content: '';
@@ -418,11 +418,11 @@
 
 @-webkit-keyframes shine {
 	100% {
-		left: 125%;
+		inset-inline-start: 125%;
 	}
 }
 @keyframes shine {
 	100% {
-		left: 125%;
+		inset-inline-start: 125%;
 	}
 }

@@ -17,10 +17,10 @@
 		box-shadow: 0 0 30px rgba(0, 17, 77, .2);
 	}
 	.footer-fixed .site-footer {
-		left: 50%;
+		inset-inline-start: 50%;
 		width: 1200px;
 		margin: 0 -600px;
-		
+
 	}
 	.is-fixed{
 		.main-bar {
@@ -32,14 +32,14 @@
 			position: unset;
 		}
 	}
-	
+
 	// site-header
 	.site-header{
 		&.style-1{
 			.extra-cell{
-				& > a, 
+				& > a,
 				& > div{
-					margin-left: 15px;
+					margin-inline-start: 15px;
 				}
 			}
 			.extra-icon-box{
@@ -52,12 +52,12 @@
 			.extra-cell{
 				.login-btn{
 					i{
-						@include respond('wide-desktop-min'){	
+						@include respond('wide-desktop-min'){
 							margin:0;
 						}
 					}
-					@include respond('wide-desktop-min'){		
-						margin-left: 20px;
+					@include respond('wide-desktop-min'){
+						margin-inline-start: 20px;
 						width: 45px;
 						height: 45px;
 						padding: 12px;
@@ -72,20 +72,20 @@
 					display: none;
 				}
 			}
-			
+
 			&.center{
 				.header-nav{
 					.nav{
 						&.navbar-left {
-							margin-right: 120px;
+							margin-inline-end: 120px;
 						}
 						&.navbar-right {
-							margin-left: 120px;
+							margin-inline-start: 120px;
 						}
 					}
 				}
 				.extra-icon-box{
-					padding-left: 0;
+					padding-inline-start: 0;
 					width: 50px;
 					.title,
 					span{
@@ -96,14 +96,14 @@
 				.extra-nav{
 					width: 120px;
 					padding: 0;
-				}				
+				}
 				.extra-cell{
 					.login-btn{
 						display: none;
 					}
 					& > a,
 					& > div {
-						margin-left: 15px;
+						margin-inline-start: 15px;
 					}
 				}
 			}
@@ -114,51 +114,51 @@
 			font-size: 2.6rem;
 		}
 	}
-	
+
 	.no-of-item-dtl h2, .no-of-item-dtl .h2{
 		font-size:80px;
 	}
 	.no-of-item-dtl h3, .no-of-item-dtl .h3{
 		font-size:24px;
 	}
-	
+
 	.form-head h2, .form-head .h2{
 		font-size:24px;
 	}
-	
+
 	.header-nav {
 		.nav{
 			&>li {
 				&>a {
 					@include respond('wide-desktop-min'){
-						padding-left:15px;
-						padding-right:15px;
+						padding-inline-start:15px;
+						padding-inline-end:15px;
 					}
 				}
 			}
 		}
 	}
-	
-	
+
+
 	.banner-one{
 		&>.row{
-			margin-left:0;
-			margin-right:0;
+			margin-inline-start:0;
+			margin-inline-end:0;
 		}
 	}
-	
+
 	//banner-slider
-	
+
 	.banner-one .banner-content .title {
 		font-size: 56px;
 		@include respond ('phone'){
-			font-size: 32px;		
+			font-size: 32px;
 		}
 	}
 	.container-fluid{
 		@include respond('wide-desktop-min'){
-			padding-left:15px;
-			padding-right:15px;
+			padding-inline-start:15px;
+			padding-inline-end:15px;
 		}
 	}
 	.under-construct{
@@ -178,25 +178,25 @@
 			}
 		}
 	}
-	
+
 	.about-bx1 .dlab-media{
 		width: calc(100% - 20px);
 	}
 	.car-list-box.box-sm .feature-list > div:not(:last-child) {
-		margin-right: 13px;
+		margin-inline-end: 13px;
 	}
 	.side-bar {
-		padding-left: 0;
+		padding-inline-start: 0;
 	}
 	.newsletter-bx {
 		padding: 40px;
 	}
 	.portfolio-area2 .setResizeMargin {
-		padding-right: 15px;
-		margin-left: 0!important;
-		padding-left: 15px;
+		padding-inline-end: 15px;
+		margin-inline-start: 0!important;
+		padding-inline-start: 15px;
 	}
-	
+
 	.sidenav-menu{
 		position: absolute;
 	}
@@ -216,8 +216,8 @@
 			}
 		}
 		.dlab-coming-bx {
-			padding-left: 30px;
-			padding-right: 30px;
+			padding-inline-start: 30px;
+			padding-inline-end: 30px;
 		}
 	}
 }
@@ -241,17 +241,17 @@
 			}
 		}
 	}
-	
+
 	.is-fixed{
 		.main-bar {
-			left:0;
+			inset-inline-start:0;
 			width: 100%;
 			margin: 0;
 			position: unset;
 		}
 	}
 	button.scroltop{
-		right:50px;
+		inset-inline-end:50px;
 		bottom:50px;
 	}
 	.sidenav-menu{
@@ -270,25 +270,25 @@
 	}
 	.banner-slider .slider-one-pagination{
 		@include respond ('tab-land'){
-			right: 10px;
+			inset-inline-end: 10px;
 			bottom: 60px;
 		}
 	}
 	.banner-slider .dlab-slide-item .discover-link{
 		@include respond ('tab-land'){
-			left:30px;
+			inset-inline-start:30px;
 		}
 	}
 	.header-nav .nav > li > a{
 		@include respond ('tab-land'){
-			padding-left:7px;
-			padding-right:7px;
+			padding-inline-start:7px;
+			padding-inline-end:7px;
 		}
 	}
 	@include respond('wide-desktop'){
 		.dlab-coming-bx{
-			padding-left: 30px;
-			padding-right: 30px;
+			padding-inline-start: 30px;
+			padding-inline-end: 30px;
 		}
 		.countdown .date .time{
 			font-size: 70px;
@@ -301,7 +301,7 @@
 		padding:0;
 	}
 	.frame button.scroltop{
-		right:15px;
+		inset-inline-end:15px;
 		bottom:15px;
 	}
 

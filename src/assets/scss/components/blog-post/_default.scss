@@ -3,20 +3,20 @@
     width: auto;
 	.swiper-slide{
 		& > div{
-			margin:15px;	
+			margin:15px;
 			height:100%;
-		}	
-	}	
+		}
+	}
 }
 .dlab-card{
 	position:relative;
-	
+
 	.dlab-info{
 		padding:30px;
 		position:relative;
 	}
 	.dlab-title{
-		margin-bottom:15px;	
+		margin-bottom:15px;
 		word-break: break-word;
 	}
 	&.blog-half{
@@ -44,8 +44,8 @@
 			a{
 				display:block;
 				height:100%;
-				
-				
+
+
 			}
 			img{
 				height:100%;
@@ -73,12 +73,12 @@
 		padding:0;
 		li{
 			display:inline-block;
-			margin-right:20px;
+			margin-inline-end:20px;
 			a{
-				color:inherit;	
-			}	
-		}	
-	}	
+				color:inherit;
+			}
+		}
+	}
 }
 .post-video .post-video-icon {
     width: 100px;
@@ -87,7 +87,7 @@
 	border-radius: 100px;
     position: absolute;
     top: 50%;
-    left: 50%;
+    inset-inline-start: 50%;
 	color: var(--primary);
 	font-size: 30px;
 	margin: 0 auto;
@@ -105,8 +105,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-left: 5px;
-	
+    padding-inline-start: 5px;
+
 	@include respond('phone'){
 		height: 50px;
 		width: 50px;
@@ -117,7 +117,7 @@
 		content: "";
 		position: absolute;
 		top: 0;
-		left: 0;
+		inset-inline-start: 0;
 		width: 100%;
 		height: 100%;
 		display: block;
@@ -150,7 +150,7 @@
 		content: "";
 		position: absolute;
 		top: 0;
-		left: 0;
+		inset-inline-start: 0;
 		width: 100%;
 		height: 100%;
 		display: block;

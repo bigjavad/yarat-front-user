@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation'
 
 export const MenusItem = [
     {
-        menu: 'HOME',
+        menu: 'یارات',
         link: `/`,
         subMenu: [
             { childe: 'Home 1', link: '/' },

@@ -14,7 +14,7 @@
 		position: absolute;
 		height: 50%;
 		width: 100%;
-		left: 0;
+		inset-inline-start: 0;
 		top: 0;
 		background-color: $white;
 	}
@@ -30,7 +30,7 @@
     margin-bottom: 50px;
 	padding-bottom:20px;
 	@include respond('phone'){
-		margin-bottom: 30px;	
+		margin-bottom: 30px;
 		padding-bottom:40px;
 	}
 }
@@ -38,7 +38,7 @@
 .site-footer{
 	&.style-1{
 		background-color: #fff;
-		
+
 		.widget_categories ul li {
 			padding: 8px 0!important;
 			a{
@@ -48,14 +48,14 @@
 				}
 			}
 			&:hover{
-				left:0;
+				inset-inline-start:0;
 			}
 		}
 		.footer-logo-head {
 			border-bottom: 1px solid $border-color;
-			
+
 			.icon-bx-wraper{
-				float: right;
+				float: inline-end;
 			}
 			@include respond('tab-port'){
 				.icon-bx-wraper{
@@ -74,7 +74,7 @@
 						width: 60px;
 						height: 60px;
 						min-width: 60px;
-    
+
 						i{
 							font-size: 26px;
 						}
@@ -89,7 +89,7 @@
 			}
 			@include respond('phone'){
 				padding-bottom: 10px;
-				
+
 				.footer-logo {
 					max-width: 200px;
 				}
@@ -111,7 +111,7 @@
 			}
 			@include respond('phone-land'){
 				.widget_categories.p-l50{
-					padding-left: 0;
+					padding-inline-start: 0;
 				}
 				.widget_about p {
 					margin-bottom: 25px;
@@ -125,13 +125,13 @@
 		.footer-bottom{
 			background-color:#fff;
 			padding: 20px 0;
-			
+
 			.copyright-text{
 				color: #595959;
 			}
 			.footer-link{
 				li a{
-					color: #595959;				
+					color: #595959;
 				}
 			}
 			@include respond('tab-port'){
@@ -157,7 +157,7 @@
 		padding: 15px 60px 15px 30px;
 		color: $body-color;
 		border-color: $body-color;
-		
+
 		&::-webkit-input-placeholder{
 			font-family: var(--font-family-title);
 			color: $body-color;
@@ -172,7 +172,7 @@
 		}
 	}
 	button{
-		right: 5px;
+		inset-inline-end: 5px;
 		top: 5px;
 		border-radius: var(--border-radius-base)!important;
 		position: absolute!important;

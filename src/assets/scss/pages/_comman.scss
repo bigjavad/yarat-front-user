@@ -8,7 +8,7 @@
         width: 100%;
         background-color: red;
         bottom: 0;
-        left: 0;
+        inset-inline-start: 0;
         border-radius: 5px 5px 0 0;
         height: 6px;
         position: absolute;
@@ -167,11 +167,11 @@
     }
 
     .slider__left-value {
-        left: 6px;
+        inset-inline-start: 6px;
     }
 
     .slider__right-value {
-        right: -4px;
+        inset-inline-end: -4px;
     }
 
     /* Removing the default appearance */
@@ -256,7 +256,7 @@
 
 .rev-slider-title {
     position: absolute;
-    right: 0%;
+    inset-inline-end: 0%;
     top: 50% !important;
     transform: translate(-10%, -50%);
     display: flex;
@@ -355,18 +355,18 @@
 
 .nav-tabs {
     .tab-one {
-        border-right-color: #dee2e6 !important;
+        border-inline-end-color: #dee2e6 !important;
     }
 
     .tab-one:hover {
         border-top-color: transparent !important;
-        border-left-color: transparent !important;
+        border-inline-start-color: transparent !important;
         border-bottom-color: transparent !important;
     }
 
     .tab-two {
         border-top-color: transparent !important;
-        border-left-color: transparent !important;
+        border-inline-start-color: transparent !important;
         border-bottom-color: transparent !important;
     }
 
@@ -565,7 +565,7 @@
 .home_three_custom_pagination {
     position: absolute;
     bottom: 25px;
-    left: 50%;
+    inset-inline-start: 50%;
     display: flex;
     gap: 10px;
     z-index: 999999;
@@ -610,7 +610,7 @@
     transform: rotate(45deg) !important;
     background: rgb(43, 42, 42);
     top: 11px;
-    right: 10px;
+    inset-inline-end: 10px;
 }
 
 .hoverNone::before {
@@ -622,7 +622,7 @@
     transform: rotate(-45deg) !important;
     background: rgb(43, 42, 42);
     top: 11px;
-    right: 16px;
+    inset-inline-end: 16px;
     font-weight: bold;
 }
 

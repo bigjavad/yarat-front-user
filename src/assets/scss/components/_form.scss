@@ -154,7 +154,7 @@ input:-internal-autofill-selected {
         background: var(--primary);
 
         &:before {
-            left: 26px;
+            inset-inline-start: 26px;
         }
     }
 }
@@ -163,7 +163,7 @@ input:-internal-autofill-selected {
     visibility: hidden;
 }
 .toggle-label {
-    margin-left: 15px;
+    margin-inline-start: 15px;
     position   : relative;
     top        : 2px;
     font-size  : 16px;
@@ -409,7 +409,7 @@ label.error {
 		}
 		&.btn-group .dropdown-menu.inner{
 			display:block;
-		}	
+		}
 	}
 	.dropdown-menu {
 		border: 0;
@@ -428,11 +428,11 @@ label.error {
 				font-weight: 400;
 				color: #333;
 				white-space: nowrap;
-				
+
 				img {
 					border-radius: 100%;
 					-webkit-border-radius: 100%;
-					margin-right: 5px;
+					margin-inline-end: 5px;
 				}
 				&:hover {
 					background-color:#f2f2f4;
@@ -471,7 +471,7 @@ label.error {
 		.caret{
 			font-size: 10px;
 			top: 50%;
-			right: 5px;
+			inset-inline-end: 5px;
 			transform: translateY(-50%);
 			&:before{
 				content: "\f078";
@@ -520,4 +520,4 @@ label.error {
 			}
 		}
 	}
-} 
+}

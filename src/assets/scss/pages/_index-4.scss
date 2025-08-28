@@ -10,23 +10,23 @@
 			padding-top:70px;
 		}
 	}
-	
+
 	.bottom-aside {
 		height: 150px;
 		position: absolute;
 		bottom: 0;
-		right: 100px;
+		inset-inline-end: 100px;
 		z-index: 99;
-		left: 0;
+		inset-inline-start: 0;
 		.video-box {
 			width: 250px;
 			position: absolute;
-			right: 0;
+			inset-inline-end: 0;
 			bottom: 0;
 			.popup-youtube {
 				position: absolute;
 				top: 50%;
-				left: 50%;
+				inset-inline-start: 50%;
 				transform: translate(-50%,-50%);
 				z-index: 999;
 				background-color: rgba(255,255,255,.8);
@@ -39,7 +39,7 @@
 			}
 		}
 		@include custommq($max:1200px){
-			right:80px;
+			inset-inline-end:80px;
 			.video-box{
 				width:180px;
 			}
@@ -50,12 +50,12 @@
 			}
 		}
 	}
-	
+
 	.swiper-button-arrow {
 		position: absolute;
 		width: 350px;
 		top: 50%;
-		left: 50%;
+		inset-inline-start: 50%;
 		transform: translate(-50%,-50%);
 		.swiper-button-next,
 		.swiper-button-prev{
@@ -79,21 +79,21 @@
 			}
 		}
 		.swiper-button-next{
-			right: 10px;
-			left: auto;
+			inset-inline-end: 10px;
+			inset-inline-start: auto;
 			&:before {
-				right: 50px;
+				inset-inline-end: 50px;
 			}
 		}
 		.swiper-button-prev{
-			left: 10px;
-			right: auto;
+			inset-inline-start: 10px;
+			inset-inline-end: auto;
 			&:before {
-				left: 50px;
+				inset-inline-start: 50px;
 			}
 		}
 		@include respond ('phone-land'){
-			left: 20px;
+			inset-inline-start: 20px;
 			width:250px;
 			transform: translate(20px,-50%);
 			.swiper-button-next,
@@ -124,14 +124,14 @@
 		padding: 80px 0 150px 80px;
 		z-index: 9;
 		position: relative;
-		
+
 		&:after{
 			content:"";
 			position:absolute;
 			height:100%;
 			width:500px;
 			top:0;
-			left:0;
+			inset-inline-start:0;
 			z-index:-1;
 			/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,7db9e8+100&0.58+0,0+100 */
 			background: -moz-linear-gradient(left,  rgba(0,0,0,0.7) 0%, rgba(125,185,232,0) 100%); /* FF3.6-15 */
@@ -139,14 +139,14 @@
 			background: linear-gradient(to right,  rgba(0,0,0,0.7) 0%,rgba(125,185,232,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#94000000', endColorstr='#007db9e8',GradientType=1 ); /* IE6-9 */
 		}
-		
+
 		&:before{
 			content:"";
 			position:absolute;
 			height:100%;
 			width:500px;
 			top:0;
-			right:0;
+			inset-inline-end:0;
 			z-index:-1;
 			/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+1,000000+100&0+0,0.58+100 */
 			background: -moz-linear-gradient(left,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.01) 1%, rgba(0,0,0,0.7) 100%); /* FF3.6-15 */
@@ -155,9 +155,9 @@
 			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#94000000',GradientType=1 ); /* IE6-9 */
 
 		}
-		
+
 		.bottom-info {
-			border-left: 4px solid var(--primary);
+			border-inline-start: 4px solid var(--primary);
 			padding: 5px 0 5px 20px;
 			margin-top: auto;
 			h3 {
@@ -211,7 +211,7 @@
 	}
 	.right-info {
 		position: absolute;
-		right: 100px;
+		inset-inline-end: 100px;
 		z-index: 10;
 		top: 50%;
 		transform: translate(-100px,-50%)!important;
@@ -259,7 +259,7 @@
 			background-color: #231e22;
 			position: absolute;
 			top: 30px;
-			left: 50%;
+			inset-inline-start: 50%;
 			transform: translateX(-50%);
 			transition: all .5s;
 		}

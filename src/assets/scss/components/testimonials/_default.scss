@@ -43,14 +43,14 @@
 	&:before {
 		top: 15px;
 		content: "\f115";
-		left: 0;
+		inset-inline-start: 0;
 	}
 }
 .quote-right{
 	&:before {
 		top: 15px;
 		content: "\f11e";
-		right: 0;
+		inset-inline-end: 0;
 	}
 }
 .testimonial-text{

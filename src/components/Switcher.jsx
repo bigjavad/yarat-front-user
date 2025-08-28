@@ -310,7 +310,7 @@ function Switcher() {
 
     return (
         <>
-            <div id="dzSwitcher-right" className={`styleswitcher top-0`} style={{ left: `${state.openswitcher ? "0" : ""}`, transition: 'all .2s linear' }}>
+            <div id="dzSwitcher-right" className={`styleswitcher top-0`} style={{ inset-inline-start: `${state.openswitcher ? "0" : ""}`, transition: 'all .2s linear' }}>
                 <div className="overlay-switch" onClick={() => dispatch({ type: 'openswitcher' })}></div>
                 <div className="switcher-btn-bx" onClick={() => dispatch({ type: 'openswitcher' })}>
                     <Link href={"#"} className="switch-btn open"><span className="fas fa-cog"></span></Link>

@@ -23,11 +23,11 @@
 			color: $white;
 			box-shadow: 5px 0 15px var(--rgba-primary-4);
 			background-color: var(--primary);
-			
+
 			&:after{
 				content: none;
 			}
-			
+
 			.toggle-close{
 				background-color: $white;
 				font-family: themify;
@@ -35,7 +35,7 @@
 				width: 55px;
 				display: block;
 				position: absolute;
-				right: 5px;
+				inset-inline-end: 5px;
 				top: 5px;
 				border-radius: $border-radius;
 				line-height: 57px;
@@ -44,7 +44,7 @@
 				@include transitionMedium;
 				z-index:1;
 				overflow:hidden;
-				
+
 				&:after{
 					content: "";
 					position:absolute;
@@ -53,11 +53,11 @@
 					@include transitionMedium;
 					width:100%;
 					height:100%;
-					left:0;
+					inset-inline-start:0;
 					top:0;
 					opacity:0;
 				}
-				
+
 				&:before{
 					content: "\e61a";
 					color: var(--primary);
@@ -71,7 +71,7 @@
 					display:block;
 				}
 			}
-			
+
 			&.collapsed{
 				background: $white;
 				color: inherit;
@@ -89,7 +89,7 @@
 						color:$white;
 					}
 				}
-				
+
 			}
 		}
 		@include respond('phone'){

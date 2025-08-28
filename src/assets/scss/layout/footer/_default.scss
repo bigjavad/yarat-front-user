@@ -1,17 +1,17 @@
 footer{
 	font-size:18px;
 	background-image:url();
-	
+
 	@include custommq ($max : 1600px){
 		font-size:16px;
 	}
-	
+
 	.widget{
 		margin-bottom:30px;
-	}	
+	}
 	strong{
 		color:#fff;
-	}	
+	}
 	.footer-logo{
 		margin-bottom:25px;
 		img{
@@ -22,11 +22,11 @@ footer{
 		display: flex;
 		align-items: center;
 		flex-wrap: wrap;
-		
+
 		li{
 			display:inline-block;
-		    flex: 50%;	
-		    padding: 0 15px 15px 0px;	
+		    flex: 50%;
+		    padding: 0 15px 15px 0px;
 		}
 	}
 	.widget_about{
@@ -34,7 +34,7 @@ footer{
 			margin-bottom:20px;
 		}
 	}
-	
+
 	.footer-title{
 		margin: 0;
 		font-weight: 700;
@@ -43,11 +43,11 @@ footer{
 		position: relative;
 		color: $white;
 		line-height: 1.2;
-		
+
 		.dlab-separator{
 			position:absolute;
 			bottom:0;
-			left:0;
+			inset-inline-start:0;
 		}
 	}
 	.widget:hover{
@@ -63,7 +63,7 @@ footer{
 		}
 	}
 	.footer-top{
-		
+
 		padding: 70px 0 20px;
 		@include respond('phone-land'){
 			padding: 50px 0 0;
@@ -94,10 +94,10 @@ footer{
 		li{
 			display: inline-block;
 			text-transform: uppercase;
-			margin-left: 20px;
+			margin-inline-start: 20px;
 			@include respond('phone-land'){
-				margin-left: 8px;
-				margin-right: 7px;
+				margin-inline-start: 8px;
+				margin-inline-end: 7px;
 			}
 		}
 		a{
@@ -111,7 +111,7 @@ footer{
 					color: $white;
 					display: block;
 					@include transitionMedium;
-					
+
 				}
 			}
 		}
@@ -123,7 +123,7 @@ footer{
 						&:before{
 							content: "\f105";
 							font-family: fontawesome;
-							left: 0;
+							inset-inline-start: 0;
 							position: absolute;
 							top: 50%;
 							transform: translateY(-50%);
@@ -134,21 +134,21 @@ footer{
 			}
 		}
 	}
-	.wp-block-latest-posts li, 
-	.wp-block-categories-list li, 
-	.wp-block-archives-list li, 
-	.widget_categories ul li, 
-	.widget_archive ul li, 
-	.widget_meta ul li, 
-	.widget_pages ul li, 
-	.widget_recent_comments ul li, 
-	.widget_nav_menu li, 
-	.widget_recent_entries ul li, 
+	.wp-block-latest-posts li,
+	.wp-block-categories-list li,
+	.wp-block-archives-list li,
+	.widget_categories ul li,
+	.widget_archive ul li,
+	.widget_meta ul li,
+	.widget_pages ul li,
+	.widget_recent_comments ul li,
+	.widget_nav_menu li,
+	.widget_recent_entries ul li,
 	.widget_services ul li{
 		@include transitionMedium;
-		left: 0;
+		inset-inline-start: 0;
 		&:hover{
-			left:10px;
+			inset-inline-start:10px;
 		}
 	}
 }
@@ -158,16 +158,16 @@ footer{
 		li{
 			position: relative;
 			margin-bottom: 30px;
-			padding-left: 60px;
-			@include respond('tab-land'){	
+			padding-inline-start: 60px;
+			@include respond('tab-land'){
 				margin-bottom: 20px;
-				padding-left: 50px;
+				padding-inline-start: 50px;
 			}
 			h5{
 				font-size: 20px;
 				line-height: 1.33;
 				margin-bottom: 5px;
-				@include respond('tab-land'){	
+				@include respond('tab-land'){
 					font-size: 18px;
 					line-height: 1.2;
 				}
@@ -176,14 +176,14 @@ footer{
 				position: absolute;
 				font-size: 42px;
 				line-height: 1;
-				left: 0;
+				inset-inline-start: 0;
 				top: 8px;
 				color: var(--primary);
-				@include respond('tab-land'){	
+				@include respond('tab-land'){
 					font-size: 35px;
 					top: 6px;
 				}
-				
+
 			}
 		}
 	}
@@ -229,7 +229,7 @@ footer{
 	padding:0;
 	li{
 		display:inline-block;
-		
+
 		a{
 			color:#fff;
 			position:relative;
@@ -262,7 +262,7 @@ footer{
 			background-color: var(--primary);
 			position: absolute;
 			top: 50%;
-			left: 0;
+			inset-inline-start: 0;
 			border-radius: 4px;
 			transform: translateY(-50%);
 		}
@@ -278,7 +278,7 @@ footer{
 			label{
 				color: rgba(255,255,255,0.7);
 				margin-bottom: 0;
-				margin-right: 3px;
+				margin-inline-end: 3px;
 			}
 		}
 	}

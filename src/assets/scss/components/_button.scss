@@ -51,9 +51,9 @@ button:focus {
 	i{
 		font-size: 24px;
 		line-height: 1;
-		
+
 	}
-	
+
 	&.btn-white{
 		background-color:#fff;
 		color:var(--primary);
@@ -74,7 +74,7 @@ button:focus {
 			height: 0;
 			padding-bottom: 120%;
 			top: -110%;
-			left: -10%;
+			inset-inline-start: -10%;
 			border-radius: 50%;
 			transform: translate3d(0,68%,0) scale3d(0,0,0);
 		}
@@ -84,7 +84,7 @@ button:focus {
 			height:100%;
 			width:100%;
 			top:0;
-			left:0;
+			inset-inline-start:0;
 			background: #fff;
 			transform: translate3d(0,-100%,0);
 			transition: transform 0.4s cubic-bezier(0.1, 0, 0.3, 1);
@@ -160,39 +160,39 @@ button:focus {
 	}
 }
 .btn-primary{
-	border-color:var(--primary);	
+	border-color:var(--primary);
 	background-color:var(--primary);
 	&.disabled,
 	&:disabled,
-	&:not(:disabled):not(.disabled).active, 
-	&:not(:disabled):not(.disabled):active, 
+	&:not(:disabled):not(.disabled).active,
+	&:not(:disabled):not(.disabled):active,
 	&:active,
 	&:focus,
 	&:hover{
-		border-color:var(--primary-hover);	
-		background-color:var(--primary-hover);	
+		border-color:var(--primary-hover);
+		background-color:var(--primary-hover);
 	}
 }
 .btn-link{
 	color:var(--primary);
 	text-decoration: none;
-	
+
 	&:hover{
-		color:var(--primary-hover);	
+		color:var(--primary-hover);
 	}
 }
 .btn-outline-primary {
-	color:var(--primary);	
+	color:var(--primary);
 	border-color:var(--primary);
 	&.disabled,
 	&:disabled,
-	&:not(:disabled):not(.disabled).active, 
-	&:not(:disabled):not(.disabled):active, 
+	&:not(:disabled):not(.disabled).active,
+	&:not(:disabled):not(.disabled):active,
 	&:active,
 	&:focus,
 	&:hover{
-		border-color:var(--primary-hover);	
-		background-color:var(--primary-hover);	
+		border-color:var(--primary-hover);
+		background-color:var(--primary-hover);
 		color:$white;
 	}
 }
@@ -201,7 +201,7 @@ button:focus {
 	font-size: 18px;
 	i{
 		transform: scale(1.5);
-		margin-left: 20px;
+		margin-inline-start: 20px;
 	}
 	&:hover{
 		text-decoration: unset;
@@ -230,7 +230,7 @@ button:focus {
 	@extend .btn;
 	@extend .btn-primary;
 	border-radius:60px;
-	
+
 	&:after{
 		content:none;
 	}

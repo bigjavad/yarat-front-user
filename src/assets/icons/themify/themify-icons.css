@@ -143,10 +143,10 @@
 .ti-arrow-up:before {
 	content: "\e627";
 }
-.ti-arrow-right:before {
+.ti-arrow-inset-inline-end:before {
 	content: "\e628";
 }
-.ti-arrow-left:before {
+.ti-arrow-inset-inline-start:before {
 	content: "\e629";
 }
 .ti-arrow-down:before {
@@ -242,10 +242,10 @@
 .ti-angle-up:before {
 	content: "\e648";
 }
-.ti-angle-right:before {
+.ti-angle-inset-inline-end:before {
 	content: "\e649";
 }
-.ti-angle-left:before {
+.ti-angle-inset-inline-start:before {
 	content: "\e64a";
 }
 .ti-angle-down:before {
@@ -293,19 +293,19 @@
 .ti-fullscreen:before {
 	content: "\e659";
 }
-.ti-arrow-top-right:before {
+.ti-arrow-top-inset-inline-end:before {
 	content: "\e65a";
 }
-.ti-arrow-top-left:before {
+.ti-arrow-top-inset-inline-start:before {
 	content: "\e65b";
 }
 .ti-arrow-circle-up:before {
 	content: "\e65c";
 }
-.ti-arrow-circle-right:before {
+.ti-arrow-circle-inset-inline-end:before {
 	content: "\e65d";
 }
-.ti-arrow-circle-left:before {
+.ti-arrow-circle-inset-inline-start:before {
 	content: "\e65e";
 }
 .ti-arrow-circle-down:before {
@@ -314,10 +314,10 @@
 .ti-angle-double-up:before {
 	content: "\e660";
 }
-.ti-angle-double-right:before {
+.ti-angle-double-inset-inline-end:before {
 	content: "\e661";
 }
-.ti-angle-double-left:before {
+.ti-angle-double-inset-inline-start:before {
 	content: "\e662";
 }
 .ti-angle-double-down:before {
@@ -386,10 +386,10 @@
 .ti-shine:before {
 	content: "\e678";
 }
-.ti-shift-right:before {
+.ti-shift-inset-inline-end:before {
 	content: "\e679";
 }
-.ti-shift-left:before {
+.ti-shift-inset-inline-start:before {
 	content: "\e67a";
 }
 .ti-shield:before {
@@ -401,10 +401,10 @@
 .ti-server:before {
 	content: "\e67d";
 }
-.ti-quote-right:before {
+.ti-quote-inset-inline-end:before {
 	content: "\e67e";
 }
-.ti-quote-left:before {
+.ti-quote-inset-inline-start:before {
 	content: "\e67f";
 }
 .ti-pulse:before {
@@ -587,10 +587,10 @@
 .ti-bar-chart-alt:before {
 	content: "\e6bb";
 }
-.ti-back-right:before {
+.ti-back-inset-inline-end:before {
 	content: "\e6bc";
 }
-.ti-back-left:before {
+.ti-back-inset-inline-start:before {
 	content: "\e6bd";
 }
 .ti-arrows-corner:before {
@@ -602,10 +602,10 @@
 .ti-anchor:before {
 	content: "\e6c0";
 }
-.ti-align-right:before {
+.ti-align-inset-inline-end:before {
 	content: "\e6c1";
 }
-.ti-align-left:before {
+.ti-align-inset-inline-start:before {
 	content: "\e6c2";
 }
 .ti-align-justify:before {
@@ -746,13 +746,13 @@
 .ti-layout-slider-alt:before {
 	content: "\e6f0";
 }
-.ti-layout-sidebar-right:before {
+.ti-layout-sidebar-inset-inline-end:before {
 	content: "\e6f1";
 }
 .ti-layout-sidebar-none:before {
 	content: "\e6f2";
 }
-.ti-layout-sidebar-left:before {
+.ti-layout-sidebar-inset-inline-start:before {
 	content: "\e6f3";
 }
 .ti-layout-placeholder:before {
@@ -773,7 +773,7 @@
 .ti-layout-media-right-alt:before {
 	content: "\e6f9";
 }
-.ti-layout-media-right:before {
+.ti-layout-media-inset-inline-end:before {
 	content: "\e6fa";
 }
 .ti-layout-media-overlay:before {
@@ -788,7 +788,7 @@
 .ti-layout-media-left-alt:before {
 	content: "\e6fe";
 }
-.ti-layout-media-left:before {
+.ti-layout-media-inset-inline-start:before {
 	content: "\e6ff";
 }
 .ti-layout-media-center-alt:before {
@@ -824,19 +824,19 @@
 .ti-layout-grid2-thumb:before {
 	content: "\e70a";
 }
-.ti-layout-cta-right:before {
+.ti-layout-cta-inset-inline-end:before {
 	content: "\e70b";
 }
-.ti-layout-cta-left:before {
+.ti-layout-cta-inset-inline-start:before {
 	content: "\e70c";
 }
 .ti-layout-cta-center:before {
 	content: "\e70d";
 }
-.ti-layout-cta-btn-right:before {
+.ti-layout-cta-btn-inset-inline-end:before {
 	content: "\e70e";
 }
-.ti-layout-cta-btn-left:before {
+.ti-layout-cta-btn-inset-inline-start:before {
 	content: "\e70f";
 }
 .ti-layout-column4:before {
@@ -872,10 +872,10 @@
 .ti-hand-point-up:before {
 	content: "\e71a";
 }
-.ti-hand-point-right:before {
+.ti-hand-point-inset-inline-end:before {
 	content: "\e71b";
 }
-.ti-hand-point-left:before {
+.ti-hand-point-inset-inline-start:before {
 	content: "\e71c";
 }
 .ti-hand-point-down:before {

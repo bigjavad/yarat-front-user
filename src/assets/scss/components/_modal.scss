@@ -41,7 +41,7 @@
 			padding:0;
 			display: block;
 			text-align: center;
-			
+
 			.modal-title{
 				font-size: 24px;
 				margin-bottom: 15px;
@@ -54,7 +54,7 @@
 				color: var(--primary);
 				font-size: 54px;
 				line-height: 1;
-				display: inline-block;	
+				display: inline-block;
 			}
 		}
 		.modal-body{
@@ -64,7 +64,7 @@
 	.btn-close {
 		margin: 0;
 		position: absolute;
-		right: -40px;
+		inset-inline-end: -40px;
 		top: -40px;
 		color: #fff;
 		font-weight: 100;
@@ -78,7 +78,7 @@
 		border: 0;
 		background: transparent;
 		@include respond('phone-land'){
-			right: 0;
+			inset-inline-end: 0;
 		}
 	}
 }

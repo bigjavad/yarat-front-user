@@ -2,7 +2,7 @@
 .dlab-info-has {
     position: absolute;
     bottom: 0;
-    left: 0;
+    inset-inline-start: 0;
     width: 100%;
     height: auto;
     padding: 30px 15px 40px;
@@ -23,7 +23,7 @@
 	a,
 	p,
 	h6 {
-	    color: #fff;	
+	    color: #fff;
 	}
 	.dlab-info-has-text {
 		margin-bottom: 20px;

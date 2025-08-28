@@ -1,10 +1,10 @@
-.btn-next, 
+.btn-next,
 .btn-prev{
 	box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.05);
     position: relative;
     top: auto;
-    left: auto;
-    right: auto;
+    inset-inline-start: auto;
+    inset-inline-end: auto;
     bottom: auto;
     width: 50px;
     height: 50px;
@@ -29,7 +29,7 @@
 		color:#fff;
 	}
 	&:after{
-		content:none;	
+		content:none;
 	}
 	i{
 		font-size: 30px;
@@ -41,7 +41,7 @@
 }
 
 .swiper-btn-lr{
-	.btn-next, 
+	.btn-next,
 	.btn-prev{
 		position:absolute;
 		top:50%;
@@ -52,9 +52,9 @@
 		color:#fff;
 	}
 	.btn-next{
-		right:1px;
+		inset-inline-end:1px;
 	}
 	.btn-prev{
-		left:1px;
+		inset-inline-start:1px;
 	}
 }

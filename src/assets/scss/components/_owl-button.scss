@@ -5,7 +5,7 @@
 }
 .owl-nav{
 	button{
-		&.owl-prev, 
+		&.owl-prev,
 		&.owl-next{
 			cursor: pointer;
 			transition: all 0.5s;
@@ -27,7 +27,7 @@
 	}
 	.owl-dots{
 		text-align:center;
-		
+
 		.owl-dot {
 			display: inline-block;
 			span {
@@ -54,7 +54,7 @@
 			}
 		}
 	}
-	
+
 	// Owl Dots 1
 	&.owl-dots-1{
 		.owl-dots .owl-dot{
@@ -76,7 +76,7 @@
 		.owl-dots {
 			margin-top: 40px;
 			position: unset;
-			right: auto;
+			inset-inline-end: auto;
 			text-align: center;
 			top: auto;
 			transform: translateY(-50%);
@@ -107,7 +107,7 @@
 			margin-top: 40px;
 			position: unset;
 			display: block;
-			right: auto;
+			inset-inline-end: auto;
 			text-align: center;
 			top: auto;
 			transform: translateY(-50%);
@@ -142,34 +142,34 @@
 
 // OWL BUTTON TOP TO LEFT
 .owl-btn-top-l .owl-nav {
-    text-align: left;
-	
+    text-align: start;
+
 	.owl-prev {
-		margin-left: 0;
+		margin-inline-start: 0;
 	}
 }
 // OWL BUTTON TOP TO RIGHT
 .owl-btn-top-r .owl-nav {
     position: absolute;
     top: -125px;
-    right: 0;
+    inset-inline-end: 0;
     margin: 0;
 
 	.owl-next {
-		margin-right: 0;
+		margin-inline-end: 0;
 	}
 }
 // OWL BUTTON TOP TO LEFT & RIGHT
 .owl-btn-top-lr .owl-nav{
-    text-align: left;
+    text-align: start;
 	.owl-next {
-		margin-right: 0;
-		float: right;
+		margin-inline-end: 0;
+		float: inline-end;
 	}
 }
-.owl-btn-full .owl-prev, 
+.owl-btn-full .owl-prev,
 .owl-btn-full .owl-next{
-	padding: 40px 8px;	
+	padding: 40px 8px;
 }
 // OWL BUTTON < > CENTER TO LEFT & RIGHT
 .owl-btn-center{
@@ -181,7 +181,7 @@
 	.owl-prev,
 	.owl-next{
 		position: absolute;
-		left: 0;
+		inset-inline-start: 0;
 		top: 50%;
 		margin: 0;
 		transform: translateY(-50%);
@@ -191,26 +191,26 @@
 		cursor:pointer;
 	}
 	.owl-prev {
-		left: -110px;
+		inset-inline-start: -110px;
 	}
 	.owl-next {
-		left: auto;
-		right: -110px;
+		inset-inline-start: auto;
+		inset-inline-end: -110px;
 	}
 	@include respond('laptop'){
 		.owl-prev{
-			left: -40px;
+			inset-inline-start: -40px;
 		}
 		.owl-next{
-			right: -40px;
+			inset-inline-end: -40px;
 		}
 	}
 	@include respond('tab-land'){
 		.owl-prev{
-			left: -20px;
+			inset-inline-start: -20px;
 		}
 		.owl-next{
-			right: -20px;
+			inset-inline-end: -20px;
 		}
 	}
 }
@@ -222,7 +222,7 @@
 .owl-btn-1{
 	.owl-nav{
 		button{
-			&.owl-prev, 
+			&.owl-prev,
 			&.owl-next{
 				border-radius: 3px;
 				line-height: 40px;
@@ -235,7 +235,7 @@
 				width: auto;
 				background-color: transparent;
 				position: relative;
-				
+
 				&:before{
 					content: "";
 					position: absolute;
@@ -248,7 +248,7 @@
 					top: 8px;
 					color: $dark;
 				}
-				
+
 				&:hover {
 					background-color: rgba(0, 0, 0, 0);
 					color:#000;
@@ -262,21 +262,21 @@
 				padding: 0 30px 0 0px!important;
 				&:before{
 					content: "PREV";
-					right: 0;
+					inset-inline-end: 0;
 				}
-			} 
+			}
 			&.owl-next{
 				padding: 0 0 0 30px!important;
 				&:before{
 					content: "NEXT";
-					left: 0;
+					inset-inline-start: 0;
 				}
 			}
 		}
 	}
 	&.btn-white{
 		.owl-nav{
-			.owl-prev, 
+			.owl-prev,
 			.owl-next{
 				color:#fff;
 				&:hover {
@@ -289,14 +289,14 @@
 .owl-btn-2{
 	&.owl-btn-rounded{
 		.owl-nav{
-			.owl-prev, 
+			.owl-prev,
 			.owl-next{
 				border-radius: 8px;
 			}
 		}
 	}
 	.owl-nav{
-		.owl-prev, 
+		.owl-prev,
 		.owl-next{
 			height: 60px;
 			line-height: 60px;
@@ -316,7 +316,7 @@
 }
 .owl-btn-3{
 	.owl-nav{
-		.owl-prev, 
+		.owl-prev,
 		.owl-next{
 			border-radius: 50px;
 			height: 45px;
@@ -332,7 +332,7 @@
 .owl-btn-primary{
 	.owl-nav{
 		button{
-			&.owl-prev, 
+			&.owl-prev,
 			&.owl-next{
 				background-color: var(--primary);
 				color: $white;
@@ -346,7 +346,7 @@
 	}
 }
 .owl-btn-white{
-	.owl-prev, 
+	.owl-prev,
 	.owl-next{
 		background-color: $white;
 		color: var(--primary);
@@ -417,7 +417,7 @@
 /* owl num count */
 .owl-num-count{
 	.owl-dots{
-		text-align: right;
+		text-align: end;
 		counter-reset:li;
 		justify-content: center;
 		display: flex;
@@ -450,4 +450,4 @@
 			}
 		}
 	}
-} 
+}

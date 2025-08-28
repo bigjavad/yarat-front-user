@@ -211,35 +211,35 @@
 		.icon-bx-md,
 		.icon-bx-sm,
 		.icon-bx-xs{
-			float: left;
-			margin-right: 20px;
+			float: inline-start;
+			margin-inline-end: 20px;
 		}
 		.icon-xl,
 		.icon-lg,
 		.icon-md,
 		.icon-sm,
 		.icon-xs{
-			float: left;
-			margin-right: 10px;
+			float: inline-start;
+			margin-inline-end: 10px;
 		}
 	}
 	&.right{
-		text-align: right;
+		text-align: end;
 		.icon-bx-xl,
 		.icon-bx-lg,
 		.icon-bx-md,
 		.icon-bx-sm,
 		.icon-bx-xs{
-			float: right;
-			margin-left: 20px;
+			float: inline-end;
+			margin-inline-start: 20px;
 		}
 		.icon-xl,
 		.icon-lg,
 		.icon-md,
 		.icon-sm,
 		.icon-xs{
-			float: right;
-			margin-left: 10px;
+			float: inline-end;
+			margin-inline-start: 10px;
 		}
 	}
 	&.bx-style-1,
@@ -253,54 +253,54 @@
 			[class*="icon-bx-"] {
 				position: absolute;
 				top: 0;
-				left: 50%;
+				inset-inline-start: 50%;
 				-webkit-transform: translateY(-50%);
 				-ms-transform: translateY(-50%);
 				transform: translateY(-50%);
 			}
 			.icon-bx-xl {
-				margin-left: -75px;
+				margin-inline-start: -75px;
 			}
 			.icon-bx-lg {
-				margin-left: -60px;
+				margin-inline-start: -60px;
 			}
 			.icon-bx-md {
-				margin-left: -50px;
+				margin-inline-start: -50px;
 			}
 			.icon-bx-sm {
-				margin-left: -40px;
+				margin-inline-start: -40px;
 			}
 			.icon-bx-xs {
-				margin-left: -20px;
+				margin-inline-start: -20px;
 			}
 		}
 		&.left{
 			[class*="icon-bx-"] {
 				position: absolute;
 				top: auto;
-				left: 0;
+				inset-inline-start: 0;
 				-webkit-transform: translateX(-50%);
 				-ms-transform: translateX(-50%);
 				transform: translateX(-50%);
 			}
 		}
-		&.right{ 
+		&.right{
 			[class*="icon-bx-"] {
 				position: absolute;
 				top: auto;
-				right: 0;
+				inset-inline-end: 0;
 				-webkit-transform: translateX(50%);
 				-ms-transform: translateX(50%);
 				transform: translateX(50%);
 			}
 		}
 	}
-	
+
 }
 .icon-content{
     overflow: hidden;
 }
-// ICON BOX CENTER ALIGH 
+// ICON BOX CENTER ALIGH
 [class*="icon-bx-"][class*="bg-"]{
 	a,
 	span{
@@ -313,8 +313,8 @@
 [class*="icon-bx-"][class*="border-"] {
     display: table;
     line-height: normal;
-    margin-left: auto;
-    margin-right: auto;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
 }
 [class*="icon-bx-"][class*="border-"] .icon-cell {
     display: table-cell;
@@ -377,7 +377,7 @@
 	}
 }
 .right-border:before {
-    right: 0;
+    inset-inline-end: 0;
 }
 // FOR IMAGES
 .dlab-media,
@@ -408,7 +408,7 @@
 	.icon-box-btn .btn{
 		@include transitionMedium;
 	}
-	&.active{ 
+	&.active{
 		.icon-bx-wraper{
 			background-color:rgba(0,0,0,0.70);
 		}
@@ -420,7 +420,7 @@
 			@include transitionMedium;
 		}
 	}
-	.icon-box-btn{ 
+	.icon-box-btn{
 		.btn{
 			background-color: #eeeeee;
 			padding: 15px 20px;

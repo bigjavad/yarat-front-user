@@ -11,13 +11,13 @@
 	.dlab-content-inner{
 		position: relative;
 	}
-	
+
 	&.style-1{
 		.dlab-content-inner{
 			.content-media{
 				width: 50vw;
 				height: calc(100% + 50px);
-				float: right;
+				float: inline-end;
 				margin-top: -50px;
 				z-index: 1;
 				padding-bottom: 50px;
@@ -46,11 +46,11 @@
 		.content-media{
 			width: 50vw;
 			margin: -120px 0 0 0;
-			float: right;
+			float: inline-end;
 			height: 100%;
 			&.right{
-				float: left;
-				
+				float: inline-start;
+
 			}
 			img{
 				height:100%;
@@ -72,23 +72,23 @@
 	}
 	&.style-3{
 		.dlab-content-inner{
-			padding-right: 80px;
+			padding-inline-end: 80px;
 		}
 		.counter-info{
 			background-color: $white;
 			position: absolute;
-			left: 0;
+			inset-inline-start: 0;
 			top: 0;
 			z-index: 1;
 			padding: 80px 80px 50px 80px;
-			
+
 			.counter{
 			    margin: 0 10px 0 0;
 				writing-mode: tb-rl;
-				border-right: 2px solid #a3cc02;
+				border-inline-end: 2px solid #a3cc02;
 				font-size: 50px;
 				line-height: 40px;
-				padding-right: 10px;
+				padding-inline-end: 10px;
 			}
 			.counter-bx{
 				display: flex;
@@ -105,7 +105,7 @@
 			margin: 100px auto;
 			max-width: 1000px;
 			img{
-				box-shadow: 40px -40px 0 0 var(--primary);				
+				box-shadow: 40px -40px 0 0 var(--primary);
 				margin: 40px 40px 0 0;
 			}
 			&:after {
@@ -116,19 +116,19 @@
 				color: transparent;
 				top: 50px;
 				z-index: 1;
-				right: 10px;
+				inset-inline-end: 10px;
 				line-height: 80px;
 				-webkit-text-stroke: 1px #fff;
 				text-transform: uppercase;
 				font-weight: 700;
 				width: 100%;
-				text-align: right;
+				text-align: end;
 				letter-spacing: 10px;
 			}
 		}
 		&:after{
 			content: "";
-			left: 0;
+			inset-inline-start: 0;
 			bottom: 0;
 			height: 300px;
 			background-color: $white;

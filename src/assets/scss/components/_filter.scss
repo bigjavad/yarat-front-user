@@ -27,7 +27,7 @@
 				background-color: #EFBB20;
 			}
 		}
-		
+
 	}
 	&.center{
 		text-align: center;
@@ -46,7 +46,7 @@
 			}
 		}
 	}
-	
+
 	// Style 1
 	&.style-1{
 		margin-bottom: 45px;
@@ -56,7 +56,7 @@
 				margin: 0 20px -1px;
 				border: 0;
 				&:after{
-					content:none;	
+					content:none;
 				}
 				a{
 					color: $headings-color;
@@ -75,10 +75,10 @@
 					}
 				}
 				&:first-child{
-					margin-left: 0;
+					margin-inline-start: 0;
 				}
 				&:last-child{
-					margin-right: 0;
+					margin-inline-end: 0;
 				}
 				@include respond ('tab-port'){
 					margin: 0 5px -1px;
@@ -91,7 +91,7 @@
 					a{
 						font-size: 14px;
 					}
-				}	
+				}
 			}
 		}
 	}

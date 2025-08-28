@@ -4,7 +4,7 @@
 		float:right;
 		border-radius:0 100px 100px 0;
 		overflow:hidden;
-		margin-right:50px;
+		margin-inline-end:50px;
 		height:100%;
 		img{
 			width:100%;
@@ -13,30 +13,30 @@
 		}
 	}
 	.about-swiper{
-		margin-left:-350px;
-		margin-right: -18px;
+		margin-inline-start:-350px;
+		margin-inline-end: -18px;
 		.icon-bx-wraper.style-1{
 			margin: 45px 18px;
 		}
 	}
 	@include respond ('tab-land'){
 		.dlab-media{
-			margin-right:40px;
+			margin-inline-end:40px;
 		}
 		.about-swiper{
-			margin-left:-200px;
+			margin-inline-start:-200px;
 		}
 	}
 	@include respond ('tab-port'){
 		.dlab-media{
 			width:100%;
 			border-radius:50px;
-			margin-right:0;
+			margin-inline-end:0;
 			height: auto;
 			margin-bottom: 40px;
 		}
 		.about-swiper{
-			margin-left:-18px;
+			margin-inline-start:-18px;
 		}
 	}
 	@include respond ('phone'){
@@ -49,5 +49,5 @@
 			}
 		}
 	}
-	
+
 }
