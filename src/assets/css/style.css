@@ -2795,12 +2795,12 @@ textarea.form-control-lg {
 .comment-respond .comment-form p .form-floating > textarea:not(:placeholder-shown) ~ label,
 .form-floating > .form-select ~ label {
     opacity: 0.65;
-    transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
+    transform: scale(0.85) translateY(-0.5rem) translateX(calc(0.15rem * var(--translate-x)));
 }
 
 .form-floating > .form-control:-webkit-autofill ~ label, .wp-block-categories-dropdown .form-floating > select:-webkit-autofill ~ label, .wp-block-archives-dropdown .form-floating > select:-webkit-autofill ~ label, .comment-respond .comment-form p.comment-form-author .form-floating > input:-webkit-autofill ~ label, .comment-respond .comment-form p.comment-form-email .form-floating > input:-webkit-autofill ~ label, .comment-respond .comment-form p.comment-form-url .form-floating > input:-webkit-autofill ~ label, .comment-respond .comment-form p .form-floating > textarea:-webkit-autofill ~ label {
     opacity: 0.65;
-    transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
+    transform: scale(0.85) translateY(-0.5rem) translateX(calc(0.15rem * var(--translate-x)));
 }
 
 .input-group {
@@ -6484,12 +6484,12 @@ fieldset:disabled .wp-block-button__link {
 /* rtl:begin:ignore */
 .carousel-item-next:not(.carousel-item-start),
 .active.carousel-item-end {
-    transform: translateX(100%);
+    transform: translateX(calc(100% * var(--translate-x)));
 }
 
 .carousel-item-prev:not(.carousel-item-end),
 .active.carousel-item-start {
-    transform: translateX(-100%);
+    transform: translateX(calc(-100% * var(--translate-x)));
 }
 
 /* rtl:end:ignore */
@@ -6761,7 +6761,7 @@ fieldset:disabled .wp-block-button__link {
     inset-inline-start: 0;
     width: 400px;
     border-inline-end: 1px solid rgba(0, 0, 0, 0.2);
-    transform: translateX(-100%);
+    transform: translateX(calc(-100% * var(--translate-x)));
 }
 
 .offcanvas-end {
@@ -6769,7 +6769,7 @@ fieldset:disabled .wp-block-button__link {
     inset-inline-end: 0;
     width: 400px;
     border-inline-start: 1px solid rgba(0, 0, 0, 0.2);
-    transform: translateX(100%);
+    transform: translateX(calc(100% * var(--translate-x)));
 }
 
 .offcanvas-top {
@@ -7172,7 +7172,7 @@ fieldset:disabled .wp-block-button__link {
 }
 
 .translate-middle-x {
-    transform: translateX(-50%) !important;
+    transform: translateX(calc(-50% * var(--translate-x))) !important;
 }
 
 .translate-middle-y {
@@ -12139,19 +12139,19 @@ strong,
 
 @keyframes motion {
     0% {
-        transform: translateX(0) scale(1);
+        transform: translateX(calc(0 * var(--translate-x))) scale(1);
     }
     25% {
-        transform: translateX(-50px) scale(0.3);
+        transform: translateX(calc(-50px * var(--translate-x))) scale(0.3);
     }
     50% {
-        transform: translateX(0) scale(1);
+        transform: translateX(calc(0 * var(--translate-x))) scale(1);
     }
     75% {
-        transform: translateX(50px) scale(0.3);
+        transform: translateX(calc(50px * var(--translate-x))) scale(0.3);
     }
     100% {
-        transform: translateX(0) scale(1);
+        transform: translateX(calc(0 * var(--translate-x))) scale(1);
     }
 }
 
@@ -17914,7 +17914,7 @@ ul.grid-2 li {
 .widget_recent_entries ul li a:hover,
 .widget_services ul li a:hover {
     color: var(--primary);
-    transform: translateX(10px);
+    transform: translateX(calc(10px * var(--translate-x)));
 }
 
 .wp-block-latest-posts li li,
@@ -18408,11 +18408,11 @@ ul a.rsswidget:hover {
 .service_menu_nav ul li:hover a, .service_menu_nav ul li.current-menu-item a, .service_menu_nav ul li.active a {
     padding-inline-start: 20px;
     border-color: transparent;
-    transform: translateX(0);
-    -moz-transform: translateX(0);
-    -webkit-transform: translateX(0);
-    -ms-transform: translateX(0);
-    -o-transform: translateX(0);
+    transform: translateX(calc(0 * var(--translate-x)));
+    -moz-transform: translateX(calc(0 * var(--translate-x)));
+    -webkit-transform: translateX(calc(0 * var(--translate-x)));
+    -ms-transform: translateX(calc(0 * var(--translate-x)));
+    -o-transform: translateX(calc(0 * var(--translate-x)));
     color: #fff;
 }
 
@@ -20076,18 +20076,18 @@ ul a.rsswidget:hover {
     position: absolute;
     top: auto;
     inset-inline-start: 0;
-    -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%);
+    -webkit-transform: translateX(calc(-50% * var(--translate-x)));
+    -ms-transform: translateX(calc(-50% * var(--translate-x)));
+    transform: translateX(calc(-50% * var(--translate-x)));
 }
 
 .icon-bx-wraper.bx-style-2.right [class*="icon-bx-"] {
     position: absolute;
     top: auto;
     inset-inline-end: 0;
-    -webkit-transform: translateX(50%);
-    -ms-transform: translateX(50%);
-    transform: translateX(50%);
+    -webkit-transform: translateX(calc(50% * var(--translate-x)));
+    -ms-transform: translateX(calc(50% * var(--translate-x)));
+    transform: translateX(calc(50% * var(--translate-x)));
 }
 
 .icon-content {
@@ -21173,7 +21173,7 @@ ul a.rsswidget:hover {
     font: inherit;
     vertical-align: 0.1em;
     display: inline-block;
-    transform: scaleY(0) translateX(-1em);
+    transform: scaleY(0) translateX(calc(-1em * var(--translate-x)));
     margin-inline-end: -0.25em;
 }
 
@@ -21184,16 +21184,16 @@ ul a.rsswidget:hover {
 }
 
 .banner-slider .dlab-slide-item .discover-link .char {
-    transform: translateX(-0.15em);
+    transform: translateX(calc(-0.15em * var(--translate-x)));
 }
 
 .banner-slider .dlab-slide-item .discover-link:hover:before {
-    transform: scaleY(1) translateX(0em);
+    transform: scaleY(1) translateX(calc(0em * var(--translate-x)));
 }
 
 .banner-slider .dlab-slide-item .discover-link:hover .char {
-    transform: translateX(1em);
-    transform: translateX(0.5em) translateX(calc(0.1em * var(--char-index)));
+    transform: translateX(calc(1em * var(--translate-x)));
+    transform: translateX(calc(0.5em * var(--translate-x))) translateX(calc(calc(0.1em * var(--char-index * var(--translate-x)))));
 }
 
 .banner-slider .slider-one-pagination {
@@ -21707,17 +21707,17 @@ ul a.rsswidget:hover {
 }
 
 .car-list-box .list-info .title a .char:before {
-    transform: translateX(110%);
+    transform: translateX(calc(110% * var(--translate-x)));
     color: var(--primary);
 }
 
 .car-list-box .list-info .title a:hover .char:before {
-    transform: translateX(0%);
+    transform: translateX(calc(0% * var(--translate-x)));
     transition-delay: calc(0.2s + (0.02s * (var(--char-index))));
 }
 
 .car-list-box .list-info .title a:hover .char:after {
-    transform: translateX(-110%);
+    transform: translateX(calc(-110% * var(--translate-x)));
     transition-delay: calc(0.02s * (var(--char-index)));
 }
 
@@ -22710,17 +22710,17 @@ ol.commentlist li .description p {
 }
 
 .text-effect-1 .char:before {
-    transform: translateX(110%);
+    transform: translateX(calc(110% * var(--translate-x)));
     color: var(--primary);
 }
 
 .text-effect-1:hover .char:before {
-    transform: translateX(0%);
+    transform: translateX(calc(0% * var(--translate-x)));
     transition-delay: calc(0.2s + (0.02s * (var(--char-index))));
 }
 
 .text-effect-1:hover .char:after {
-    transform: translateX(-110%);
+    transform: translateX(calc(-110% * var(--translate-x)));
     transition-delay: calc(0.02s * (var(--char-index)));
 }
 
@@ -23736,7 +23736,7 @@ ol.commentlist li .description p {
     position: absolute;
     top: 30px;
     inset-inline-start: 50%;
-    transform: translateX(-50%);
+    transform: translateX(calc(-50% * var(--translate-x)));
     transition: all .5s;
 }
 
@@ -29142,7 +29142,7 @@ pre {
     position: absolute;
     inset-inline-start: 50%;
     bottom: -25px;
-    transform: translateX(-50%);
+    transform: translateX(calc(-50% * var(--translate-x)));
     display: inline-table;
     padding: 0 15px;
 }

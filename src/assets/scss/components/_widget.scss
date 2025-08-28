@@ -291,7 +291,7 @@
 			}
 			&:hover{
 				color:var(--primary);
-				transform:translateX(10px);
+				transform:translateX(calc(10px * var(--translate-x)));
 			}
 		}
 
@@ -717,11 +717,11 @@ ul {
 				a{
 					padding-inline-start: 20px;
 					border-color:transparent;
-					transform: translateX(0);
-					-moz-transform: translateX(0);
-					-webkit-transform: translateX(0);
-					-ms-transform: translateX(0);
-					-o-transform: translateX(0);
+					transform: translateX(calc(0 * var(--translate-x)));
+					-moz-transform: translateX(calc(0 * var(--translate-x)));
+					-webkit-transform: translateX(calc(0 * var(--translate-x)));
+					-ms-transform: translateX(calc(0 * var(--translate-x)));
+					-o-transform: translateX(calc(0 * var(--translate-x)));
 					&:before{
 						opacity:1;
 						inset-inline-end:10px;

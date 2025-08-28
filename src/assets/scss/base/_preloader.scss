@@ -70,18 +70,18 @@
 }
 @keyframes motion{
 	0%{
-		transform: translateX(0) scale(1);
+		transform: translateX(calc(0 * var(--translate-x))) scale(1);
 	}
 	25%{
-		transform: translateX(-50px) scale(0.3);
+		transform: translateX(calc(-50px * var(--translate-x))) scale(0.3);
 	}
 	50%{
-		transform: translateX(0) scale(1);
+		transform: translateX(calc(0 * var(--translate-x))) scale(1);
 	}
 	75%{
-		transform: translateX(50px) scale(0.3);
+		transform: translateX(calc(50px * var(--translate-x))) scale(0.3);
 	}
 	100%{
-		transform: translateX(0) scale(1);
+		transform: translateX(calc(0 * var(--translate-x))) scale(1);
 	}
 }

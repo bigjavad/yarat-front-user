@@ -279,9 +279,9 @@
 				position: absolute;
 				top: auto;
 				inset-inline-start: 0;
-				-webkit-transform: translateX(-50%);
-				-ms-transform: translateX(-50%);
-				transform: translateX(-50%);
+				-webkit-transform: translateX(calc(-50% * var(--translate-x)));
+				-ms-transform: translateX(calc(-50% * var(--translate-x)));
+				transform: translateX(calc(-50% * var(--translate-x)));
 			}
 		}
 		&.right{
@@ -289,9 +289,9 @@
 				position: absolute;
 				top: auto;
 				inset-inline-end: 0;
-				-webkit-transform: translateX(50%);
-				-ms-transform: translateX(50%);
-				transform: translateX(50%);
+				-webkit-transform: translateX(calc(50% * var(--translate-x)));
+				-ms-transform: translateX(calc(50% * var(--translate-x)));
+				transform: translateX(calc(50% * var(--translate-x)));
 			}
 		}
 	}

@@ -268,7 +268,7 @@
 			position: absolute;
 			inset-inline-start: 50%;
 			bottom: -25px;
-			transform: translateX(-50%);
+			transform: translateX(calc(-50% * var(--translate-x)));
 			display: inline-table;
 			padding: 0 15px;
 

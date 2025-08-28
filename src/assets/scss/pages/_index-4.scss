@@ -260,7 +260,7 @@
 			position: absolute;
 			top: 30px;
 			inset-inline-start: 50%;
-			transform: translateX(-50%);
+			transform: translateX(calc(-50% * var(--translate-x)));
 			transition: all .5s;
 		}
 		&.swiper-pagination-bullet-active{

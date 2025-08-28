@@ -1,1 +1,8 @@
+:root {
+    --translate-x: 1; /* LTR */
+}
+
+html[dir="rtl"], body.rtl {
+    --translate-x: -1; /* RTL */
+}
 

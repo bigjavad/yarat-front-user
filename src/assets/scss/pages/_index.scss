@@ -160,7 +160,7 @@
 				font: inherit;
 				vertical-align: 0.1em;
 				display: inline-block;
-				transform: scaleY(0) translateX(-1em);
+				transform: scaleY(0) translateX(calc(-1em * var(--translate-x)));
 				margin-inline-end: -0.25em;
 			  }
 
@@ -171,16 +171,16 @@
 			  }
 
 			  .char {
-				transform: translateX(-0.15em);
+				transform: translateX(calc(-0.15em * var(--translate-x)));
 			  }
 
 			  &:hover:before {
-				transform: scaleY(1) translateX(0em);
+				transform: scaleY(1) translateX(calc(0em * var(--translate-x)));
 			  }
 
 			  &:hover .char {
-				transform: translateX(1em);
-				transform: translateX(0.5em) translateX( calc(0.1em * var(--char-index)) );
+				transform: translateX(calc(1em * var(--translate-x)));
+				transform: translateX(calc(0.5em * var(--translate-x))) translateX(calc( calc(0.1em * var(--char-index * var(--translate-x)))) );
 			  }
 
 		}
@@ -643,17 +643,17 @@
 						transition-delay: calc( 0.2s + ( 0.02s * ( var(--char-index)) ) );
 					}
 					&:before {
-						transform: translateX(110%);
+						transform: translateX(calc(110% * var(--translate-x)));
 						color:var(--primary);
 					}
 				}
 				&:hover{
 					.char:before {
-						transform: translateX(0%);
+						transform: translateX(calc(0% * var(--translate-x)));
 						transition-delay: calc( 0.2s + ( 0.02s * ( var(--char-index)) ) );
 					}
 					.char:after {
-						transform: translateX(-110%);
+						transform: translateX(calc(-110% * var(--translate-x)));
 						transition-delay: calc( 0.02s * ( var(--char-index)) );
 					}
 				}
@@ -1540,17 +1540,17 @@ ol.commentlist {
 			transition-delay: calc( 0.2s + ( 0.02s * ( var(--char-index)) ) );
 		}
 		&:before {
-			transform: translateX(110%);
+			transform: translateX(calc(110% * var(--translate-x)));
 			color:var(--primary);
 		}
 	}
 	&:hover{
 		.char:before {
-			transform: translateX(0%);
+			transform: translateX(calc(0% * var(--translate-x)));
 			transition-delay: calc( 0.2s + ( 0.02s * ( var(--char-index)) ) );
 		}
 		.char:after {
-			transform: translateX(-110%);
+			transform: translateX(calc(-110% * var(--translate-x)));
 			transition-delay: calc( 0.02s * ( var(--char-index)) );
 		}
 	}
