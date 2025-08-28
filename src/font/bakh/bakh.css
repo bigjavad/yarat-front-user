@@ -1,0 +1,41 @@
+@font-face {
+    font-family: 'bakh var';
+    font-weight: 200;
+    font-style: normal;
+    src: url("YekanBakhFaNum-Thin.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: 'bakh var';
+    font-weight: 300;
+    font-style: normal;
+    src: url("YekanBakhFaNum-Light.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: 'bakh var';
+    font-weight: 400;
+    font-style: normal;
+    src: url("YekanBakhFaNum-Regular.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: 'bakh var';
+    font-weight:500;
+    font-style: normal;
+    src: url("YekanBakhFaNum-SemiBold.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: 'bakh var';
+    font-weight:600;
+    font-style: normal;
+    src: url("YekanBakhFaNum-Bold.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: 'bakh var';
+    font-weight:700;
+    font-style: normal;
+    src: url("YekanBakhFaNum-ExtraBold.woff2") format("woff2");
+}
