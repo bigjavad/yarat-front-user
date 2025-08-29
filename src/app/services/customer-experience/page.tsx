@@ -1,5 +1,5 @@
 import React from 'react';
-import CarlistingBanner from "@/element/CarlistingBanner";
+import CarListingBanner from "@/element/car-listing-banner";
 import {IMAGE} from "@/constent/theme";
 import ContectForm from "@/element/ContectForm";
 import Testimonial from "@/components/Testimonial";
@@ -8,7 +8,7 @@ function Page() {
     return (
         <div>
             <div className="page-content bg-white">
-                <CarlistingBanner img={IMAGE.bnr1} title={'تجربه مشتریان'}/>
+                <CarListingBanner img={IMAGE.bnr1} title={'تجربه مشتریان'}/>
                 <div className="section-full bg-gray content-inner-1" id="client">
                     <div className="container">
                         <div className="section-head text-center wow fadeIn" data-wow-duration="2s"

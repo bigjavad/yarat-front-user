@@ -1,6 +1,6 @@
 import React from 'react'
 
-const CarlistingBanner = (props) => {
+const CarListingBanner = (props) => {
     return (
         <>
             <div className="dlab-bnr-inr style-1 overlay-black-middle" style={{ backgroundImage: `url(${props.img})` }}>
@@ -16,4 +16,4 @@ const CarlistingBanner = (props) => {
     )
 }
 
-export default CarlistingBanner
+export default CarListingBanner

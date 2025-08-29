@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from 'react'
 import {IMAGE} from "@/constent/theme";
-import CarlistingBanner from "@/element/CarlistingBanner";
+import CarListingBanner from "@/element/car-listing-banner";
 import CarOverview from "@/components/car/car-overview";
 import Link from "next/link";
 import CarDetailSpacation from "@/components/car/car-detail-spacation";
@@ -57,7 +57,7 @@ const CarDetail_2 = () => {
   return (
     <>
       <div className="page-content bg-white">
-        <CarlistingBanner img={banner} title={heading} />
+        <CarListingBanner img={banner} title={heading} />
         <div className="car-details-info">
           <div className="container">
             <div className="row">

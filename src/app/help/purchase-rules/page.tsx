@@ -1,7 +1,7 @@
 "use client"
 import React from 'react';
 import ContectForm from "@/element/ContectForm";
-import CarlistingBanner from "@/element/CarlistingBanner";
+import CarListingBanner from "@/element/car-listing-banner";
 import {IMAGE} from "@/constent/theme";
 import { Container, Row, Col, Card, Accordion, Badge } from 'react-bootstrap';
 import ContectUs from "@/components/contect-us/ContectUs";
@@ -88,7 +88,7 @@ function Page() {
             <div className="page-content bg-white">
 
                 <div className="page-content bg-white">
-                    <CarlistingBanner img={IMAGE.bnr1} title={'قوانین خرید'} />
+                    <CarListingBanner img={IMAGE.bnr1} title={'قوانین خرید'} />
                     <Container className="py-5">
                         <Row className="text-center mb-4">
                             <Col>

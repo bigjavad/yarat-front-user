@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import {Autoplay , Pagination , Navigation ,Parallax} from "swiper/modules";
 
 import Menu_2 from './Menu_2';
+import Link from "next/link";
 
 const home4Slider = [
     { img: IMAGE.home4mainSlider1 },
@@ -39,7 +40,7 @@ const Header2 = () => {
                         </div>
                         <div className="extra-nav">
                             <div className="extra-cell">
-                                <Link href="/" className="btn btn-primary light phone-no shadow-none effect-1"><span><i className="fas fa-phone-volume shake me-lg-3 me-0"></i>224 000 22 11 33</span></Link>
+                                <Link href="/" className="btn btn-primary light phone-no shadow-none effect-1"><span><i className="fas fa-phone-volume shake me-lg-3 me-0"></i>024-32385348</span></Link>
                                 <button onClick={() => { setSearch('On') }} id="quik-search-btn" type="button" className="search-btn site-button-link"><i className="fa fa-search"></i></button>
                             </div>
                         </div>

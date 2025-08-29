@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from 'react'
-import CarlistingBanner from "@/element/CarlistingBanner";
+import CarListingBanner from "@/element/car-listing-banner";
 import {IMAGE} from "@/constent/theme";
 import Link from "next/link";
 import CarOverview from "@/components/car/car-overview";
@@ -34,7 +34,7 @@ const CarSpacification = () => {
     return (
         <>
             <div className="page-content bg-white theme-rounded">
-                <CarlistingBanner img={banner} title={heading} />
+                <CarListingBanner img={banner} title={heading} />
 
                 <div className="car-details-info">
                     <div className="container">

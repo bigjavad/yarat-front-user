@@ -49,12 +49,12 @@ const Header = () => {
                             <div className="extra-nav">
                                 <div className="extra-cell">
                                     <Link
-                                        href="tel:224000221133"
+                                        href="tel:02432385348"
                                         className="btn btn-primary light phone-no shadow-none effect-1 focusBtn"
                                     >
                                         <span>
                                             <i className="fas fa-phone-volume shake"></i>
-                                            224 000 22 11 33
+                                            024-32385348
                                         </span>
                                     </Link>
                                 </div>

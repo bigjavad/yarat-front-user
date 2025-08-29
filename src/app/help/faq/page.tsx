@@ -1,6 +1,6 @@
 "use client"
 import React, {useState} from 'react';
-import CarlistingBanner from "@/element/CarlistingBanner";
+import CarListingBanner from "@/element/car-listing-banner";
 import {IMAGE} from "@/constent/theme";
 import ContectForm from "@/element/ContectForm";
 import {Accordion, Badge, Col, Container, Row} from "react-bootstrap";
@@ -85,7 +85,7 @@ function Page() {
     return (
         <div>
             <div className="page-content bg-white">
-                <CarlistingBanner img={IMAGE.bnr1} title={'سوالات متداول'} />
+                <CarListingBanner img={IMAGE.bnr1} title={'سوالات متداول'} />
 
                 <Container className="py-4">
                     <Row className="text-center mb-4">

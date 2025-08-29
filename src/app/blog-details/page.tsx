@@ -1,5 +1,5 @@
 import React from 'react'
-import CarlistingBanner from "@/element/CarlistingBanner";
+import CarListingBanner from "@/element/car-listing-banner";
 import {IMAGE} from "@/constent/theme";
 import Link from "next/link";
 import PageSider from "@/element/PageSider";
@@ -9,7 +9,7 @@ const BlogDetail = () => {
     return (
         <>
             <div className="page-content bg-white">
-                <CarlistingBanner img={IMAGE.bnr1} title={'Blog Details'} />
+                <CarListingBanner img={IMAGE.bnr1} title={'Blog Details'} />
                 <section className="content-inner">
                     <div className="container">
                         <div className="row">

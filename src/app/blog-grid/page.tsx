@@ -3,7 +3,7 @@ import React, { useRef, useState } from 'react'
 import ModalVideo from 'react-modal-video'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { IMAGE } from "@/constent/theme";
-import CarlistingBanner from "@/element/CarlistingBanner";
+import CarListingBanner from "@/element/car-listing-banner";
 import BlogDridCard from "@/element/BlogDridCard";
 import Link from "next/link";
 import Image from 'next/image';
@@ -31,7 +31,7 @@ const BlogGrid = () => {
             />
 
             <div className="page-content bg-white">
-                <CarlistingBanner img={IMAGE.bnr1} title={'Blog Grid'} />
+                <CarListingBanner img={IMAGE.bnr1} title={'Blog Grid'} />
 
                 <section className="content-inner">
                     <div className="container">
