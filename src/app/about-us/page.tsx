@@ -6,9 +6,6 @@ import {Swiper, SwiperSlide} from "swiper/react";
 import Link from "next/link";
 import ContectUs from "@/components/contect-us/ContectUs";
 
-import {Metadata} from "next";
-import Head from "next/head";
-
 const progressCard = [
     {
         icon:
@@ -93,13 +90,11 @@ const About = () => {
     }
     return (
         <>
-            <Head>
-                <title>
-                    درباره ما
-                </title>
-                <meta name="descripton"
-                      content=" یارات پلتفرم تولید باگی گروهی ۴، ۸ و ۱۲ نفره است. اینجا بهترین باگی هارو تولید می‌کنیم!"/>
-            </Head>
+            <title>
+                درباره ما
+            </title>
+            <meta name="descripton"
+                  content=" یارات پلتفرم تولید باگی گروهی ۴، ۸ و ۱۲ نفره است. اینجا بهترین باگی هارو تولید می‌کنیم!"/>
             <div className="page-content bg-white">
                 <CarListingBanner img={IMAGE.bnr1} title={'درباره یارات'}/>
                 {/* Content */}

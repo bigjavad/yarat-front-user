@@ -12,8 +12,6 @@ import Footer from "@/components/base/Footer";
 import Header from "@/components/base/Header";
 import {SnackbarProvider} from "notistack";
 import LoginModal from "@/components/modal/login-modal";
-import {Metadata} from "next";
-import Head from "next/head";
 import React from "react";
 
 
@@ -58,10 +56,8 @@ export default function RootLayout({
             className={`max-w-[1920px] mx-auto   ${bakh.variable}`}
             lang="fa" dir="rtl"
         >
-        <Head>
             <title>یارات پلتفرم تولید باگی</title>
             <meta name="description" content="یارات پلتفرم تولید باگ‌های گروهی ۴، ۸ و ۱۲ نفره است." />
-        </Head>
         {/*<NextTopLoader*/}
         {/*    color="#EE3131"*/}
         {/*    initialPosition={0.08}*/}
