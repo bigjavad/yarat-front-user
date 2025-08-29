@@ -81,8 +81,8 @@ const Homebanner = () => {
             <div className="col-lg-6 align-self-center">
                 <div className="banner-content">
                     <div className="trending-box">
-                        <span className="text-btn">TRENDING</span>
-                        2023 FORT MUSTANG
+                        <span className="text-btn">تجربه هیجان رانندگی</span>
+                        با یارات موتور
                     </div>
                     <h1 className="title">یارات موتور</h1>
                     <p>
@@ -101,9 +101,12 @@ const Homebanner = () => {
                     </div>
                     <div className="d-block mt-5 ">
                         <ul className="d-flex gap-5 mt-2">
-                            <li ><Link className="btn btn-sm btn-outline-primary "  href={'/car-listing?brand=hondo'}>باگی 4 نفره</Link></li>
-                            <li><Link className="btn btn-sm btn-outline-primary " href={'/car-listing?brand=fort'}>باگی 8 نفره</Link></li>
-                            <li><Link className="btn btn-sm btn-outline-primary " href={'/car-listing?brand=toyoto'}>باگی 12 نفره </Link></li>
+                            <li><Link className="btn btn-sm btn-outline-primary " href={'/car-listing?brand=hondo'}>باگی
+                                4 نفره</Link></li>
+                            <li><Link className="btn btn-sm btn-outline-primary " href={'/car-listing?brand=fort'}>باگی
+                                8 نفره</Link></li>
+                            <li><Link className="btn btn-sm btn-outline-primary " href={'/car-listing?brand=toyoto'}>باگی
+                                12 نفره </Link></li>
                         </ul>
                     </div>
                     <Image className="img1 move-1" src={IMAGE.patternImg} alt="" width={100} height={100}/>

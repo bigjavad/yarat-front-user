@@ -37,7 +37,7 @@ export default function Home() {
                         <div className="section-head space-lg text-center">
                             <h2 className="title">محصولات یارات</h2>
                             <p>
-                                 لیست کامل محصولات یارات را مشاهده کنید. هر محصول با جزئیات و
+                                لیست کامل محصولات یارات را مشاهده کنید. هر محصول با جزئیات و
                                 ویژگی‌های اختصاصی خود نمایش داده می‌شود تا انتخاب برای شما راحت‌تر شود.
                                 کیفیت، تنوع و کاربردی بودن محصولات یارات ما را از دیگران متمایز می‌کند.
                             </p>
@@ -48,18 +48,18 @@ export default function Home() {
                 <section className="content-inner-2">
                     <div className="container">
                         <div className="row features-box">
-                        <Bestcar  />
+                            <Bestcar/>
+                        </div>
                     </div>
-                  </div>
                 </section>
                 <section className="content-inner">
-                  <div className="container">
-                    <ContectUs />
-                  </div>
+                    <div className="container">
+                        <ContectUs/>
+                    </div>
                 </section>
             </div>
             <ModalVideo channel="youtube" autoplay
-                        isOpen={open} videoId="PkkV1vLHUvQ" onClose={() => setOpen(false)} />
+                        isOpen={open} videoId="PkkV1vLHUvQ" onClose={() => setOpen(false)}/>
         </>
     )
 }
