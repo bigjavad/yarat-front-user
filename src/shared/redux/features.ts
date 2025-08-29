@@ -1,5 +1,4 @@
-import {setCookie} from "undici-types";
-import {getCookie} from "cookies-next";
+import {getCookie, setCookie} from "cookies-next";
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {LoginDto} from "@/shared/model/dto/auth/login.dto";
 

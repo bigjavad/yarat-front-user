@@ -5961,10 +5961,10 @@ fieldset:disabled .wp-block-button__link {
     border-top-right-radius: calc(1rem - 1px);
 }
 
-.modal-header .btn-close {
-    padding: 0.5rem 0.5rem;
-    margin: -0.5rem -0.5rem -0.5rem auto;
-}
+/*.modal-header .btn-close {*/
+/*    padding: 0.5rem 0.5rem;*/
+/*    margin: -0.5rem -0.5rem -0.5rem auto;*/
+/*}*/
 
 .modal-title {
     margin-bottom: 0;

@@ -13,9 +13,8 @@ function Page() {
                     <div className="container">
                         <div className="section-head text-center wow fadeIn" data-wow-duration="2s"
                              data-wow-delay="0.2s">
-                            <h2 className="title">What peolpe are saying</h2>
-                            <p>There are many variations of passages of Lorem Ipsum typesetting industry has been the
-                                industrys standard dummy text ever since the been when an unknown printer.</p>
+                            <h2 className="title">در مورد ما چه می گویند</h2>
+                            <p>اگر شما یک طراح هستین و یا با طراحی های گرافیکی سروکار دارید به متن های برخورده اید که با نام لورم ایپسوم شناخته می‌شوند. لورم ایپسوم یا طرح‌نما (به انگلیسی: Lorem ipsum) متنی ساختگی و بدون معنی است که برای امتحان فونت و یا پر کردن فضا در یک طراحی گرافیکی و یا صنعت چاپ استفاده میشود. طراحان وب و گر</p>
                         </div>
                         <Testimonial/>
                     </div>

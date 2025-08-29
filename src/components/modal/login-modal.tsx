@@ -1,6 +1,6 @@
 'use client'
 import {useEffect, useState} from "react";
-import {useRouter} from "next/navigation"; // اصلاح شده
+import {useRouter} from "next/navigation";
 import {useFormik} from "formik";
 import {EN_LoginStateEnum} from "@/shared/enum/form/EN_LoginState.enum";
 import {LoginSchema} from "@/shared/validation/schema/login-schema";
@@ -71,104 +71,107 @@ const LoginModal = () => {
     }
 
     return (
-        <Modal show={show} onHide={handleClose} centered size="lg">
+        <Modal show={show} onHide={handleClose} centered size="md">
             <Modal.Header closeButton>
-                <Modal.Title>ورود به سیستم</Modal.Title>
+                <Modal.Title>ورود</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <div className="flex items-center justify-center gap-5 w-32 mx-auto mb-4">
-                    {/* لوگوهای شما */}
+                {/* لوگو */}
+                <div className="d-flex align-items-center justify-content-center gap-3 w-25 mx-auto mb-4">
+                    {/* جای لوگو */}
                 </div>
 
-                <div className="my-4 border-b text-center">
-                    <div className="leading-none px-2 inline-block text-sm text-gray-600 tracking-wide font-medium bg-white dark:bg-neutral-900 transform translate-y-1/2">
+                {/* جداکننده */}
+                <div className="my-4 border-bottom text-center position-relative">
+                    <span
+                        className="position-absolute px-2 bg-white text-muted small fw-medium"
+                        style={{top: "-12px", left: "50%", transform: "translateX(-50%)"}}
+                    >
                         ورود
-                    </div>
+                    </span>
                 </div>
 
-                <form className="grid grid-cols-1 gap-3">
-                    {
-                        loginState == EN_LoginStateEnum.LOGIN ?
-                            <div>
-                                <div className="grid sm:grid-cols-2 gap-2 mt-1">
-                                    <label className="block">
-                                        <span className="text-neutral-800 dark:text-neutral-200">
-                                            نام
-                                        </span>
-                                        <InputComponent
-                                            type="text"
-                                            name="firstname"
-                                            value={formik.values.firstname}
-                                            onChange={formik.handleChange}
-                                            placeholder="نام خود را وارد کنید"
-                                        />
-                                        {formik.errors.firstname && (formik.submitCount > 0 || formik.touched) && (
-                                            <ValidationErrorComponent msg={formik.errors.firstname}/>
-                                        )}
-                                    </label>
-                                    <label className="block">
-                                        <span className="text-neutral-800 dark:text-neutral-200">
-                                            نام خانوادگی
-                                        </span>
-                                        <InputComponent
-                                            type="text"
-                                            name="lastname"
-                                            value={formik.values.lastname}
-                                            onChange={formik.handleChange}
-                                            placeholder="نام خانوادگی خود را وارد کنید"
-                                        />
-                                        {formik.errors.lastname && (formik.submitCount > 0 || formik.touched) && (
-                                            <ValidationErrorComponent msg={formik.errors.lastname}/>
-                                        )}
-                                    </label>
-                                </div>
-                                <label className="block mt-3">
-                                    <span className="text-neutral-800 dark:text-neutral-200">
-                                        شماره تلفن
-                                    </span>
+                <form className="row g-3">
+                    {loginState === EN_LoginStateEnum.LOGIN ? (
+                        <>
+                            <div className="row g-2 mt-1">
+                                <div className="col-sm-6">
+                                    <label className="form-label">نام</label>
                                     <InputComponent
                                         type="text"
-                                        maxLength={11}
-                                        minLength={11}
-                                        name="phoneNumber"
-                                        value={formik.values.phoneNumber}
+                                        name="firstname"
+                                        value={formik.values.firstname}
                                         onChange={formik.handleChange}
-                                        placeholder="شماره تلفن همراه خود را وارد کنید"
-                                        className="mt-1"
+                                        placeholder="نام خود را وارد کنید"
+                                        className="form-control"
                                     />
-                                    {formik.errors.phoneNumber && (formik.submitCount > 0 || formik.touched) && (
-                                        <ValidationErrorComponent msg={formik.errors.phoneNumber}/>
+                                    {formik.errors.firstname && (formik.submitCount > 0 || formik.touched) && (
+                                        <ValidationErrorComponent msg={formik.errors.firstname}/>
                                     )}
-                                </label>
-                            </div> :
-                            <div className="w-full flex justify-center" dir="ltr">
-                                <div className="text-center mb-3">کد تأیید را وارد کنید</div>
-                                <OtpInput
-                                    value={formik.values.code}
-                                    onChange={(value: string) => formik.setFieldValue('code', value)}
-                                    numInputs={5}
-                                    renderSeparator={<span>-</span>}
-                                    renderInput={(props) => <input {...props} />}
-                                    inputStyle={{
-                                        width: '3rem',
-                                        height: '3rem',
-                                        margin: '0 0.5rem',
-                                        fontSize: '1.5rem',
-                                        borderRadius: '4px',
-                                        border: '1px solid #ccc',
-                                    }}
-                                />
+                                </div>
+                                <div className="col-sm-6">
+                                    <label className="form-label">نام خانوادگی</label>
+                                    <InputComponent
+                                        type="text"
+                                        name="lastname"
+                                        value={formik.values.lastname}
+                                        onChange={formik.handleChange}
+                                        placeholder="نام خانوادگی خود را وارد کنید"
+                                        className="form-control"
+                                    />
+                                    {formik.errors.lastname && (formik.submitCount > 0 || formik.touched) && (
+                                        <ValidationErrorComponent msg={formik.errors.lastname}/>
+                                    )}
+                                </div>
                             </div>
-                    }
 
-                    <button
-                        className="btn btn-primary w-100 mt-3"
-                        onClick={formik.submitForm}
-                        type="button"
-                        disabled={loginState == EN_LoginStateEnum.LOGIN ? !formik.isValid : formik.values.code.length !== 5}
-                    >
-                        {loginState === EN_LoginStateEnum.LOGIN ? 'ارسال کد تأیید' : 'تأیید و ورود'}
-                    </button>
+                            <div className="mt-3">
+                                <label className="form-label">شماره تلفن</label>
+                                <InputComponent
+                                    type="text"
+                                    maxLength={11}
+                                    minLength={11}
+                                    name="phoneNumber"
+                                    value={formik.values.phoneNumber}
+                                    onChange={formik.handleChange}
+                                    placeholder="شماره تلفن همراه خود را وارد کنید"
+                                    className="form-control"
+                                />
+                                {formik.errors.phoneNumber && (formik.submitCount > 0 || formik.touched) && (
+                                    <ValidationErrorComponent msg={formik.errors.phoneNumber}/>
+                                )}
+                            </div>
+                        </>
+                    ) : (
+                        <div className="w-100 text-center mt-5" dir="ltr">
+                            <div className="mb-3">کد تأیید را وارد کنید</div>
+                            <OtpInput
+                                value={formik.values.code}
+                                onChange={(value: string) => formik.setFieldValue('code', value)}
+                                numInputs={6}
+                                renderSeparator={<span>-</span>}
+                                renderInput={(props) =>
+                                    <input {...props} className="form-control d-inline-block text-center"/>}
+                                inputStyle={{
+                                    width: "100%",
+                                    height: "3rem",
+                                    margin: "0 0.5rem",
+                                    fontSize: "1.5rem",
+                                }}
+                            />
+                        </div>
+                    )}
+
+                    <div className="d-grid mt-5">
+                        <button
+                            className="btn btn-primary px-4 d-flex justify-content-center mx-auto"
+                            onClick={formik.submitForm}
+                            type="button"
+                            disabled={loginState === EN_LoginStateEnum.LOGIN ? !formik.isValid : formik.values.code.length !== 5}
+                        >
+                            {loginState === EN_LoginStateEnum.LOGIN ? 'ارسال کد تأیید' : 'تأیید و ورود'}
+                        </button>
+                    </div>
                 </form>
             </Modal.Body>
         </Modal>
