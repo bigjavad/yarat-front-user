@@ -47,7 +47,7 @@ const CarFuturSlide = () => {
                 {/*    </div>*/}
                 {/*</Swiper>*/}
                 <div className="">
-                    <Player  poster="/assets/img/etehadie.png">
+                    <Player  poster="/assets/images/gallery/2.webp">
                         <source src="/movie.mp4"/>
                     </Player>
                 </div>

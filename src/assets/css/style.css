@@ -18903,7 +18903,7 @@ ul a.rsswidget:hover {
 .about-bx1 .dlab-media {
     width: 50vw;
     float: inline-end;
-    border-radius: 0 100px 100px 0;
+    border-radius: 100px 0 0 100px;
     overflow: hidden;
     margin-inline-end: 50px;
     height: 100%;
@@ -21589,7 +21589,8 @@ ul a.rsswidget:hover {
     bottom: -135px;
     transform: scale(0.75);
     inset-inline-start: 0;
-    right: 115px
+    right: 115px;
+    z-index: -1;
 }
 
 .features-box .image-slider-box .img1 {
@@ -21996,12 +21997,14 @@ ul a.rsswidget:hover {
     height: 470px;
     object-fit: cover;
 }
-
+.z-1{
+    z-index: 1;
+}
 .call-to-action-bx .media-box .pt-img {
     position: absolute;
     top: 0;
     inset-inline-start: -8px;
-    z-index: 0;
+    z-index: 2;
 }
 
 .call-to-action-bx .media-box:after {
