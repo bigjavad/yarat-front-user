@@ -31,7 +31,6 @@ export const MenusItem = [
         menu: 'راهنما',
         subMenu: [
             { childe: 'قوانین خرید', link: '/help/purchase-rules' },
-            { childe: 'راهنمای خرید', link: '/help/how-to-buy' },
             { childe: 'سوالات متداول', link: '/help/faq' },
         ]
     },

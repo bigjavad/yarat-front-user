@@ -44,9 +44,7 @@ export const IMAGE = {
     galleryImg3: require('../assets/images/our-work/pic3.jpg'),
     galleryImg4: require('../assets/images/our-work/pic2.jpg'),
     galleryImg5: require('../assets/images/our-work/pic6.jpg'),
-    testimonialPic1: require('../assets/images/testimonials/pic1.jpg'),
-    testimonialPic2: require('../assets/images/testimonials/pic2.jpg'),
-    testimonialPic3: require('../assets/images/testimonials/pic3.jpg'),
+
     bannerImg1: require('../assets/images/banner/bnr4.jpg'),
     productGridPic1: require('../assets/images/product/grid/pic6.jpg'),
     bnr3: require('../assets/images/banner/bnr3.jpg'),
