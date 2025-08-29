@@ -121,7 +121,7 @@ const About = () => {
             <meta name="descripton"
                   content=" یارات پلتفرم تولید باگی گروهی ۴، ۸ و ۱۲ نفره است. اینجا بهترین باگی هارو تولید می‌کنیم!"/>
             <div className="page-content bg-white">
-                <CarListingBanner img={IMAGE.bnr1} title={'درباره یارات'}/>
+                <CarListingBanner img={'/assets/images/gallery/8.webp'} title={'درباره یارات'}/>
                 {/* Content */}
                 <section className="content-inner-2">
                     <div className="container">

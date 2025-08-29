@@ -11,14 +11,13 @@ const LetestCar = () => {
             <title>یارات محصولات ما</title>
             <meta name="description" content="یارات پلتفرم تولید باگ‌های گروهی ۴، ۸ و ۱۲ نفره است."/>
             <div className="page-content bg-white">
-                <LatestCarBanner image={'/assets/images/gallery/27.webp'} title={'محصولات ما'}/>
+                <LatestCarBanner img={'/assets/images/gallery/27.webp'} title={'محصولات ما'}/>
                 <section className="content-inner-2">
                     <div className="container">
                         <div className="row">
-                            <div className="col-xl-9 col-lg-8 col-md-7">
+                            <div className="col-12">
                                 <LatestCarSider/>
                             </div>
-                            <PopulerCars categery={'پر بازدید ترین ها'}/>
                         </div>
                     </div>
                 </section>

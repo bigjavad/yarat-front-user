@@ -46,8 +46,8 @@ const CarFuturSlide = () => {
                 {/*        <div className="swiper-pagination" ref={paginationRef}></div>*/}
                 {/*    </div>*/}
                 {/*</Swiper>*/}
-                <div className="">
-                    <Player  poster="/assets/images/gallery/2.webp">
+                <div className="rounded-1 overflow-hidden">
+                    <Player poster="/assets/images/gallery/2.webp">
                         <source src="/movie.mp4"/>
                     </Player>
                 </div>

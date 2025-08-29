@@ -7,7 +7,9 @@ let carList = [
             '/assets/images/gallery/1.webp',
             '/assets/images/gallery/2.webp'
         ], id: 1, description: "توضیحات"},
-    {title:"باگی چهار نفره",capacity:4,image:[IMAGE.dealPic2],id:2,description:"توضیحات"},
+    {title:"باگی چهار نفره",capacity:4,image:[
+            '/assets/images/gallery/6.webp',
+        ],id:2,description:"توضیحات"},
     {title:"باگی هشت نفره",capacity:8,image:[
             '/assets/images/gallery/80.webp',
             '/assets/images/gallery/81.webp'
@@ -26,7 +28,7 @@ const LatestCarSider = () => {
             <div className="row lightgallery">
                 {carList.map((item, index) => {
                     return (
-                        <div className="col-xl-4 col-lg-6 m-b30" key={index}>
+                        <div className="col-xl-3 col-lg-4 col-sm-6 m-b30" key={index}>
                             <div className="car-list-box box-sm">
                                 <div className="media-box">
                                     <img src={item.image[0]} alt={item.title} />
@@ -53,13 +55,6 @@ const LatestCarSider = () => {
                         </div>
                     )
                 })}
-                <nav aria-label="Blog Pagination">
-                    <ul className="pagination text-center m-b30">
-                        <li className="page-item"><Link className="page-link active" href="#">1</Link></li>
-                        {/*<li className="page-item"><Link className="page-link" href="#">2</Link></li>*/}
-                        {/*<li className="page-item"><Link className="page-link" href="#">3</Link></li>*/}
-                    </ul>
-                </nav>
             </div>
 
         </>

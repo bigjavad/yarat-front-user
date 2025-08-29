@@ -1,7 +1,7 @@
 import {snackbarService} from "@/shared/service-ui/snackbar.service";
 import {getCookie} from "cookies-next";
 
-const API_URL = 'http://localhost:3001'
+const API_URL = 'http://localhost:3000'
 
 const handlerExceptionError = async (response: any) => {
     switch (response.status) {

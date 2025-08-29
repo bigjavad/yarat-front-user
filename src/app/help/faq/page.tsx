@@ -68,7 +68,7 @@ function Page() {
                 <meta name="description" content="یارات پلتفرم تولید باگ‌های گروهی ۴، ۸ و ۱۲ نفره است."/>
             </Head>
             <div className="page-content bg-white">
-                <CarListingBanner img={IMAGE.bnr1} title={'سوالات متداول'}/>
+                <CarListingBanner img={'/assets/images/gallery/23.webp'} title={'سوالات متداول'}/>
 
                 <section className="content-inner overflow-hidden bg-gray">
                     <div className="container">
