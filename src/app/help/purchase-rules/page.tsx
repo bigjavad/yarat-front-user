@@ -1,10 +1,12 @@
 "use client"
-import React from 'react';
+import React, {useState} from 'react';
 import CarListingBanner from "@/element/car-listing-banner";
 import {IMAGE} from "@/constent/theme";
 import { Container, Row, Col, Card, Accordion, Badge } from 'react-bootstrap';
 import ContectUs from "@/components/contect-us/ContectUs";
 function Page() {
+    const [activeKey, setActiveKey] = useState('0');
+
     const rulesSections = [
         {
             title: "قوانین عمومی",
@@ -127,29 +129,33 @@ function Page() {
                             </Col>
                         </Row>
 
-                        {rulesSections.map((section, index) => (
-                            <Row key={index} className="mb-4">
-                                <Col>
-                                    <div className="d-flex align-items-center mb-3">
-                                        <span className="fs-6 me-3">{section.icon}</span>
-                                        <h2 className="fs-4 mb-0 text-primary">{section.title}</h2>
-                                    </div>
+                            {rulesSections.map((category, categoryIndex) => (
+                                    <Row key={categoryIndex} className="mb-4">
+                                        <Col lg={10} className="mx-auto">
+                                            <div className="d-flex align-items-center mb-3">
+                                                <span className="fs-5 me-2">{category.icon}</span>
+                                                <h2 className="h5 fw-semibold text-primary mb-0">{category.title}</h2>
+                                            </div>
 
-                                    <Accordion defaultActiveKey="0">
-                                        {section.items.map((item, itemIndex) => (
-                                            <Accordion.Item key={itemIndex} eventKey={itemIndex.toString()}>
-                                                <Accordion.Header>
-                                                    <strong>{item.question}</strong>
-                                                </Accordion.Header>
-                                                <Accordion.Body>
-                                                    <p className="mb-0">{item.answer}</p>
-                                                </Accordion.Body>
-                                            </Accordion.Item>
-                                        ))}
-                                    </Accordion>
-                                </Col>
-                            </Row>
-                        ))}
+                                            <Accordion activeKey={activeKey} onSelect={(key) => setActiveKey(key || '0')} flush>
+                                                {category.items.map((item, itemIndex) => {
+                                                    const eventKey = `${categoryIndex}-${itemIndex}`;
+                                                    return (
+                                                        <Accordion.Item key={eventKey} eventKey={eventKey}
+                                                                        className="border-0 mb-2">
+                                                            <Accordion.Header className="p-3 rounded-1 ">
+                                                                <span className="fw-medium text-dark">{item.question}</span>
+                                                            </Accordion.Header>
+                                                            <Accordion.Body className="p-3 text-primary lh-lg">
+                                                                {item.answer}
+                                                            </Accordion.Body>
+                                                        </Accordion.Item>
+                                                    );
+                                                })}
+                                            </Accordion>
+                                        </Col>
+                                    </Row>
+                                ))}
                     </Container>
                     <section className="content-inner">
                         <div className="container">

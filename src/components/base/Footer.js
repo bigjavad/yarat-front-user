@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from "next/link";
+import {IMAGE} from "@/constent/theme";
 
 
 const Footer = () => {
@@ -12,8 +13,7 @@ const Footer = () => {
                             <div className="col-lg-3 col-md-6 col-sm-12 ">
                                 <div className="widget widget_about">
                                     <div className="footer-logo">
-                                        logo
-                                        {/*<img src={IMAGE.logo1} alt="" />*/}
+                                        <img src={'/assets/images/logo-2.png'} alt="یارات لوگو"/>
                                     </div>
                                     <p>
                                         یارات موتورز، نامی نوظهور و پویا در صنعت خودروسازی ایران، با تمرکز بر طراحی و

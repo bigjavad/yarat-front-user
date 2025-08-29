@@ -25,8 +25,8 @@ const ContectUs = () => {
                 </div>
                 <div className="col-lg-6">
                     <div className="media-box">
-                        <img src={IMAGE.aboutPic5} className="main-img" alt=""/>
-                        <img src={IMAGE.patternImg3} className="pt-img move-1" alt=""/>
+                        <img src="/assets/images/about/contact.webp" className="main-img" alt="تماس با ما یارات موتور"/>
+                        <img src={'/assets/images/pattern/pattern7.png'} className="pt-img move-1" alt=""/>
                     </div>
                 </div>
             </div>

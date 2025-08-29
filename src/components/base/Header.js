@@ -29,7 +29,7 @@ const Header = () => {
                             <div className="logo-header mostion logo-dark">
                                 <Link href={'/'}>
                                     <Image
-                                        src={IMAGE.logo1}
+                                        src='/assets/images/logo.png'
                                         alt="Logo"
                                         width={150}
                                         height={50}
