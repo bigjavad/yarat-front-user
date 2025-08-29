@@ -10,11 +10,14 @@ import '../../node_modules/react-modal-video/scss/modal-video.scss'
 import ModalVideo from 'react-modal-video'
 
 
+
 export default function Home() {
     const [open, setOpen] = useState(false);
 
     return (
         <>
+                <title>یارات پلتفرم تولید باگی</title>
+                <meta name="description" content="یارات پلتفرم تولید باگ‌های گروهی ۴، ۸ و ۱۲ نفره است." />
             <div className="page-content bg-white">
                 <div className="banner-one">
                     <div className="row">
