@@ -9,7 +9,7 @@ const About = () => {
         <div className="row about-bx1">
             <div className="col-lg-5">
                 <div className="dlab-media">
-                    <img src={IMAGE.about1} alt=""/>
+                    <img src={'/assets/images/gallery/8.webp'} alt="باگی یارات موتورز"/>
                 </div>
             </div>
             <div className="col-lg-7 align-self-center">

@@ -10,9 +10,17 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 const slider = [
-    {imag1: '/images/deal/pic1.jpg'},
-    {imag1: '/images/deal/pic1.jpg'},
-    {imag1: '/images/deal/pic1.jpg'},
+    {imag1: '/assets/images/gallery/5.webp',
+        name:"باگی دو نفره"
+    },
+    {imag1: '/assets/images/gallery/15.webp',
+        name:"باگی دو نفره"},
+    {imag1: '/assets/images/gallery/24.webp',
+        name:"باگی دوازده نفره"},
+    {imag1: '/assets/images/gallery/88.webp',
+        name:"باگی دوازده نفره"},
+    {imag1: '/assets/images/gallery/92.webp',
+        name:"باگی دوازده نفره"},
 ];
 
 const Homeslide = (props) => {
@@ -28,7 +36,7 @@ const Homeslide = (props) => {
                     spaceBetween={30}
                     effect={"fade"}
                     speed={1500}
-                    modules={[EffectFade, Navigation, Pagination, Autoplay]}
+                    modules={[EffectFade,  Autoplay]}
                     autoplay={{delay: 1200}}
                     loop={true}
                     ref={swiperRef}
@@ -39,16 +47,16 @@ const Homeslide = (props) => {
                                 <div className="silder-content">
                                     <div className="inner-content">
                                         <div className="left">
-                                            <p className="car-type">SPORT CAR</p>
-                                            <p className="car-name slide-vertical">Porce 123 GT</p>
+                                            <p className="car-type">{slide.name}</p>
+                                            {/*<p className="car-name slide-vertical">Porce 123 GT</p>*/}
                                         </div>
-                                        <div className="right">
-                                            <p className="price-label">Starting at </p>
-                                            <p className="car-price">$ 20,500</p>
-                                        </div>
+                                        {/*<div className="right">*/}
+                                        {/*    <p className="price-label">Starting at </p>*/}
+                                        {/*    <p className="car-price">$ 20,500</p>*/}
+                                        {/*</div>*/}
                                     </div>
                                     <Link href="/car-listing" className="discover-link">
-                                        DISCOVER MORE
+                                       نمابش بیشتر
                                     </Link>
                                 </div>
                                 <div className="slider-img">
@@ -57,7 +65,7 @@ const Homeslide = (props) => {
                                         alt={`Slide ${index + 1}`}
                                         fill
                                         style={{objectFit: 'cover'}}
-                                        priority={index === 0} // اولویت برای اولین تصویر
+                                        priority={index === 0}
                                     />
                                 </div>
                             </div>

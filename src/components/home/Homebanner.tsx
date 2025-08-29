@@ -100,7 +100,9 @@ const Homebanner = () => {
                         </Link>
                     </div>
                     <div className="d-block mt-5 ">
-                        <ul className="d-flex gap-5 mt-2">
+                        <ul className="d-flex gap-3 mt-2">
+                            <li><Link className="btn btn-sm btn-outline-primary " href={'/car-listing?brand=hondo'}>باگی
+                                2</Link></li>
                             <li><Link className="btn btn-sm btn-outline-primary " href={'/car-listing?brand=hondo'}>باگی
                                 4 نفره</Link></li>
                             <li><Link className="btn btn-sm btn-outline-primary " href={'/car-listing?brand=fort'}>باگی

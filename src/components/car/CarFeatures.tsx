@@ -19,7 +19,7 @@ const CarFeatures = () => {
                             به بازارهای جهانی، قصد دارد نام ایران را به‌عنوان یک تولیدکننده خلاق و قابل‌اعتماد در این
                             حوزه معرفی کند.
                         </p>
-                        <Link href="/about-us" className="btn btn-primary effect-1"><span>محصولات</span></Link>
+                        <Link href="/car-listing" className="btn btn-primary effect-1"><span>محصولات</span></Link>
                     </div>
                 </div>
                 <CarFuturSlide/>
