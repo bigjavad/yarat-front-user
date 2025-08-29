@@ -1,5 +1,5 @@
 'use client'
-import {useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
 import {useRouter} from "next/navigation";
 import {useFormik} from "formik";
 import {EN_LoginStateEnum} from "@/shared/enum/form/EN_LoginState.enum";
@@ -13,6 +13,8 @@ import InputComponent from "@/shared/component/input.component";
 import OtpInput from 'react-otp-input';
 import ValidationErrorComponent from "@/shared/component/validationErrorComponent";
 import {store} from "@/shared/redux/store";
+import Link from "next/link";
+import Image from "next/image";
 
 const LoginModal = () => {
     const [show, setShow] = useState(false);
@@ -73,15 +75,21 @@ const LoginModal = () => {
     return (
         <Modal show={show} onHide={handleClose} centered size="md">
             <Modal.Header closeButton>
-                <Modal.Title>ورود</Modal.Title>
+                <Modal.Title>تماس با ما</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                {/* لوگو */}
                 <div className="d-flex align-items-center justify-content-center gap-3 w-25 mx-auto mb-4">
-                    {/* جای لوگو */}
+                    <div className="logo-header mostion logo-dark">
+                        <Link href={'/'}>
+                            <Image
+                                src='/assets/images/logo.png'
+                                alt="Logo"
+                                width={150}
+                                height={50}
+                            />
+                        </Link>
+                    </div>
                 </div>
-
-                {/* جداکننده */}
                 <div className="my-4 border-bottom text-center position-relative">
                     <span
                         className="position-absolute px-2 bg-white text-muted small fw-medium"
