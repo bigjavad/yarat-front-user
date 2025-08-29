@@ -1,7 +1,7 @@
 import React from 'react'
-import { IMAGE } from '../constent/theme'
-
+import { IMAGE } from '@/constent/theme'
 import { Form } from 'react-bootstrap'
+import Link from "next/link";
 
 const LatestCarBanner = (props) => {
     return (

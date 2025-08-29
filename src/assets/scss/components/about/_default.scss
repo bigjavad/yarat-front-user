@@ -1,6 +1,6 @@
 .move-1{
 	-webkit-animation: move1 5s infinite;
-	animation: move1 5s infinite; 
+	animation: move1 5s infinite;
 }
 .move-2{
 	-webkit-animation: move2 5s infinite;
@@ -12,62 +12,62 @@
 }
 @-webkit-keyframes move1 {
   0% {
-	-webkit-transform: rotate(-1deg) translate(-2px, -2px);
-	transform: rotate(-1deg) translate(-2px, -2px); 
+	-webkit-transform: rotate(-1deg) translate(calc(-2px * var(--translate-x)), -2px);
+	transform: rotate(-1deg) translate(calc(-2px * var(--translate-x)), -2px);
 	}
   50% {
-	-webkit-transform: rotate(1deg) translate(2px, 2px);
-	transform: rotate(1deg) translate(2px, 2px); 
+	-webkit-transform: rotate(1deg) translate(calc(2px * var(--translate-x)), 2px);
+	transform: rotate(1deg) translate(calc(2px * var(--translate-x)), 2px);
 	}
   100% {
-	-webkit-transform: rotate(-1deg) translate(-2px, -2px);
-	transform: rotate(-1deg) translate(-2px, -2px); 
-		} 
+	-webkit-transform: rotate(-1deg) translate(calc(-2px * var(--translate-x)), -2px);
+	transform: rotate(-1deg) translate(calc(-2px * var(--translate-x)), -2px);
+		}
 }
 @keyframes move1 {
   0% {
-	-webkit-transform: rotate(-1deg) translate(-2px, -2px);
-	transform: rotate(-1deg) translate(-2px, -2px);
+	-webkit-transform: rotate(-1deg) translate(calc(-2px * var(--translate-x)), -2px);
+	transform: rotate(-1deg) translate(calc(-2px * var(--translate-x)), -2px);
 	}
   50% {
-	-webkit-transform: rotate(1deg) translate(2px, 2px);
-	transform: rotate(1deg) translate(2px, 2px); }
+	-webkit-transform: rotate(1deg) translate(calc(2px * var(--translate-x)), 2px);
+	transform: rotate(1deg) translate(calc(2px * var(--translate-x)), 2px); }
   100% {
-	-webkit-transform: rotate(-1deg) translate(-2px, -2px);
-	transform: rotate(-1deg) translate(-2px, -2px); } 
+	-webkit-transform: rotate(-1deg) translate(calc(-2px * var(--translate-x)), -2px);
+	transform: rotate(-1deg) translate(calc(-2px * var(--translate-x)), -2px); }
 }
 
 @-webkit-keyframes move2 {
   0% {
-	-webkit-transform: rotate(1deg) translate(2px, 2px);
-	transform: rotate(1deg) translate(2px, 2px); 
+	-webkit-transform: rotate(1deg) translate(calc(2px * var(--translate-x)), 2px);
+	transform: rotate(1deg) translate(calc(2px * var(--translate-x)), 2px);
 	}
   50% {
-	-webkit-transform: rotate(-1deg) translate(-2px, -2px);
-	transform: rotate(-1deg) translate(-2px, -2px); 
+	-webkit-transform: rotate(-1deg) translate(calc(-2px * var(--translate-x)), -2px);
+	transform: rotate(-1deg) translate(calc(-2px * var(--translate-x)), -2px);
 	}
   100% {
-	-webkit-transform: rotate(1deg) translate(2px, 2px);
-	transform: rotate(1deg) translate(2px, 2px); 
-		} 
+	-webkit-transform: rotate(1deg) translate(calc(2px * var(--translate-x)), 2px);
+	transform: rotate(1deg) translate(calc(2px * var(--translate-x)), 2px);
+		}
 }
 @-webkit-keyframes move3 {
 	0% {
-		transform: translate(0, 0);
+		transform: translate(calc(0 * var(--translate-x)), 0);
 	}
 	20% {
-		transform: translate(5px, 0);
+		transform: translate(calc(5px * var(--translate-x)), 0);
 	}
 	40% {
-		transform: translate(5px, 5px);
+		transform: translate(calc(5px * var(--translate-x)), 5px);
 	}
 	65% {
-		transform: translate(0, 5px);
+		transform: translate(calc(0 * var(--translate-x)), 5px);
 	}
 	65% {
-		transform: translate(5px, 0);
+		transform: translate(calc(5px * var(--translate-x)), 0);
 	}
 	100% {
-		transform: translate(0, 0);
-	} 
+		transform: translate(calc(0 * var(--translate-x)), 0);
+	}
 }

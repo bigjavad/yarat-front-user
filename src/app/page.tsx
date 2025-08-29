@@ -1,16 +1,18 @@
 "use client"
 import React, {useState} from 'react'
-import Homebanner from '../components/Homebanner'
-import About from '../components/About'
-import CarFeatures from '../components/CarFeatures'
+import Homebanner from '../components/home/Homebanner'
+import About from '../components/about/About'
+import CarFeatures from '../components/car/CarFeatures'
 import TopDeal from '../components/TopDeal'
-import Bestcar from '../components/Bestcar'
-import ContectUs from '../components/ContectUs'
+import Bestcar from '../components/car/Bestcar'
+import ContectUs from '../components/contect-us/ContectUs'
 import '../../node_modules/react-modal-video/scss/modal-video.scss'
 import ModalVideo from 'react-modal-video'
 
 
 export default function Home() {
+    const [open, setOpen] = useState(false);
+
     return (
         <>
             <div className="page-content bg-white">
@@ -53,8 +55,8 @@ export default function Home() {
                   </div>
                 </section>
             </div>
-            {/*<ModalVideo channel="youtube" autoplay*/}
-            {/*            isOpen={open} videoId="PkkV1vLHUvQ" onClose={() => setOpen(false)} />*/}
+            <ModalVideo channel="youtube" autoplay
+                        isOpen={open} videoId="PkkV1vLHUvQ" onClose={() => setOpen(false)} />
         </>
     )
 }

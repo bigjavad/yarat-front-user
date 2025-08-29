@@ -1,6 +1,6 @@
 export const REST_CONST={
-    SERVICES:"/services/",
-    POST:{
-        PREGNANCY:"/post/pregnancy/"
-    }
+    AUTH:{
+        LOGIN:`/auth/login`,
+        VALID_SECURITY_CODE:'/auth/register'
+    },
 }

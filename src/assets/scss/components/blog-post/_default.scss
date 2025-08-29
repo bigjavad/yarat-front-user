@@ -92,11 +92,11 @@
 	font-size: 30px;
 	margin: 0 auto;
    background-color: $white;
-    transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
+    transform: translate(calc(-50% * var(--translate-x)), -50%);
+    -moz-transform: translate(calc(-50% * var(--translate-x)), -50%);
+    -webkit-transform: translate(calc(-50% * var(--translate-x)), -50%);
+    -ms-transform: translate(calc(-50% * var(--translate-x)), -50%);
+    -o-transform: translate(calc(-50% * var(--translate-x)), -50%);
     -webkit-transition: all 1s;
     -ms-transition: all 1s;
     transition: all 1s;

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { IMAGE } from '../constent/theme'
+import { IMAGE } from '@/constent/theme'
 ;
 
 

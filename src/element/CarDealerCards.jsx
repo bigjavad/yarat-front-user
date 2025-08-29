@@ -1,5 +1,5 @@
 import React from 'react'
-import { IMAGE } from '../constent/theme'
+import { IMAGE } from '@/constent/theme'
 
 
 

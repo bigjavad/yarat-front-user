@@ -41,7 +41,7 @@
 		font-weight: 800;
 		opacity: 0.05;
 		z-index:-1;
-		transform: translate(-50%,-50%);
+		transform: translate(calc(-50% * var(--translate-x)), -50%);
 		inset-inline-start: 50%;
 		top: 50%;
 		font-family: var(--font-family-title);

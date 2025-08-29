@@ -1,3 +1,4 @@
+'use client'
 import './globals.css';
 import localFont from 'next/font/local';
 import '../assets/vendor/swiper/swiper-bundle.min.css'
@@ -7,8 +8,10 @@ import 'lightgallery/css/lightgallery.css';
 import 'lightgallery/css/lg-zoom.css';
 import 'lightgallery/css/lg-thumbnail.css';
 import '../assets/css/style.css'
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
+import Footer from "@/components/base/Footer";
+import Header from "@/components/base/Header";
+import {SnackbarProvider} from "notistack";
+import LoginModal from "@/components/modal/login-modal";
 
 const avinyFont = localFont({
     src: [
@@ -60,28 +63,29 @@ export default function RootLayout({
         <html
             className={`max-w-[1920px] mx-auto ${avinyFont.variable} ${bakh.variable}`}
             lang="fa" dir="rtl"
-         >
-  {/*      <NextTopLoader*/}
-  {/*          color="#2299DD"*/}
-  {/*          initialPosition={0.08}*/}
-  {/*          crawlSpeed={200}*/}
-  {/*          height={3}*/}
-  {/*          crawl={true}*/}
-  {/*          showSpinner={true}*/}
-  {/*          easing="ease"*/}
-  {/*          speed={200}*/}
-  {/*          shadow="0 0 10px #2299DD,0 0 5px #2299DD"*/}
-  {/*          template='<div class="bar" role="bar"><div class="peg"></div></div>*/}
-  {/*<div class="spinner" role="spinner"><div class="spinner-icon"></div></div>'*/}
-  {/*          zIndex={1600}*/}
-  {/*          showAtBottom={false}*/}
-  {/*      />*/}
+        >
+        {/*<NextTopLoader*/}
+        {/*    color="#EE3131"*/}
+        {/*    initialPosition={0.08}*/}
+        {/*    crawlSpeed={200}*/}
+        {/*    height={3}*/}
+        {/*    crawl={true}*/}
+        {/*    showSpinner={false}*/}
+        {/*    easing="ease"*/}
+        {/*    speed={200}*/}
+        {/*    shadow="0 0 10px #EE3131,0 0 5px #EE3131"*/}
+        {/*    zIndex={1600}*/}
+        {/*    showAtBottom={false}*/}
+        {/*/>*/}
         <body suppressHydrationWarning={true}>
-        <Header />
-        {/*<HeaderComponent/>*/}
-        <article className="max-w-[1920px] mx-auto">{children}</article>
-        {/*<FooterComponent/>*/}
-        <Footer/>
+        <SnackbarProvider
+            maxSnack={3}
+            autoHideDuration={3000}
+            anchorOrigin={{horizontal: 'right', vertical: 'top'}}>
+            <Header/>
+            <article className="max-w-[1920px] mx-auto">{children}</article>
+            <Footer/>
+        </SnackbarProvider>
         </body>
         </html>
     );

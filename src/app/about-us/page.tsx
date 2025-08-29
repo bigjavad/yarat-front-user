@@ -4,7 +4,7 @@ import {IMAGE} from "@/constent/theme";
 import CarlistingBanner from "@/element/CarlistingBanner";
 import {Swiper, SwiperSlide} from "swiper/react";
 import Link from "next/link";
-import ContectUs from "@/components/ContectUs";
+import ContectUs from "@/components/contect-us/ContectUs";
 
 
 

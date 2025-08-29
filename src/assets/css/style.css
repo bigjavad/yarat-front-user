@@ -5883,7 +5883,7 @@ fieldset:disabled .wp-block-button__link {
 
 .modal.fade .modal-dialog {
     transition: transform 0.3s ease-out;
-    transform: translate(0, -50px);
+    transform: translate(calc(0 * var(--translate-x)), -50px);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -7168,7 +7168,7 @@ fieldset:disabled .wp-block-button__link {
 }
 
 .translate-middle {
-    transform: translate(-50%, -50%) !important;
+    transform: translate(calc(-50% * var(--translate-x)), -50%) !important;
 }
 
 .translate-middle-x {
@@ -15448,10 +15448,10 @@ button:focus {
     margin: 0;
     position: absolute;
     top: 50%;
-    transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
+    transform: translate(calc(-50% * var(--translate-x)), -50%);
+    -o-transform: translate(calc(-50% * var(--translate-x)), -50%);
+    -moz-transform: translate(calc(-50% * var(--translate-x)), -50%);
+    -webkit-transform: translate(calc(-50% * var(--translate-x)), -50%);
     width: 100%;
     padding: 0 10px;
 }
@@ -15463,10 +15463,10 @@ button:focus {
     margin: 0;
     position: absolute;
     top: 50%;
-    transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
+    transform: translate(calc(-50% * var(--translate-x)), -50%);
+    -o-transform: translate(calc(-50% * var(--translate-x)), -50%);
+    -moz-transform: translate(calc(-50% * var(--translate-x)), -50%);
+    -webkit-transform: translate(calc(-50% * var(--translate-x)), -50%);
     width: 100%;
     padding: 0 10px;
 }
@@ -17275,7 +17275,7 @@ ul.grid-2 li {
     position: absolute;
     top: 50%;
     inset-inline-start: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(calc(-50% * var(--translate-x)), -50%);
     text-align: center;
 }
 
@@ -18376,11 +18376,11 @@ ul a.rsswidget:hover {
     -webkit-transition: all 0.8s;
     -ms-transition: all 0.8s;
     transition: all 0.8s;
-    transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
+    transform: translate(calc(-50% * var(--translate-x)), -50%);
+    -moz-transform: translate(calc(-50% * var(--translate-x)), -50%);
+    -webkit-transform: translate(calc(-50% * var(--translate-x)), -50%);
+    -ms-transform: translate(calc(-50% * var(--translate-x)), -50%);
+    -o-transform: translate(calc(-50% * var(--translate-x)), -50%);
 }
 
 @media only screen and (max-width: 1280px) {
@@ -18753,16 +18753,16 @@ ul a.rsswidget:hover {
         transform: translate(0);
     }
     25% {
-        -webkit-transform: translate(10px, 10px);
-        transform: translate(10px, 10px);
+        -webkit-transform: translate(calc(10px * var(--translate-x)), 10px);
+        transform: translate(calc(10px * var(--translate-x)), 10px);
     }
     50% {
-        -webkit-transform: translate(5px, 5px);
-        transform: translate(5px, 5px);
+        -webkit-transform: translate(calc(5px * var(--translate-x)), 5px);
+        transform: translate(calc(5px * var(--translate-x)), 5px);
     }
     75% {
-        -webkit-transform: translate(10px, -5px);
-        transform: translate(10px, -5px);
+        -webkit-transform: translate(calc(10px * var(--translate-x)), -5px);
+        transform: translate(calc(10px * var(--translate-x)), -5px);
     }
     to {
         -webkit-transform: translate(0);
@@ -18835,67 +18835,67 @@ ul a.rsswidget:hover {
 
 @-webkit-keyframes move1 {
     0% {
-        -webkit-transform: rotate(-1deg) translate(-2px, -2px);
-        transform: rotate(-1deg) translate(-2px, -2px);
+        -webkit-transform: rotate(-1deg) translate(calc(-2px * var(--translate-x)), -2px);
+        transform: rotate(-1deg) translate(calc(-2px * var(--translate-x)), -2px);
     }
     50% {
-        -webkit-transform: rotate(1deg) translate(2px, 2px);
-        transform: rotate(1deg) translate(2px, 2px);
+        -webkit-transform: rotate(1deg) translate(calc(2px * var(--translate-x)), 2px);
+        transform: rotate(1deg) translate(calc(2px * var(--translate-x)), 2px);
     }
     100% {
-        -webkit-transform: rotate(-1deg) translate(-2px, -2px);
-        transform: rotate(-1deg) translate(-2px, -2px);
+        -webkit-transform: rotate(-1deg) translate(calc(-2px * var(--translate-x)), -2px);
+        transform: rotate(-1deg) translate(calc(-2px * var(--translate-x)), -2px);
     }
 }
 
 @keyframes move1 {
     0% {
-        -webkit-transform: rotate(-1deg) translate(-2px, -2px);
-        transform: rotate(-1deg) translate(-2px, -2px);
+        -webkit-transform: rotate(-1deg) translate(calc(-2px * var(--translate-x)), -2px);
+        transform: rotate(-1deg) translate(calc(-2px * var(--translate-x)), -2px);
     }
     50% {
-        -webkit-transform: rotate(1deg) translate(2px, 2px);
-        transform: rotate(1deg) translate(2px, 2px);
+        -webkit-transform: rotate(1deg) translate(calc(2px * var(--translate-x)), 2px);
+        transform: rotate(1deg) translate(calc(2px * var(--translate-x)), 2px);
     }
     100% {
-        -webkit-transform: rotate(-1deg) translate(-2px, -2px);
-        transform: rotate(-1deg) translate(-2px, -2px);
+        -webkit-transform: rotate(-1deg) translate(calc(-2px * var(--translate-x)), -2px);
+        transform: rotate(-1deg) translate(calc(-2px * var(--translate-x)), -2px);
     }
 }
 
 @-webkit-keyframes move2 {
     0% {
-        -webkit-transform: rotate(1deg) translate(2px, 2px);
-        transform: rotate(1deg) translate(2px, 2px);
+        -webkit-transform: rotate(1deg) translate(calc(2px * var(--translate-x)), 2px);
+        transform: rotate(1deg) translate(calc(2px * var(--translate-x)), 2px);
     }
     50% {
-        -webkit-transform: rotate(-1deg) translate(-2px, -2px);
-        transform: rotate(-1deg) translate(-2px, -2px);
+        -webkit-transform: rotate(-1deg) translate(calc(-2px * var(--translate-x)), -2px);
+        transform: rotate(-1deg) translate(calc(-2px * var(--translate-x)), -2px);
     }
     100% {
-        -webkit-transform: rotate(1deg) translate(2px, 2px);
-        transform: rotate(1deg) translate(2px, 2px);
+        -webkit-transform: rotate(1deg) translate(calc(2px * var(--translate-x)), 2px);
+        transform: rotate(1deg) translate(calc(2px * var(--translate-x)), 2px);
     }
 }
 
 @-webkit-keyframes move3 {
     0% {
-        transform: translate(0, 0);
+        transform: translate(calc(0 * var(--translate-x)), 0);
     }
     20% {
-        transform: translate(5px, 0);
+        transform: translate(calc(5px * var(--translate-x)), 0);
     }
     40% {
-        transform: translate(5px, 5px);
+        transform: translate(calc(5px * var(--translate-x)), 5px);
     }
     65% {
-        transform: translate(0, 5px);
+        transform: translate(calc(0 * var(--translate-x)), 5px);
     }
     65% {
-        transform: translate(5px, 0);
+        transform: translate(calc(5px * var(--translate-x)), 0);
     }
     100% {
-        transform: translate(0, 0);
+        transform: translate(calc(0 * var(--translate-x)), 0);
     }
 }
 
@@ -20301,8 +20301,8 @@ ul a.rsswidget:hover {
     height: 0;
     border-radius: 50%;
     transition: width .4s ease-in-out, height .4s ease-in-out;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(calc(-50% * var(--translate-x)), -50%);
+    transform: translate(calc(-50% * var(--translate-x)), -50%);
     z-index: -1;
 }
 
@@ -20679,11 +20679,11 @@ ul a.rsswidget:hover {
     font-size: 30px;
     margin: 0 auto;
     background-color: #fff;
-    transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
+    transform: translate(calc(-50% * var(--translate-x)), -50%);
+    -moz-transform: translate(calc(-50% * var(--translate-x)), -50%);
+    -webkit-transform: translate(calc(-50% * var(--translate-x)), -50%);
+    -ms-transform: translate(calc(-50% * var(--translate-x)), -50%);
+    -o-transform: translate(calc(-50% * var(--translate-x)), -50%);
     -webkit-transition: all 1s;
     -ms-transition: all 1s;
     transition: all 1s;
@@ -21091,7 +21091,7 @@ ul a.rsswidget:hover {
 .banner-slider {
     width: 100%;
     inset-inline-end: 0;
-    border-radius: 0 0 0 100px;
+    border-end-start-radius: 100px;
     overflow: hidden;
 }
 
@@ -22215,25 +22215,25 @@ ul a.rsswidget:hover {
 .map-bx-wraper .shop-location.location1 {
     top: 14%;
     inset-inline-start: 10%;
-    transform: translate(-10%, -14%);
+    transform: translate(calc(-10% * var(--translate-x)), -14%);
 }
 
 .map-bx-wraper .shop-location.location2 {
     top: 35%;
     inset-inline-start: 50%;
-    transform: translate(-50%, -35%);
+    transform: translate(calc(-50% * var(--translate-x)), -35%);
 }
 
 .map-bx-wraper .shop-location.location3 {
     top: 14%;
     inset-inline-end: 10%;
-    transform: translate(-10%, -14%) scale(1.2);
+    transform: translate(calc(-10% * var(--translate-x)), -14%) scale(1.2);
 }
 
 .map-bx-wraper .shop-location.location4 {
     bottom: 14%;
     inset-inline-start: 60%;
-    transform: translate(-60%, -14%) scale(0.6);
+    transform: translate(calc(-60% * var(--translate-x)), -14%) scale(0.6);
 }
 
 @media only screen and (max-width: 991px) {
@@ -23461,7 +23461,7 @@ ol.commentlist li .description p {
     position: absolute;
     top: 50%;
     inset-inline-start: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(calc(-50% * var(--translate-x)), -50%);
     z-index: 999;
     background-color: rgba(255, 255, 255, 0.8);
     height: 40px;
@@ -23493,7 +23493,7 @@ ol.commentlist li .description p {
     width: 350px;
     top: 50%;
     inset-inline-start: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(calc(-50% * var(--translate-x)), -50%);
 }
 
 .creative-banner-one .swiper-button-arrow .swiper-button-next:before,
@@ -23540,7 +23540,7 @@ ol.commentlist li .description p {
     .creative-banner-one .swiper-button-arrow {
         inset-inline-start: 20px;
         width: 250px;
-        transform: translate(20px, -50%);
+        transform: translate(calc(20px * var(--translate-x)), -50%);
     }
 
     .creative-banner-one .swiper-button-arrow .swiper-button-next:before,
@@ -23681,7 +23681,7 @@ ol.commentlist li .description p {
     inset-inline-end: 100px;
     z-index: 10;
     top: 50%;
-    transform: translate(-100px, -50%) !important;
+    transform: translate(calc(-100px * var(--translate-x)), -50%) !important;
 }
 
 @media only screen and (max-width: 575px) {
@@ -26287,7 +26287,7 @@ pre {
     font-weight: 800;
     opacity: 0.05;
     z-index: -1;
-    transform: translate(-50%, -50%);
+    transform: translate(calc(-50% * var(--translate-x)), -50%);
     inset-inline-start: 50%;
     top: 50%;
     font-family: var(--font-family-title);
@@ -26576,7 +26576,7 @@ pre {
     position: absolute;
     inset-inline-end: 0%;
     top: 50% !important;
-    transform: translate(-10%, -50%);
+    transform: translate(calc(-10% * var(--translate-x)), -50%);
     display: flex;
     flex-direction: column;
     align-items: end;
@@ -29198,7 +29198,7 @@ pre {
     width: 170px;
     height: 130px;
     top: 50%;
-    transform: translate(-25%, -50%);
+    transform: translate(calc(-25% * var(--translate-x)), -50%);
     inset-inline-end: 25%;
     z-index: -1;
 }
@@ -29229,7 +29229,7 @@ pre {
         width: 100px;
         height: 80px;
         top: 40%;
-        transform: translate(-25%, -40%);
+        transform: translate(calc(-25% * var(--translate-x)), -40%);
     }
 
     .square-bx:before {

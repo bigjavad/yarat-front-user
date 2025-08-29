@@ -27,7 +27,7 @@
 				position: absolute;
 				top: 50%;
 				inset-inline-start: 50%;
-				transform: translate(-50%,-50%);
+				transform: translate(calc(-50% * var(--translate-x)), -50%);
 				z-index: 999;
 				background-color: rgba(255,255,255,.8);
 				height: 40px;
@@ -56,7 +56,7 @@
 		width: 350px;
 		top: 50%;
 		inset-inline-start: 50%;
-		transform: translate(-50%,-50%);
+		transform: translate(calc(-50% * var(--translate-x)), -50%);
 		.swiper-button-next,
 		.swiper-button-prev{
 			&:before{
@@ -95,7 +95,7 @@
 		@include respond ('phone-land'){
 			inset-inline-start: 20px;
 			width:250px;
-			transform: translate(20px,-50%);
+			transform: translate(calc(20px * var(--translate-x)), -50%);
 			.swiper-button-next,
 			.swiper-button-prev{
 				&:before{
@@ -214,7 +214,7 @@
 		inset-inline-end: 100px;
 		z-index: 10;
 		top: 50%;
-		transform: translate(-100px,-50%)!important;
+		transform: translate(calc(-100px * var(--translate-x)), -50%)!important;
 		@include respond ('phone'){
 			display:none;
 		}

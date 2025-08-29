@@ -1,10 +1,12 @@
+"use client"
 import React from 'react';
-import { IMAGE } from '../constent/theme'
+import { IMAGE } from '@/constent/theme'
 
 import { useState } from 'react';
 import LightGallery from 'lightgallery/react';
 import lgThumbnail from 'lightgallery/plugins/thumbnail';
 import lgZoom from 'lightgallery/plugins/zoom';
+import Link from "next/link";
 
 
 
@@ -49,15 +51,15 @@ const Ourproject = () => {
                             ${addactive === undefined ? 'active' : false}
                             ${addactive === 'all' ? 'active' : false}`}>
                                 <input type="radio" />
-                                <Link className="site-button-secondry wow fadeInUp"><span>Show All</span></Link> </li>
+                                <Link href={'#'} className="site-button-secondry wow fadeInUp" ><span>Show All</span></Link> </li>
                             <li onClick={() => gelleryfilterBtn('brakes')} className={`btn ${addactive === 'brakes' ? 'active' : false}`}>
-                                <Link className="site-button-secondry wow fadeInUp"><span>Brakes</span></Link> </li>
+                                <Link href={'#'} className="site-button-secondry wow fadeInUp"><span>Brakes</span></Link> </li>
                             <li onClick={() => gelleryfilterBtn('suspansiors')} className={`btn ${addactive === 'suspansiors' ? 'active' : false}`}>
-                                <Link className="site-button-secondry wow fadeInUp"><span>Suspension</span></Link> </li>
+                                <Link href={'#'} className="site-button-secondry wow fadeInUp"><span>Suspension</span></Link> </li>
                             <li onClick={() => gelleryfilterBtn('wheels')} className={`btn ${addactive === 'wheels' ? 'active' : false}`}>
-                                <Link className="site-button-secondry wow fadeInUp"><span>Wheels</span></Link> </li>
+                                <Link href={'#'} className="site-button-secondry wow fadeInUp"><span>Wheels</span></Link> </li>
                             <li onClick={() => gelleryfilterBtn('steering')} className={`btn ${addactive === 'steering' ? 'active' : false}`}>
-                                <Link className="site-button-secondry wow fadeInUp"><span>Steering</span></Link> </li>
+                                <Link href={'#'} className="site-button-secondry wow fadeInUp"><span>Steering</span></Link> </li>
                         </ul>
                     </div>
                     <div className="masonaryContainer">
@@ -72,7 +74,7 @@ const Ourproject = () => {
                                             <li className="office card-container">
                                                 <div className="dlab-box dlab-gallery-box">
                                                     <div className="dlab-media dlab-img-overlay1 dlab-img-effect zoom-slow dlab-img-effect zoom">
-                                                        <img src={image.img} alt="" />
+                                                        <img src={image.img} alt={image.categery} />
                                                         <div className="overlay-bx">
                                                             <div className="overlay-icon">
                                                                 {/* <i className="fa fa-link icon-bx-xs check-km"></i> */}

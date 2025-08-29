@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Pagination from './Pagination';
 ;
-import { IMAGE } from '../constent/theme';
+import { IMAGE } from '@/constent/theme';
 import { Dropdown } from 'react-bootstrap';
 
 

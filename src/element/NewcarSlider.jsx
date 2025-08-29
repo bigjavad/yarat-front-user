@@ -1,5 +1,5 @@
 import React from 'react'
-import { IMAGE } from '../constent/theme'
+import { IMAGE } from '@/constent/theme'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 import {Autoplay , EffectFade,Pagination , Navigation ,Parallax} from "swiper/modules";

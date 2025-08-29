@@ -9,7 +9,7 @@ import 'lightgallery/css/lightgallery.css';
 import 'lightgallery/css/lg-zoom.css';
 import 'lightgallery/css/lg-thumbnail.css';
 
-import { IMAGE } from '../constent/theme'
+import { IMAGE } from '@/constent/theme'
 import Link from "next/link";
 
 

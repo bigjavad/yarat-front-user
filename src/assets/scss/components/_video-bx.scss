@@ -116,7 +116,7 @@
 			position: absolute;
 			top: 50%;
 			inset-inline-start: 50%;
-			transform: translate(-50%, -50%);
+			transform: translate(calc(-50% * var(--translate-x)), -50%);
 			text-align: center;
 			&.sm{
 				.popup-youtube{

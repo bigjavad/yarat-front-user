@@ -1,5 +1,5 @@
 //MEDIA QUERY MANAGER
-// 0 - 500: Phone 
+// 0 - 500: Phone
 // 500 - 900: Tablet portrait
 // 900 - 1200: Tablet landscape
 // 1200 - 1800: Normal styles
@@ -100,11 +100,11 @@
 	transition: all 0.2s;
 }
 @mixin translateZ{
-	transform:translate(-50%, -50%);
-	-moz-transform:translate(-50%, -50%);
-	-webkit-transform:translate(-50%, -50%);
-	-ms-transform:translate(-50%, -50%);
-	-o-transform:translate(-50%, -50%);
+	transform:translate(calc(-50% * var(--translate-x)), -50%);
+	-moz-transform:translate(calc(-50% * var(--translate-x)), -50%);
+	-webkit-transform:translate(calc(-50% * var(--translate-x)), -50%);
+	-ms-transform:translate(calc(-50% * var(--translate-x)), -50%);
+	-o-transform:translate(calc(-50% * var(--translate-x)), -50%);
 }
 
 @mixin transformScale{

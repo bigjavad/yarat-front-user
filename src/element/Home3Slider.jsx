@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { IMAGE } from '../constent/theme'
+import { IMAGE } from '@/constent/theme'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import {Autoplay , EffectFade,Pagination , Navigation ,Parallax} from "swiper/modules";
 ;
@@ -47,8 +47,8 @@ const Home3Slider = () => {
                             </div>
                             <div className="form-find-area">
                                 <ul className="nav nav-tabs style-1 m-b20">
-                                    <li onClick={() => { inputButton('1') }} className="nav-item"><Link className={`nav-link ${Addactive === '1' ? 'active' : ''}`} aria-controls="new-car" to={'#'}>NEW CAR</Link></li>
-                                    <li onClick={() => { inputButton('2') }} className="nav-item"><Link className={`nav-link ${Addactive === '2' ? 'active' : ''}`} aria-controls="popular" to={'#'}>USED CAR</Link></li>
+                                    <li onClick={() => { inputButton('1') }} className="nav-item"><Link className={`nav-link ${Addactive === '1' ? 'active' : ''}`} aria-controls="new-car" href={'#'}>NEW CAR</Link></li>
+                                    <li onClick={() => { inputButton('2') }} className="nav-item"><Link className={`nav-link ${Addactive === '2' ? 'active' : ''}`} aria-controls="popular" href={'#'}>USED CAR</Link></li>
                                 </ul>
                                 <div className="tab-content">
                                     <div id="new-car" className={`tab-pane ${Addactive === '1' ? 'active' : ''} clearfix`}>

@@ -333,7 +333,7 @@
 	width: 170px;
 	height: 130px;
 	top: 50%;
-	transform: translate(-25%, -50%);
+	transform: translate(calc(-25% * var(--translate-x)), -50%);
 	inset-inline-end: 25%;
 	z-index: -1;
 
@@ -363,7 +363,7 @@
 		width: 100px;
 		height: 80px;
 		top: 40%;
-		transform: translate(-25%, -40%);
+		transform: translate(calc(-25% * var(--translate-x)), -40%);
 
 		&:before {
 			height: 60px;
