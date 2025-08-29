@@ -32,11 +32,10 @@ const Footer = () => {
                     <h5 className="title">Quick Links</h5>
                   </div>
                   <ul>
-                    <li className="cat-item"><Link href="/contact-us">Contact us</Link></li>
-                    <li className="cat-item"><Link href="/car-listing">Products</Link></li>
-                    <li className="cat-item"><Link href='/latest-cars'>Latest car</Link></li>
-                    <li className="cat-item"><Link href={'/blog-list-sidebar'}>Blog list</Link></li>
-                    <li className="cat-item"><Link href={'/blog-details'}>Blog detail</Link></li>
+                    <li className="cat-item"><Link href="/car-listing">محصولات ما</Link></li>
+                    <li className="cat-item"><Link href={'/blog-grid'}>وبلاگ</Link></li>
+                    <li className="cat-item"><Link href={'/gallery'}>گالری</Link></li>
+                    <li className="cat-item"><Link href={'/customer-experience'}>تجربه مشتریان</Link></li>
                   </ul>
                 </div>
               </div>
@@ -46,11 +45,10 @@ const Footer = () => {
                     <h5 className="title">Support</h5>
                   </div>
                   <ul>
-                    <li className="cat-item"><Link href="/about-us">About us</Link></li>
-                    <li className="cat-item"><Link href={'/services'}>Services</Link></li>
-                    <li className="cat-item"><Link href={'/location'}>Location</Link></li>
-                    <li className="cat-item"><Link href={'/error-404'}>Error 404</Link></li>
-                    <li className="cat-item"><Link href="/used-car-search">Search car</Link></li>
+                    <li className="cat-item"><Link href="/about-us">درباره ما</Link></li>
+                    <li className="cat-item"><Link href="/contact-us">ارتباط با ما</Link></li>
+                    <li className="cat-item"><Link href={'/purchase-rules'}>قوانین ما</Link></li>
+                    <li className="cat-item"><Link href={'/faq'}>سوالات متداول</Link></li>
 
                   </ul>
                 </div>

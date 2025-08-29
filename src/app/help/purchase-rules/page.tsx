@@ -98,7 +98,7 @@ function Page() {
                                 <p className="lead text-muted">
                                     آشنایی با قوانین و مقررات استفاده از خدمات ما
                                 </p>
-                                <Badge bg="secondary" className="fs-6 mt-2">
+                                <Badge className="fs-6 mt-2">
                                     آخرین بروزرسانی: {lastUpdateDate}
                                 </Badge>
                             </Col>
@@ -143,28 +143,6 @@ function Page() {
                                 </Col>
                             </Row>
                         ))}
-
-                        {/* پذیرش قوانین */}
-                        <Row className="mt-5">
-                            <Col>
-                                <Card className="bg-light border-0">
-                                    <Card.Body className="p-4 text-center">
-                                        <h3 className="mb-3">✅ پذیرش قوانین</h3>
-                                        <p className="fs-5 mb-4">
-                                            با کلیک بر روی دکمه "موافقم" تمامی قوانین و مقررات فوق را مطالعه کرده و می‌پذیرم.
-                                        </p>
-                                        <div className="d-flex justify-content-center gap-3">
-                                            <button className="btn btn-primary btn-lg px-5">
-                                                موافقم
-                                            </button>
-                                            <button className="btn btn-outline-secondary btn-lg px-5">
-                                                خروج
-                                            </button>
-                                        </div>
-                                    </Card.Body>
-                                </Card>
-                            </Col>
-                        </Row>
                     </Container>
                     <section className="content-inner">
                         <div className="container">
