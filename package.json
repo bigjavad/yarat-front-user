@@ -13,6 +13,7 @@
     "@reduxjs/toolkit": "^2.8.2",
     "@types/react-modal-video": "^1.2.3",
     "@types/react-otp-input": "^2.0.5",
+    "@types/video-react": "^0.15.8",
     "cookies-next": "^6.1.0",
     "formik": "^2.4.6",
     "lightgallery": "^2.9.0-beta.1",
