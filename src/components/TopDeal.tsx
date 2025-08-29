@@ -5,13 +5,21 @@ import {Swiper, SwiperSlide} from 'swiper/react'
 
 import Link from "next/link";
 import {Autoplay, Pagination} from "swiper/modules";
-import {CarDto} from "@/shared/model/dto/car/car.dto";
 
 let topdealSlid = [
-    {title: "باگی دو نفره", capacity: 2, image: [IMAGE.dealPic1], id: 1, description: "توضیحات"},
+    {title: "باگی دو نفره", capacity: 2, image: [
+            '/assets/images/gallery/1.webp',
+            '/assets/images/gallery/2.webp'
+        ], id: 1, description: "توضیحات"},
     {title:"باگی چهار نفره",capacity:4,image:[IMAGE.dealPic2],id:2,description:"توضیحات"},
-    {title:"باگی هشت نفره",capacity:8,image:[IMAGE.dealPic3],id:3,description:"توضیحات"},
-    {title:"باگی دوازده نفره",capacity:12,image:[IMAGE.dealPic4],id:4,description:"توضیحات"},
+    {title:"باگی هشت نفره",capacity:8,image:[
+            '/assets/images/gallery/80.webp',
+            '/assets/images/gallery/81.webp'
+        ],id:3,description:"توضیحات"},
+    {title:"باگی دوازده نفره",capacity:12,image:[
+            '/assets/images/gallery/90.webp',
+            '/assets/images/gallery/91.webp'
+        ],id:4,description:"توضیحات"},
 ]
 const TopDeal = () => {
     const paginationRef = React.useRef(null)
@@ -56,7 +64,6 @@ const TopDeal = () => {
                                 <div className="list-info">
                                     <h3 className="title"><Link href="/car-details" data-splitting
                                                                 className="text-white">{item.title}</Link></h3>
-                                    <div className="car-type">SPORT CAR</div>
                                     <span className="badge px-3 py-2 m-b5 fs-6">$34,500</span>
                                     <div className="feature-list">
                                         <div>

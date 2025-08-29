@@ -11,7 +11,7 @@ const LetestCar = () => {
             <title>یارات محصولات ما</title>
             <meta name="description" content="یارات پلتفرم تولید باگ‌های گروهی ۴، ۸ و ۱۲ نفره است."/>
             <div className="page-content bg-white">
-                <LatestCarBanner title={'محصولات ما'}/>
+                <LatestCarBanner image={'/assets/images/gallery/27.webp'} title={'محصولات ما'}/>
                 <section className="content-inner-2">
                     <div className="container">
                         <div className="row">

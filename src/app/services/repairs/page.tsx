@@ -135,7 +135,7 @@ function Page() {
     return (
         <div>
             <div className="page-content bg-white">
-                <CarListingBanner img={IMAGE.bnr1} title={'تعمیرات'}/>
+                <CarListingBanner img={'/assets/images/gallery/2.webp'} img={IMAGE.bnr1} title={'تعمیرات'}/>
                 <section className="content-inner">
                     <div className="container">
                         <div className="section-head text-center space-lg">

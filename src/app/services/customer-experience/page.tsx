@@ -12,7 +12,7 @@ function Page() {
     return (
         <div>
             <div className="page-content bg-white">
-                <CarListingBanner img={IMAGE.bnr1} title={'تجربه مشتریان'}/>
+                <CarListingBanner img={'/assets/images/gallery/27.webp'} title={'تجربه مشتریان'}/>
                 <div className="section-full bg-gray content-inner-1" id="client">
                     <div className="container">
                         <div className="section-head text-center wow fadeIn" data-wow-duration="2s"

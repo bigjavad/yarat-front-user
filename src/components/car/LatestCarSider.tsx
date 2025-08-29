@@ -1,13 +1,21 @@
 import React from 'react'
-import { IMAGE } from '@/constent/theme'
-;
+import { IMAGE } from '@/constent/theme';
 import Link from "next/link";
 
 let carList = [
-    {title: "باگی دو نفره", capacity: 2, image: [IMAGE.dealPic1], id: 1, description: "توضیحات"},
+    {title: "باگی دو نفره", capacity: 2, image: [
+            '/assets/images/gallery/1.webp',
+            '/assets/images/gallery/2.webp'
+        ], id: 1, description: "توضیحات"},
     {title:"باگی چهار نفره",capacity:4,image:[IMAGE.dealPic2],id:2,description:"توضیحات"},
-    {title:"باگی هشت نفره",capacity:8,image:[IMAGE.dealPic3],id:3,description:"توضیحات"},
-    {title:"باگی دوازده نفره",capacity:12,image:[IMAGE.dealPic4],id:4,description:"توضیحات"},
+    {title:"باگی هشت نفره",capacity:8,image:[
+            '/assets/images/gallery/80.webp',
+            '/assets/images/gallery/81.webp'
+        ],id:3,description:"توضیحات"},
+    {title:"باگی دوازده نفره",capacity:12,image:[
+            '/assets/images/gallery/90.webp',
+            '/assets/images/gallery/91.webp'
+        ],id:4,description:"توضیحات"},
 ]
 
 
