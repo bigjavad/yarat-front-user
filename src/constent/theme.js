@@ -15,7 +15,7 @@ export const IMAGE = {
     dealPic2: require('../assets/images/deal/pic2.jpg'),
     dealPic3: require('../assets/images/deal/pic3.jpg'),
     dealPic4: require('../assets/images/deal/pic4.jpg'),
-    aboutPic5: require('../assets/images/about/pic5.jpg'),
+    aboutPic5: require('../assets/images/about/contact.webp'),
     patternImg3: require('../assets/images/pattern/pattern7.png'),
     patternImg5: require('../assets/images/pattern/pattern5.png'),
     home2Slideimg1: require('../assets/images/main-slider/slide1.jpg'),
@@ -162,7 +162,9 @@ export const IMAGE = {
     largeBackgroundimg4: require('../assets/images/background/bg1.jpg'),
 
 }
+
 function allImages() {
-    <IMAGE />
+    <IMAGE/>
 }
+
 export default allImages;

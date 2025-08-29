@@ -36,7 +36,7 @@ const Header2 = () => {
                 <div className={`sticky-header main-bar-wraper navbar-expand-lg ${scrollHeader}`}>
                     <div className="main-bar clearfix ">
                         <div className="logo-header mostion logo-dark">
-                            <Link href="/"><img src={IMAGE.logo1} alt="" /></Link>
+                            <Link href="/"><img src='/assets/images/logo.png' alt="" /></Link>
                         </div>
                         <div className="extra-nav">
                             <div className="extra-cell">
