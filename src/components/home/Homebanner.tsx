@@ -101,13 +101,13 @@ const Homebanner = () => {
                     </div>
                     <div className="d-block mt-5 ">
                         <ul className="d-flex gap-3 mt-2">
-                            <li><Link className="btn btn-sm btn-outline-primary " href={'/car-listing?brand=hondo'}>باگی
+                            <li><Link className="btn btn-sm btn-outline-primary " href={'/car-listing/1'}>باگی
                                 2</Link></li>
-                            <li><Link className="btn btn-sm btn-outline-primary " href={'/car-listing?brand=hondo'}>باگی
+                            <li><Link className="btn btn-sm btn-outline-primary " href={'/car-listing/2'}>باگی
                                 4 نفره</Link></li>
-                            <li><Link className="btn btn-sm btn-outline-primary " href={'/car-listing?brand=fort'}>باگی
+                            <li><Link className="btn btn-sm btn-outline-primary " href={'/car-listing/3'}>باگی
                                 8 نفره</Link></li>
-                            <li><Link className="btn btn-sm btn-outline-primary " href={'/car-listing?brand=toyoto'}>باگی
+                            <li><Link className="btn btn-sm btn-outline-primary " href={'/car-listing/4'}>باگی
                                 12 نفره </Link></li>
                         </ul>
                     </div>

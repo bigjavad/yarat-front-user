@@ -47,7 +47,7 @@ const AboutSlider = () => {
                 {/*    </svg>*/}
                 {/*</div>*/}
                 <div className="icon-content">
-                    <h3 className="title text-center text-white"><Link href="/services" id='about-title'
+                    <h3 className="title text-center text-white"><Link href="#" id='about-title'
                                                                        className="text-effect-1">{item.title}</Link>
                     </h3>
                     <p className="">
