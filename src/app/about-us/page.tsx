@@ -6,6 +6,8 @@ import {Swiper, SwiperSlide} from "swiper/react";
 import Link from "next/link";
 import ContectUs from "@/components/contect-us/ContectUs";
 
+import {Metadata} from "next";
+import Head from "next/head";
 
 const progressCard = [
     {
@@ -91,6 +93,13 @@ const About = () => {
     }
     return (
         <>
+            <Head>
+                <title>
+                    درباره ما
+                </title>
+                <meta name="descripton"
+                      content=" یارات پلتفرم تولید باگی گروهی ۴، ۸ و ۱۲ نفره است. اینجا بهترین باگی هارو تولید می‌کنیم!"/>
+            </Head>
             <div className="page-content bg-white">
                 <CarListingBanner img={IMAGE.bnr1} title={'درباره یارات'}/>
                 {/* Content */}
@@ -169,7 +178,9 @@ const About = () => {
                             </div>
                             <div className="col-lg-6 m-b30">
                                 <p>
-                                    یارات موتورز نه‌تنها به دنبال توسعه صنعت خودروهای تفریحی و آفرود در ایران است، بلکه با نگاه به بازارهای جهانی، قصد دارد نام ایران را به‌عنوان یک تولیدکننده خلاق و قابل‌اعتماد در این حوزه معرفی کند.
+                                    یارات موتورز نه‌تنها به دنبال توسعه صنعت خودروهای تفریحی و آفرود در ایران است، بلکه
+                                    با نگاه به بازارهای جهانی، قصد دارد نام ایران را به‌عنوان یک تولیدکننده خلاق و
+                                    قابل‌اعتماد در این حوزه معرفی کند.
                                 </p>
                             </div>
                         </div>

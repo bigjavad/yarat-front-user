@@ -1,6 +1,5 @@
 "use client"
 import React from 'react';
-import ContectForm from "@/element/ContectForm";
 import CarListingBanner from "@/element/car-listing-banner";
 import {IMAGE} from "@/constent/theme";
 import { Container, Row, Col, Card, Accordion, Badge } from 'react-bootstrap';
