@@ -35,17 +35,20 @@ export default function Home() {
                 <section className="content-inner-2">
                     <div className="container-fluid">
                         <div className="section-head space-lg text-center">
-                            <h2 className="title">Top deals of the week</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut labore et dolore magna aliqua. </p>
+                            <h2 className="title">محصولات یارات</h2>
+                            <p>
+                                 لیست کامل محصولات یارات را مشاهده کنید. هر محصول با جزئیات و
+                                ویژگی‌های اختصاصی خود نمایش داده می‌شود تا انتخاب برای شما راحت‌تر شود.
+                                کیفیت، تنوع و کاربردی بودن محصولات یارات ما را از دیگران متمایز می‌کند.
+                            </p>
                         </div>
                         <TopDeal/>
                     </div>
                 </section>
                 <section className="content-inner-2">
-                  <div className="container">
-                    <div className="row features-box">
-                      <Bestcar  />
+                    <div className="container">
+                        <div className="row features-box">
+                        <Bestcar  />
                     </div>
                   </div>
                 </section>
