@@ -6,14 +6,21 @@ import {Swiper, SwiperSlide} from 'swiper/react'
 import Link from "next/link";
 import {Autoplay, Pagination} from "swiper/modules";
 
-const topdealSlid = [
-    {img: IMAGE.dealPic1, name: 'SMART GT AA-211'},
-    {img: IMAGE.dealPic2, name: 'GT-Z 122 Boost'},
-    {img: IMAGE.dealPic3, name: 'SPORT X-GTZ'},
-    {img: IMAGE.dealPic4, name: 'Smart Car GT AA-211'},
-    {img: IMAGE.dealPic1, name: 'SPORT X-GTZ'},
+let topdealSlid = [
+    {title: "باگی دو نفره", capacity: 2, image: [
+            '/assets/images/gallery/1.webp',
+            '/assets/images/gallery/2.webp'
+        ], id: 1, description: "توضیحات"},
+    {title:"باگی چهار نفره",capacity:4,image:[IMAGE.dealPic2],id:2,description:"توضیحات"},
+    {title:"باگی هشت نفره",capacity:8,image:[
+            '/assets/images/gallery/80.webp',
+            '/assets/images/gallery/81.webp'
+        ],id:3,description:"توضیحات"},
+    {title:"باگی دوازده نفره",capacity:12,image:[
+            '/assets/images/gallery/90.webp',
+            '/assets/images/gallery/91.webp'
+        ],id:4,description:"توضیحات"},
 ]
-
 const TopDeal = () => {
     const paginationRef = React.useRef(null)
     return (
@@ -52,25 +59,26 @@ const TopDeal = () => {
                         <SwiperSlide className="swiper-slide" key={index}>
                             <div className="car-list-box overlay">
                                 <div className="media-box">
-                                    <img src={item.img} alt=""/>
+                                    <img src={item.image[0]} alt=""/>
                                 </div>
                                 <div className="list-info">
                                     <h3 className="title"><Link href="/car-details" data-splitting
-                                                                className="text-white">{item.name}</Link></h3>
-                                    <div className="car-type">SPORT CAR</div>
-                                    <span className="badge m-b30">$34,500</span>
+                                                                className="text-white">{item.title}</Link></h3>
+                                    <span className="badge px-3 py-2 m-b5 fs-6">$34,500</span>
                                     <div className="feature-list">
                                         <div>
-                                            <label>Transmotion</label>
-                                            <p className="value">Automatic</p>
+                                            <label>ظرفیت</label>
+                                            <p className="value font-10">{item.capacity} نفر </p>
                                         </div>
                                         <div>
-                                            <label>Fuel</label>
-                                            <p className="value">Electric</p>
+                                            <label>گارانتی</label>
+                                            <p className="value font-10">6 ماه موتوری</p>
                                         </div>
                                         <div>
-                                            <label>Passenger</label>
-                                            <p className="value">2 Person</p>
+                                            <label>امکانات</label>
+                                            <p className="value font-10">
+                                                فرمان اسپرت و ...
+                                            </p>
                                         </div>
                                     </div>
                                 </div>

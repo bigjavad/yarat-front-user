@@ -1,27 +1,12 @@
 import React from 'react'
 import { IMAGE } from '@/constent/theme';
-import Link from "next/link";;
+import Link from "next/link";
 
-
-
-
-const CarList = [
-    { img: IMAGE.blogPic1 },
-    { img: IMAGE.productPic2 },
-    { img: IMAGE.productPic3 },
-    { img: IMAGE.productPic4 },
-    { img: IMAGE.productPic5 },
-];
-const clientLogo =[
-    { logo: IMAGE.clientLogo1 },
-    { logo: IMAGE.clientLogo2 },
-    { logo: IMAGE.clientLogo3 },
-    { logo: IMAGE.clientLogo4 },
-    { logo: IMAGE.clientLogo5 },
-    { logo: IMAGE.clientLogo6 },
-    { logo: IMAGE.clientLogo7 },
-    { logo: IMAGE.clientLogo8 },
-    { logo: IMAGE.clientLogo9 },
+let carList = [
+    {title: "باگی دو نفره", capacity: 2, image: [IMAGE.dealPic1], id: 1, description: "توضیحات"},
+    {title:"باگی چهار نفره",capacity:4,image:[IMAGE.dealPic2],id:2,description:"توضیحات"},
+    {title:"باگی هشت نفره",capacity:8,image:[IMAGE.dealPic3],id:3,description:"توضیحات"},
+    {title:"باگی دوازده نفره",capacity:12,image:[IMAGE.dealPic4],id:4,description:"توضیحات"},
 ]
 const PopulerCars = (props) => {
     return (
@@ -34,17 +19,17 @@ const PopulerCars = (props) => {
                             <div className="dlab-separator style-1 text-primary mb-0"></div>
                         </div>
                         <div className="widget-post-bx">
-                            {CarList.map((item, index) => {
+                            {carList.map((item, index) => {
                                 return (
                                     <div className="widget-post clearfix" key={index}>
                                         <div className="dlab-media">
-                                            <Link href="/popular-cars"><img src={item.img} alt="" /></Link>
+                                            <Link href="/popular-cars"><img src={item.image[0]} alt={item.title} /></Link>
                                         </div>
                                         <div className="dlab-info">
-                                            <h4 className="title"><Link href="/popular-cars">Maruti Swift Dzire</Link></h4>
+                                            <h4 className="title"><Link href="/popular-cars">{item.title}</Link></h4>
                                             <div className="dlab-meta">
                                                 <ul>
-                                                    <li className="post-date"> $7247 - $8139</li>
+                                                    <li className="post-date"> تومان 900,000,000</li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -52,7 +37,7 @@ const PopulerCars = (props) => {
 
                                 )
                             })}
-                            <Link href="/popular-cars" className="btn btn-primary d-block w-100 text-center effect-1"><span>View All Popular Cars</span></Link>
+                            <Link href="/car-detail" className="btn btn-primary d-block w-100 text-center effect-1"><span>پرفروش ها</span></Link>
                         </div>
                     </div>
                     <div className="widget ads">
@@ -64,10 +49,12 @@ const PopulerCars = (props) => {
                             <div className="dlab-separator style-1 text-primary mb-0"></div>
                         </div>
                         <ul>
-                          {clientLogo.map((logo,ind)=>{
+                          {carList.map((data,ind)=>{
                             return(
                                 <li className="brand-logo" key={ind}>
-                                    <Link href="/popular-cars"><img src={logo.logo} alt="" /></Link>
+                                    <Link className="d-flex gap-2" href="/car-detail">
+                                        <img src={data.image[0]} alt={data.title} />
+                                    </Link>
                                 </li>
                             )
                           })}
