@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation'
 
 export const MenusItem = [
     {
-        menu: 'صفحه اصلی',
+        menu: 'یارات موتور',
         link: '/',
     },
     {

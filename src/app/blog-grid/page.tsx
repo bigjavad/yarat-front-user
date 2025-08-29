@@ -9,6 +9,7 @@ import Link from "next/link";
 import Image from 'next/image';
 import 'swiper/css';
 
+
 const blogSlider = [
     { img: IMAGE.blogGridpic9 },
     { img: IMAGE.blogGridpic10 },

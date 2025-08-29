@@ -21566,17 +21566,17 @@ ul a.rsswidget:hover {
     margin-bottom: 80px;
 }
 
-.features-box .image-slider-box:after {
-    content: "";
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    background-color: #D2D2D2;
-    border-radius: inherit;
-    bottom: -75px;
-    transform: scale(0.85);
-    inset-inline-start: 0;
-}
+/*.features-box .image-slider-box:after {*/
+/*    content: "";*/
+/*    height: 100%;*/
+/*    width: 100%;*/
+/*    position: absolute;*/
+/*    background-color: #D2D2D2;*/
+/*    border-radius: inherit;*/
+/*    bottom: -75px;*/
+/*    transform: scale(0.85);*/
+/*    inset-inline-start: 0;*/
+/*}*/
 
 .features-box .image-slider-box:before {
     content: "";
@@ -21588,6 +21588,7 @@ ul a.rsswidget:hover {
     bottom: -135px;
     transform: scale(0.75);
     inset-inline-start: 0;
+    right: 115px
 }
 
 .features-box .image-slider-box .img1 {
@@ -21606,10 +21607,9 @@ ul a.rsswidget:hover {
         margin-bottom: 70px;
     }
 
-    .features-box .image-slider-box:after {
-        bottom: -70px;
-    }
-
+    /*.features-box .image-slider-box:after {*/
+    /*    bottom: -70px;*/
+    /*}*/
     .features-box .image-slider-box:before {
         bottom: -120px;
     }
@@ -21645,10 +21645,9 @@ ul a.rsswidget:hover {
         margin-bottom: 45px;
     }
 
-    .features-box .image-slider-box:after {
-        bottom: -45px;
-    }
-
+    /*.features-box .image-slider-box:after {*/
+    /*    bottom: -45px;*/
+    /*}*/
     .features-box .image-slider-box:before {
         bottom: -75px;
     }

@@ -13,15 +13,7 @@ import Header from "@/components/base/Header";
 import {SnackbarProvider} from "notistack";
 import LoginModal from "@/components/modal/login-modal";
 
-const avinyFont = localFont({
-    src: [
-        {
-            path: './../font/aviny/aviny.ttf',
-            weight: '400',
-        },
-    ],
-    variable: '--font-aviny',
-});
+
 
 const bakh = localFont({
     src: [
@@ -61,7 +53,7 @@ export default function RootLayout({
 }) {
     return (
         <html
-            className={`max-w-[1920px] mx-auto ${avinyFont.variable} ${bakh.variable}`}
+            className={`max-w-[1920px] mx-auto   ${bakh.variable}`}
             lang="fa" dir="rtl"
         >
         {/*<NextTopLoader*/}
