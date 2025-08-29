@@ -30,6 +30,7 @@
     "react-tooltip": "^5.28.0",
     "sass": "^1.91.0",
     "swiper": "^11.2.6",
+    "video-react": "^0.16.0",
     "yup": "^1.7.0"
   },
   "devDependencies": {

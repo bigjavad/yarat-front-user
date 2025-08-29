@@ -9,16 +9,19 @@ const About = () => {
         <div className="row about-bx1">
             <div className="col-lg-5">
                 <div className="dlab-media">
-                    <img src={IMAGE.about1} alt="" />
+                    <img src={IMAGE.about1} alt=""/>
                 </div>
             </div>
-            <div className="col-lg-7 align-self-center" >
+            <div className="col-lg-7 align-self-center">
                 <div className="section-head">
-                    <h6 className="text-primary sub-title">ABOUT</h6>
-                    <h2 className="title">About the Mobhi</h2>
+                    <h6 className="text-primary sub-title">درباره یارات</h6>
+                    <h2 className="title">درباره یارات</h2>
                 </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.</p>
-               <AboutSlider/>
+                <p>یارات موتورز، نامی نوظهور و پویا در صنعت خودروسازی ایران، با تمرکز بر طراحی و تولید خودروهای باگی
+                    آفرود، به دنبال خلق تجربه‌ای متفاوت برای علاقه‌مندان به رانندگی ماجراجویانه است. ما در یارات موتورز
+                    با بهره‌گیری از دانش فنی بومی، فناوری‌های نوین و طراحی‌های خلاقانه، محصولاتی ایمن، قدرتمند و متناسب
+                    با نیازهای مشتریان ایرانی و منطقه‌ای ارائه می‌دهیم.</p>
+                <AboutSlider/>
             </div>
         </div>
     )
