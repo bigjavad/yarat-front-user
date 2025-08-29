@@ -90,16 +90,13 @@ function Page() {
                 <div className="page-content bg-white">
                     <CarlistingBanner img={IMAGE.bnr1} title={'قوانین خرید'} />
                     <Container className="py-5">
-                        <Row className="text-center mb-5">
+                        <Row className="text-center mb-4">
                             <Col>
-                                <h1 className="fs-3 fw-bold text-primary mb-3">
-                                    📜 قوانین و مقررات
-                                </h1>
                                 <p className="lead text-muted">
                                     آشنایی با قوانین و مقررات استفاده از خدمات ما
                                 </p>
-                                <Badge className="fs-6 mt-2">
-                                    آخرین بروزرسانی: {lastUpdateDate}
+                                <Badge bg="light" text="dark" className="fw-normal">
+                                    به روزرسانی: ۱۴۰۲/۱۰/۲۰
                                 </Badge>
                             </Col>
                         </Row>

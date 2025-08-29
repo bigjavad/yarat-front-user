@@ -15,8 +15,8 @@ const Footer = () => {
                     logo
                     {/*<img src={IMAGE.logo1} alt="" />*/}
                   </div>
-                  <h5 className="m-b20">Best car dealer in europe</h5>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <h5 className="m-b20">یارات</h5>
+                  <p>یارات موتور تولید کننده بهترین باگی های 4 نفره 8 نفره در سراسر کشور</p>
                   <ul className="social-list style-1">
                     <li><Link href="https://www.youtube.com/"><i className="fab fa-youtube"></i></Link></li>
                     <li><Link href="https://www.linkedin.com/"><i className="fab fa-linkedin"></i></Link></li>
@@ -29,7 +29,7 @@ const Footer = () => {
               <div className="col-lg-3 col-md-6 col-sm-6">
                 <div className="widget widget_categories p-l50">
                   <div className="widget-title">
-                    <h5 className="title">Quick Links</h5>
+                    <h5 className="title">خرید</h5>
                   </div>
                   <ul>
                     <li className="cat-item"><Link href="/car-listing">محصولات ما</Link></li>
@@ -42,7 +42,7 @@ const Footer = () => {
               <div className="col-lg-3 col-md-6 col-sm-6" >
                 <div className="widget widget_categories">
                   <div className="widget-title">
-                    <h5 className="title">Support</h5>
+                    <h5 className="title">پشتیبانی</h5>
                   </div>
                   <ul>
                     <li className="cat-item"><Link href="/about-us">درباره ما</Link></li>
@@ -56,7 +56,7 @@ const Footer = () => {
               <div className="col-lg-3 col-md-6 col-sm-12">
                 <div className="widget">
                   <div className="widget-title">
-                    <h5 className="title">Contact</h5>
+                    <h5 className="title">ارتباط با ما</h5>
                   </div>
                   <div className="icon-bx-wraper style-2 m-b20">
                     <div className="icon-bx-sm radius">
