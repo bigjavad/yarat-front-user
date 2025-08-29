@@ -11,7 +11,9 @@ let topdealSlid = [
             '/assets/images/gallery/1.webp',
             '/assets/images/gallery/2.webp'
         ], id: 1, description: "توضیحات"},
-    {title:"باگی چهار نفره",capacity:4,image:[IMAGE.dealPic2],id:2,description:"توضیحات"},
+    {title:"باگی چهار نفره",capacity:4,image:[
+            '/assets/images/gallery/6.webp',
+        ],id:2,description:"توضیحات"},
     {title:"باگی هشت نفره",capacity:8,image:[
             '/assets/images/gallery/80.webp',
             '/assets/images/gallery/81.webp'
@@ -64,7 +66,7 @@ const TopDeal = () => {
                                 <div className="list-info">
                                     <h3 className="title"><Link href="/car-details" data-splitting
                                                                 className="text-white">{item.title}</Link></h3>
-                                    <span className="badge px-3 py-2 m-b5 fs-6">$34,500</span>
+                                    <span className="badge px-3 py-2 m-b5 fs-6">900,000,000 تومان</span>
                                     <div className="feature-list">
                                         <div>
                                             <label>ظرفیت</label>

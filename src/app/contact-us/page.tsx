@@ -10,7 +10,7 @@ const Contact = () => {
             <title>یارات ارتباط با ما</title>
             <meta name="description" content="یارات پلتفرم تولید باگ‌های گروهی ۴، ۸ و ۱۲ نفره است."/>
             <div className="page-content bg-white">
-                <CarListingBanner img={IMAGE.bnr1} title={'تماس با ما'}/>
+                <CarListingBanner  img={'/assets/images/gallery/6.webp'} title={'تماس با ما'}/>
                 <section className="content-inner bg-gray bottom-shape">
                     <div className="container">
                         <div className="row">

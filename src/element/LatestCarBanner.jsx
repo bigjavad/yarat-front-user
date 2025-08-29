@@ -6,7 +6,7 @@ import Link from "next/link";
 const LatestCarBanner = (props) => {
     return (
         <>
-            <div className="dlab-bnr-inr dlab-bnr-inr-lg style-1 overlay-black-middle" style={{ backgroundImage: `url(${props.image})` }}>
+            <div className="dlab-bnr-inr dlab-bnr-inr-lg style-1 overlay-black-middle" style={{ backgroundImage: `url(${props.img})` }}>
                 <div className="container">
                     <div className="dlab-bnr-inr-entry">
                         <h1 className="text-white">{props.title}</h1>

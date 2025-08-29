@@ -51,7 +51,7 @@ function Page() {
             <div className="page-content bg-white">
 
                 <div className="page-content bg-white">
-                    <CarListingBanner img={IMAGE.bnr1} title={'قوانین خرید'} />
+                    <CarListingBanner img={'/assets/images/gallery/28.webp'} title={'قوانین خرید'} />
                     <Container className="py-5">
 
                         <div className="terms-section">
