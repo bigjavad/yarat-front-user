@@ -1,94 +1,50 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Pagination from './Pagination';
-;
-import { IMAGE } from '@/constent/theme';
-import { Dropdown } from 'react-bootstrap';
+import {IMAGE} from '@/constent/theme';
+import Link from "next/link";
 
 
+let carList = [
+    {title: "باگی دو نفره", capacity: 2, image: [IMAGE.dealPic1], id: 1, description: "توضیحات"},
+    {title:"باگی چهار نفره",capacity:4,image:[IMAGE.dealPic2],id:2,description:"توضیحات"},
+    {title:"باگی هشت نفره",capacity:8,image:[IMAGE.dealPic3],id:3,description:"توضیحات"},
+    {title:"باگی دوازده نفره",capacity:12,image:[IMAGE.dealPic4],id:4,description:"توضیحات"},
+]
 
-
-const CarList = [
-    { img: IMAGE.productPic1 },
-    { img: IMAGE.productPic2 },
-    { img: IMAGE.productPic3 },
-    { img: IMAGE.productPic4 },
-    { img: IMAGE.productPic5 },
-    { img: IMAGE.productGridPic1 },
-];
-
-export const CarListSlideContent = () => {
+export const Carlist = () => {
     return (
-        <>
+        <div className="col-xl-8 col-lg-8">
             <div className="row lightgallery">
-                {CarList.map((list, listKey) => (
+                {carList.map((list, listKey) => (
                     <div className="col-xl-6 col-lg-12 col-md-6 m-b30" key={listKey}>
                         <div className="car-list-box">
                             <div className="media-box">
-                                <img src={list.img} alt="" />
+                                <img src={list.image[0]} alt={list.image[0]}/>
                             </div>
                             <div className="list-info">
-                                <h4 className="title mb-0"><Link href={'/car-details'} data-splitting>SMART GT AA-211</Link></h4>
-                                <div className="car-type">SPORT CAR</div>
-                                <span className="badge m-b30">$34,500</span>
+                                <h4 className="title mb-0"><Link href={'/car-details'} data-splitting>{list.img}</Link></h4>
+                                <span className="badge m-b30">900,000,000 تومان</span>
                                 <div className="feature-list">
                                     <div>
-                                        <label>Transmotion</label>
-                                        <p className="value">Automatic</p>
+                                        <label>ظرفیت</label>
+                                        <p className="value">{list.capacity} نفر </p>
                                     </div>
                                     <div>
-                                        <label>Fuel</label>
-                                        <p className="value">Electric</p>
+                                        <label>گارانتی</label>
+                                        <p className="value">6 ماه موتوری</p>
                                     </div>
                                     <div>
-                                        <label>Passenger</label>
-                                        <p className="value">2 Person</p>
+                                        <label>امکانات</label>
+                                        <p className="value">فرمان اسپرت , ...</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 ))}
-            </div >
-            <Pagination />
-        </>
-    )
-}
-const Carlist = () => {
-    const [selectBtn, setSelectBtn] = useState('Newest');
-    const [bgColor, setColor] = useState(2);
-
-    const setColorBtn = (action) => {
-        setColor(action)
-    }
-    return (
-        <>
-            <div className="col-xl-8 col-lg-8">
-                <div className="catagory-result-row">
-                    <h5 className="serch-result">Showing <strong>8 product from 40</strong></h5>
-                    <div className='d-flex align-items-center'>
-                        <span>Sort by</span>
-                        {/* <Form.Select className="dropdown bootstrap-select form-control custom-select ms-3 p-25">
-                            <option>Newest</option>
-                            <option>Oldest</option>
-                        </Form.Select> */}
-                        <Dropdown className='drop-select-btn custom-select '>
-                            <Dropdown.Toggle as="div" className='btn shadow-none m-l20' style={{ borderRadius: '7px' }}>
-                                {selectBtn}
-                            </Dropdown.Toggle>
-                            <Dropdown.Menu>
-                                <Dropdown.Item className={`${bgColor === 2 ? 'bg-primary text-white' : ''}`}
-                                    onClick={() => { setSelectBtn('Newest'); setColorBtn(2) }}
-                                >Newest</Dropdown.Item>
-                                <Dropdown.Item className={`${bgColor === 1 ? 'bg-primary text-white' : ''}`}
-                                    onClick={() => { setSelectBtn('Oldest'); setColorBtn(1) }}
-                                >Oldest</Dropdown.Item>
-                            </Dropdown.Menu>
-                        </Dropdown>
-                    </div>
-                </div>
-                <CarListSlideContent />
             </div>
-        </>
+            <Pagination/>
+        </div>
     )
 }
 
