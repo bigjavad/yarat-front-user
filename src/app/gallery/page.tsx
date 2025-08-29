@@ -1,7 +1,12 @@
 import React from 'react';
 import Ourproject from "@/element/Ourproject";
 import ContectUs from "@/components/contect-us/ContectUs";
+import {Metadata} from "next";
 
+export const metadata: Metadata = {
+    title: 'یارات گالری',
+    description: 'یارات پلتفرم تولید باگی گروهی ۴، ۸ و ۱۲ نفره است. اینجا بهترین باگی هارو تولید می‌کنیم!',
+}
 function Page() {
     const ourService = [
         {

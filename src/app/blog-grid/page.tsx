@@ -8,7 +8,12 @@ import BlogDridCard from "@/element/BlogDridCard";
 import Link from "next/link";
 import Image from 'next/image';
 import 'swiper/css';
+import {Metadata} from "next";
 
+export const metadata: Metadata = {
+    title: 'یارات وبلاگ',
+    description: 'یارات پلتفرم تولید باگی گروهی ۴، ۸ و ۱۲ نفره است. اینجا بهترین باگی هارو تولید می‌کنیم!',
+}
 
 const blogSlider = [
     { img: IMAGE.blogGridpic9 },

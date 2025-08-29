@@ -5,6 +5,9 @@ import CarlistingBanner from "@/element/CarlistingBanner";
 import {IMAGE} from "@/constent/theme";
 import { Container, Row, Col, Card, Accordion, Badge } from 'react-bootstrap';
 import ContectUs from "@/components/contect-us/ContectUs";
+import {Metadata} from "next";
+import Head from "next/head";
+
 function Page() {
     const rulesSections = [
         {
@@ -81,10 +84,12 @@ function Page() {
         }
     ];
 
-    const lastUpdateDate = "۱۴۰۲/۱۰/۱۵";
-
     return (
         <div>
+            <Head>
+                <title>یارات قوانین ما</title>
+                <meta name="description" content="یارات پلتفرم تولید باگ‌های گروهی ۴، ۸ و ۱۲ نفره است." />
+            </Head>
             <div className="page-content bg-white">
 
                 <div className="page-content bg-white">

@@ -3,7 +3,11 @@ import CarlistingBanner from "@/element/CarlistingBanner";
 import {IMAGE} from "@/constent/theme";
 import ContectForm from "@/element/ContectForm";
 import Testimonial from "@/components/Testimonial";
-
+import {Metadata} from "next";
+export const metadata: Metadata = {
+    title: 'یارات تجربه مشتریان',
+    description: 'یارات پلتفرم تولید باگی گروهی ۴، ۸ و ۱۲ نفره است. اینجا بهترین باگی هارو تولید می‌کنیم!',
+}
 function Page() {
     return (
         <div>

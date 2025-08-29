@@ -2,11 +2,17 @@ import React from 'react'
 import CarlistingBanner from "@/element/CarlistingBanner";
 import {IMAGE} from "@/constent/theme";
 import ContectForm from "@/element/ContectForm";
+import Head from "next/head";
+
 
 
 const Contect = () => {
     return (
         <>
+            <Head>
+                <title>یارات ارتباط با ما</title>
+                <meta name="description" content="یارات پلتفرم تولید باگ‌های گروهی ۴، ۸ و ۱۲ نفره است." />
+            </Head>
             <div className="page-content bg-white">
                 <CarlistingBanner img={IMAGE.bnr1} title={'Contact'} />
                 <section className="content-inner bg-gray bottom-shape">

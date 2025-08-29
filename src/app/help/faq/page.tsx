@@ -4,6 +4,8 @@ import CarlistingBanner from "@/element/CarlistingBanner";
 import {IMAGE} from "@/constent/theme";
 import ContectForm from "@/element/ContectForm";
 import {Accordion, Badge, Col, Container, Row} from "react-bootstrap";
+import {Metadata} from "next";
+import Head from "next/head";
 
 function Page() {
     const [activeKey, setActiveKey] = useState('0');
@@ -84,6 +86,10 @@ function Page() {
     ];
     return (
         <div>
+            <Head>
+                <title>یارات سوالات متداول</title>
+                <meta name="description" content="یارات پلتفرم تولید باگ‌های گروهی ۴، ۸ و ۱۲ نفره است." />
+            </Head>
             <div className="page-content bg-white">
                 <CarlistingBanner img={IMAGE.bnr1} title={'سوالات متداول'} />
 

@@ -4,10 +4,15 @@ import LatestCarBanner from "@/element/LatestCarBanner";
 import LatestCarSider from "@/components/car/LatestCarSider";
 import PopulerCars from "@/components/car/PopulerCars";
 import ContectUs from "@/components/contect-us/ContectUs";
+import Head from "next/head";
 
 const LetestCar = () => {
   return (
     <>
+      <Head>
+        <title>یارات محصولات ما</title>
+        <meta name="description" content="یارات پلتفرم تولید باگ‌های گروهی ۴، ۸ و ۱۲ نفره است." />
+      </Head>
       <div className="page-content bg-white">
         <LatestCarBanner title={'محصولات ما'} />
         <section className="content-inner-2">

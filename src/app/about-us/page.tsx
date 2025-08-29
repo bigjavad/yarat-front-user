@@ -5,8 +5,12 @@ import CarlistingBanner from "@/element/CarlistingBanner";
 import {Swiper, SwiperSlide} from "swiper/react";
 import Link from "next/link";
 import ContectUs from "@/components/contect-us/ContectUs";
+import {Metadata} from "next";
 
-
+export const metadata: Metadata = {
+    title: 'درباره ما',
+    description: 'یارات پلتفرم تولید باگی گروهی ۴، ۸ و ۱۲ نفره است. اینجا بهترین باگی هارو تولید می‌کنیم!',
+}
 
 
 const progressCard = [
