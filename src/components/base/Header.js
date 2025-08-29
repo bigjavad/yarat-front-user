@@ -26,7 +26,6 @@ const Header = () => {
                 <div className="sticky-header main-bar-wraper navbar-expand-lg">
                     <div className="main-bar clearfix" style={{ transition: 'all .5s' }}>
                         <div className="container clearfix">
-                            {/* <!-- Website Logo --> */}
                             <div className="logo-header mostion logo-dark">
                                 <Link href={'/'}>
                                     <Image
@@ -47,7 +46,6 @@ const Header = () => {
                                 <span></span>
                                 <span></span>
                             </button>
-                            {/* <!-- Extra Nav --> */}
                             <div className="extra-nav">
                                 <div className="extra-cell">
                                     <Link
