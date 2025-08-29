@@ -23,7 +23,7 @@ export const MenusItem = [
     {
         menu: 'خدمات',
         subMenu: [
-            { childe: 'تعمیرات', link: '/services/repairs' },
+            { childe: 'تعمیرات', link: '/services/waranty' },
             { childe: 'تجربه مشتری‌ها', link: '/services/customer-experience' },
         ]
     },
