@@ -1,109 +1,162 @@
 'use client'
-import React, { useEffect, useState } from 'react'
+import React, {useEffect, useReducer, useState} from 'react'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import {usePathname} from 'next/navigation'
 
 export const MenusItem = [
-    { menu: 'یارات موتور', link: '/' },
+    {
+        menu: 'یارات موتور',
+        link: '/',
+    },
     {
         menu: 'محصولات',
         link: '/products',
         subMenu: [
-            { childe: 'لیست ماشین‌ها', link: '/car-listing' },
-            { childe: 'خرید و فروش دست دوم', link: '/used-cars' },
+            {childe: 'لیست ماشین‌ها', link: '/car-listing'},
+            {childe: 'خرید و فروش دست دوم', link: '/used-cars'},
         ]
     },
-    { menu: 'گالری', link: '/gallery' },
+    {
+        menu: 'گالری',
+        link: '/gallery',
+    },
     {
         menu: 'خدمات',
         subMenu: [
-            { childe: 'تعمیرات', link: '/services/waranty' },
-            { childe: 'تجربه مشتری‌ها', link: '/services/customer-experience' },
+            {childe: 'تعمیرات', link: '/services/waranty'},
+            {childe: 'تجربه مشتری‌ها', link: '/services/customer-experience'},
         ]
     },
     {
         menu: 'راهنما',
         subMenu: [
-            { childe: 'قوانین خرید', link: '/help/purchase-rules' },
-            { childe: 'سوالات متداول', link: '/help/faq' },
+            {childe: 'قوانین خرید', link: '/help/purchase-rules'},
+            {childe: 'سوالات متداول', link: '/help/faq'},
         ]
     },
-    { menu: 'درباره ما', link: '/about-us' },
-    { menu: 'تماس با ما', link: '/contact-us' },
+    {
+        menu: 'درباره ما',
+        link: '/about-us',
+    },
+    {
+        menu: 'تماس با ما',
+        link: '/contact-us',
+    }
 ]
 
-interface MenusProps {
-    setOpen?: (open: boolean) => void
-}
+const Menus = ({setOpen}) => {
+    const pathname = usePathname();
+    const [activeLink, setActiveLink] = useState('');
 
-const Menus: React.FC<MenusProps> = ({ setOpen }) => {
-    const pathname = usePathname()
-    const [activeLink, setActiveLink] = useState('')
-    const [activeSubmenu, setActiveSubmenu] = useState('')
-    const [activeChildMenu, setActiveChildMenu] = useState<number | null>(null)
+    const reducer = (previousState, updatedState) => ({
+        ...previousState,
+        ...updatedState,
+    });
+    const initialState = {
+        activeSubmenu: "",
+    }
+
+    const [state, setState] = useReducer(reducer, initialState);
+
+    const menuHandler = (status, hasSubmenu, e) => {
+        if (hasSubmenu) {
+            e.preventDefault();
+            setState({activeSubmenu: state.activeSubmenu === status ? "" : status})
+        }
+    }
+
+    //sub menu toggle
+    const reducermenu = (menuPreviousState, menuUpdatedState) => ({
+        ...menuPreviousState,
+        ...menuUpdatedState,
+    });
+    const menuInitialState = {
+        activemenu: "",
+    }
+
+    const [menuState, setMenuState] = useReducer(reducermenu, menuInitialState);
+    const submenuHandler = (menuStatus, e) => {
+        e.preventDefault();
+        setMenuState({activemenu: menuState.activemenu === menuStatus ? "" : menuStatus})
+    }
 
     useEffect(() => {
         MenusItem.forEach((data) => {
-            if (data.link === pathname) {
-                setActiveLink(data.menu)
-                setActiveSubmenu('')
-                setActiveChildMenu(null)
-            }
-            if (data.subMenu) {
-                data.subMenu.forEach((item, idx) => {
+            if (data?.subMenu?.length > 0) {
+                data.subMenu.forEach((item) => {
                     if (item.link === pathname) {
-                        setActiveLink(data.menu)
-                        setActiveSubmenu(data.menu)
-                        setActiveChildMenu(idx)
+                        setActiveLink(data.menu);
                     }
+                    item?.submenu?.forEach((el) => {
+                        if (el.link === pathname) {
+                            setActiveLink(data.menu);
+                        }
+                    })
                 })
             }
         })
     }, [pathname])
 
-    const toggleSubmenu = (menu: string) => {
-        setActiveSubmenu(activeSubmenu === menu ? '' : menu)
-        setActiveChildMenu(null)
-    }
-
-    const toggleChildMenu = (index: number) => {
-        setActiveChildMenu(activeChildMenu === index ? null : index)
-    }
-
     return (
         <>
-            <ul className="nav navbar-nav p-t50">
+            <ul className="nav navbar-nav navbar navbar-left p-t50">
                 {MenusItem.map((menu, index) => {
-                    const hasSubMenu = !!menu.subMenu?.length
-                    const isActive = menu.menu === activeLink
-                    const isOpen = menu.menu === activeSubmenu
+                    const hasSubMenu = menu.subMenu && menu.subMenu.length > 0;
 
                     return (
-                        <li key={index} className={`sub-menu-down ${isOpen ? 'open' : ''} ${isActive ? 'active' : ''}`}>
+                        <li key={index}
+                            className={
+                                `sub-menu-down ${state.activeSubmenu === menu.menu ? 'open' : ''} 
+                                ${menu.menu === activeLink ? "active" : ""}
+                                `}>
                             {hasSubMenu ? (
-                                <button
-                                    onClick={() => toggleSubmenu(menu.menu)}
-                                    className="flex items-center gap-1"
-                                >
-                                    {menu.menu} <i className="fa fa-angle-down"></i>
-                                </button>
+                                <Link href={menu.link || '#'}
+                                      onClick={(e) => menuHandler(menu.menu, true, e)}>
+                                    {menu.menu}
+                                    <i className="fa fa-angle-down"></i>
+                                </Link>
                             ) : (
-                                <Link href={menu.link!} onClick={() => setOpen?.(false)}>
+                                <Link href={menu.link} onClick={() => setOpen && setOpen(false)}>
                                     {menu.menu}
                                 </Link>
                             )}
-
                             {hasSubMenu && (
-                                <ul className={`sub-menu ${isOpen ? 'show' : ''}`}>
-                                    {menu.subMenu!.map((item, ind) => {
-                                        const childIsOpen = activeChildMenu === ind
-                                        return (
-                                            <li key={ind} className={`sub-menu-down ${childIsOpen ? 'open' : ''}`}>
-                                                <Link href={item.link} onClick={() => setOpen?.(false)}>
-                                                    {item.childe}
-                                                </Link>
-                                            </li>
-                                        )
+                                <ul className={`sub-menu ${state.activeSubmenu === menu.menu ? 'show' : ''}`}>
+                                    {menu.subMenu.map((item: any, ind) => {
+                                        const hasChildSubMenu = item.submenu && item.submenu.length > 0;
+
+                                        if (hasChildSubMenu) {
+                                            return (
+                                                <li key={ind}
+                                                    className={`sub-menu-down ${menuState.activemenu === ind ? 'open' : ''}`}>
+                                                    <Link href={item.link || '#'}
+                                                          onClick={(e) => submenuHandler(ind, e)}>
+                                                        {item.childe}
+                                                        <i className={`fa fa-angle-${menuState.activemenu === ind ? 'down' : 'right'}`}></i>
+                                                    </Link>
+                                                    <ul className={`sub-menu ${menuState.activemenu === ind ? 'show' : ''}`}>
+                                                        {item.submenu.map((childe, mapKey) => {
+                                                            return (
+                                                                <li key={mapKey} className='sub-menu-down'>
+                                                                    <Link href={childe.link}
+                                                                          onClick={() => setOpen && setOpen(false)}>
+                                                                        {childe.shildes}
+                                                                    </Link>
+                                                                </li>
+                                                            )
+                                                        })}
+                                                    </ul>
+                                                </li>
+                                            )
+                                        } else {
+                                            return (
+                                                <li key={ind} className='sub-menu-down'>
+                                                    <Link href={item.link} onClick={() => setOpen && setOpen(false)}>
+                                                        {item.childe}
+                                                    </Link>
+                                                </li>
+                                            )
+                                        }
                                     })}
                                 </ul>
                             )}
@@ -111,7 +164,6 @@ const Menus: React.FC<MenusProps> = ({ setOpen }) => {
                     )
                 })}
             </ul>
-
             <div className="dlab-social-icon p-t50">
                 <ul>
                     <li><Link href="#" className="fab fa-facebook-f"></Link></li>
