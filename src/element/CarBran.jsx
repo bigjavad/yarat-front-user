@@ -4,6 +4,7 @@ import { IMAGE } from '@/constent/theme'
 import {Autoplay , Pagination , Navigation ,Parallax} from "swiper/modules";
 
 
+import Link from "next/link";
 
 
 

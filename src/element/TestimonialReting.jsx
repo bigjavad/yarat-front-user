@@ -46,9 +46,9 @@ const TestimonialReting = () => {
                         <div className="col-lg-8 m-b40">
                             <div className="dlab-tabs  product-description">
                                 <ul className="nav nav-tabs m-b60 m-lg-b30">
-                                    <li onClick={addActiveClassBtn} className='one'><Link className={`Description ${addActive === 'one' ? 'active' : ''}`}>Description</Link></li>
-                                    <li onClick={addActiveClassBtn} className='two'><Link className={`Discussion ${addActive === 'two' ? 'active' : ''}`}>Discussion</Link></li>
-                                    <li onClick={addActiveClassBtn} className='three'><Link className={`Reviews ${addActive === 'three' ? 'active' : ''}`}>Reviews</Link></li>
+                                    {/*<li onClick={addActiveClassBtn} className='one'><span className={`Description ${addActive === 'one' ? 'active' : ''}`}>Description</span></li>*/}
+                                    {/*<li onClick={addActiveClassBtn} className='two'><span className={`Discussion ${addActive === 'two' ? 'active' : ''}`}>Discussion</span></li>*/}
+                                    {/*<li onClick={addActiveClassBtn} className='three'><span className={`Reviews ${addActive === 'three' ? 'active' : ''}`}>Reviews</span></li>*/}
                                 </ul>
                                 <div className="tab-content">
                                     <div id="description" className={`tab-pane ${addActive === 'one' ? 'active' : ''}`}>

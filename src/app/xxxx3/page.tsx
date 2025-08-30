@@ -1,24 +1,20 @@
 "use client"
-import React, { useRef, useState } from 'react'
+import React, {useRef, useState} from 'react'
 import ModalVideo from 'react-modal-video'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { IMAGE } from "@/constent/theme";
+import {Swiper, SwiperSlide} from 'swiper/react'
+import {IMAGE} from "@/constent/theme";
 import CarListingBanner from "@/element/car-listing-banner";
 import BlogDridCard from "@/element/BlogDridCard";
 import Link from "next/link";
 import Image from 'next/image';
 import 'swiper/css';
-import {Metadata} from "next";
+import Head from "next/head";
 
-export const metadata: Metadata = {
-    title: 'یارات وبلاگ',
-    description: 'یارات پلتفرم تولید باگی گروهی ۴، ۸ و ۱۲ نفره است. اینجا بهترین باگی هارو تولید می‌کنیم!',
-}
 
 const blogSlider = [
-    { img: IMAGE.blogGridpic9 },
-    { img: IMAGE.blogGridpic10 },
-    { img: IMAGE.blogGridpic11 },
+    {img: IMAGE.blogGridpic9},
+    {img: IMAGE.blogGridpic10},
+    {img: IMAGE.blogGridpic11},
 ]
 
 const BlogGrid = () => {
@@ -27,16 +23,14 @@ const BlogGrid = () => {
 
     return (
         <>
-            <ModalVideo
-                channel="youtube"
-                autoplay
-                isOpen={open}
-                videoId="PkkV1vLHUvQ"
-                onClose={() => setOpen(false)}
-            />
+            <Head>
+                <title>یارات وبلاگ</title>
+                <meta name="description"
+                      content="'یارات پلتفرم تولید باگی گروهی ۴، ۸ و ۱۲ نفره است. اینجا بهترین باگی هارو تولید می‌کنیم!"/>
+            </Head>
 
             <div className="page-content bg-white">
-                <CarListingBanner img={IMAGE.bnr1} title={'Blog Grid'} />
+                <CarListingBanner img={IMAGE.bnr1} title={'Blog Grid'}/>
 
                 <section className="content-inner">
                     <div className="container">
@@ -71,10 +65,12 @@ const BlogGrid = () => {
                                                     alt=""
                                                     width={400}
                                                     height={250}
-                                                    style={{ objectFit: 'cover' }}
+                                                    style={{objectFit: 'cover'}}
                                                 />
                                             </Link>
-                                            <div className="video-btn sm" onClick={() => { setOpen(true) }}>
+                                            <div className="video-btn sm" onClick={() => {
+                                                setOpen(true)
+                                            }}>
                                                 <button className="popup-youtube">
                                                     <i className="fa fa-play"></i>
                                                 </button>
@@ -125,7 +121,7 @@ const BlogGrid = () => {
                                                                     alt=""
                                                                     width={400}
                                                                     height={250}
-                                                                    style={{ objectFit: 'cover' }}
+                                                                    style={{objectFit: 'cover'}}
                                                                 />
                                                             </Link>
                                                         </SwiperSlide>
@@ -133,13 +129,17 @@ const BlogGrid = () => {
                                                 </div>
                                                 <div
                                                     className="prev-post-swiper-btn cursorPointer"
-                                                    onClick={() => { swiperRef.current.swiper.slidePrev() }}
+                                                    onClick={() => {
+                                                        swiperRef.current.swiper.slidePrev()
+                                                    }}
                                                 >
                                                     <i className="fas fa-chevron-left"></i>
                                                 </div>
                                                 <div
                                                     className="next-post-swiper-btn cursorPointer"
-                                                    onClick={() => { swiperRef.current.swiper.slideNext() }}
+                                                    onClick={() => {
+                                                        swiperRef.current.swiper.slideNext()
+                                                    }}
                                                 >
                                                     <i className="fas fa-chevron-right"></i>
                                                 </div>

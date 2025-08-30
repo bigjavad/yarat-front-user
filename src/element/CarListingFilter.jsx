@@ -1,7 +1,8 @@
 import React from 'react'
-;
+
 import MultiRangeSlider from '../components/MultiRangeSlider';
 import { Form } from 'react-bootstrap';
+import Link from "next/link";
 
 
 const CarListingFilter = (props) => {

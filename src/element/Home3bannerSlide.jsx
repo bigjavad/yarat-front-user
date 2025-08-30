@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { IMAGE } from '@/constent/theme'
 ;
 
+import Link from "next/link";
 
 
 

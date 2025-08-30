@@ -1,6 +1,7 @@
 import React from 'react'
 import { IMAGE } from '@/constent/theme'
 
+import Link from "next/link";
 
 
 const cards = [

@@ -2,6 +2,7 @@ import React from 'react'
 
 import { Form } from 'react-bootstrap'
 import {IMAGE} from "@/constent/theme";
+import Link from "next/link";
 
 const CarDealerBanner = (props) => {
   return (

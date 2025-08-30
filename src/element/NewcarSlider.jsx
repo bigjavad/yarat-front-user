@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 
 import {Autoplay , EffectFade,Pagination , Navigation ,Parallax} from "swiper/modules";
 
+import Link from "next/link";
 
 const NewcarSlides = [
   { img: IMAGE.home3gellerypic1 },

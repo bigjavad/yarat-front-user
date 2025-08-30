@@ -1,6 +1,5 @@
 "use client"
 import React, { useState } from 'react'
-import { Form } from 'react-bootstrap';
 import {IMAGE} from "@/constent/theme";
 import {Swiper, SwiperSlide} from "swiper/react";
 import Link from "next/link";
@@ -18,7 +17,7 @@ const slides = [
     { img: IMAGE.slideItem4, img2: IMAGE.thumb4 },
 ]
 
-const carOverview = () => {
+const CarOverview = () => {
     const [thumbsSwiper, setThumbsSwiper] = useState(null)
     const [addActive, setActive] = useState('nav_one');
     const navLinks = (e) => {
@@ -241,4 +240,4 @@ const carOverview = () => {
     )
 }
 
-export default carOverview
+export default CarOverview

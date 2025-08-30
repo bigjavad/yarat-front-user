@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import {Autoplay , EffectFade,Pagination , Navigation ,Parallax} from "swiper/modules";
 ;
 import { Form } from 'react-bootstrap';
+import Link from "next/link";
 
 
 

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Accordion, Tab, Nav } from 'react-bootstrap';
-;
+import Link from "next/link";
+
 
 
 

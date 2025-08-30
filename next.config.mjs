@@ -1,11 +1,8 @@
+// next.config.mjs
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    images: {
-        domains: ['api.mamana.app'],
-    },
-    typescript: {
-        ignoreBuildErrors: true,
-    },
+    reactStrictMode: true,
+    swcMinify: true,
 };
 
 export default nextConfig;

@@ -2,6 +2,7 @@ import React, { useRef } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { IMAGE } from '@/constent/theme'
 import {Autoplay , EffectFade,Pagination , Navigation ,Parallax} from "swiper/modules";
+import Link from "next/link";
 
 
 
