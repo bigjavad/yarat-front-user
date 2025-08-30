@@ -28,7 +28,7 @@ const Header = () => {
                         <div className="container clearfix">
                             <div className="logo-header mostion logo-dark">
                                 <Link href={'/'}>
-                                    <Image
+                                    <img
                                         src='/assets/images/logo.png'
                                         alt="Logo"
                                         width={150}
@@ -62,7 +62,7 @@ const Header = () => {
                             <div className={`header-nav navbar-collapse collapse justify-content-center ${addOpen ? 'show' : ''}`} id="navbarNavDropdown">
                                 <div className="logo-header">
                                     <Link href={'/'}>
-                                        <Image
+                                        <img
                                             src={IMAGE.logo2}
                                             alt="Logo"
                                             width={150}

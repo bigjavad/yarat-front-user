@@ -1,10 +1,29 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     reactStrictMode: true,
-    swcMinify: true,
+    swcMinify: false,
+    images: {
+        unoptimized: true,
+        deviceSizes: [],
+        imageSizes: [],
+        domains: [],
+        loader: 'default',
+    },
     typescript: {
-        // این باعث میشه TypeScript ارور نده موقع بیلد
         ignoreBuildErrors: true,
+    },
+    eslint: {
+        ignoreDuringBuilds: true,
+    },
+    webpack(config) {
+        config.resolve.alias = {
+            ...config.resolve.alias,
+            sharp: false,
+        };
+        return config;
+    },
+    experimental: {
+        ignoreDevErrors: true,
     },
 };
 

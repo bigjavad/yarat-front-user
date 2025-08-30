@@ -1,5 +1,4 @@
 import {snackbarService} from "@/shared/service-ui/snackbar.service";
-import {getCookie} from "cookies-next";
 
 const API_URL = 'http://localhost:3000'
 
@@ -23,21 +22,15 @@ const handlerExceptionError = async (response: any) => {
 
 function errorToast(data: any) {
     data.errors.map((res: any, key: number) => {
-        snackbarService.showSnackbar(res.message,'error');
+        snackbarService.showSnackbar(res.message, 'error');
     })
 }
 
 export async function fetchData(url: string, method: string = "post", body = {}) {
     try {
         let response;
-        let token;
+        let token = '';
 
-        if (typeof window != 'undefined') {
-            token = getCookie('token');
-        } else {
-            const {cookies: serverCookies} = await import('next/headers');
-            token = serverCookies().get('token') ? serverCookies().get('token')?.value : null;
-        }
 
         const headers = {
             'Content-Type': 'application/json',

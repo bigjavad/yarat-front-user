@@ -6,13 +6,11 @@ import {EN_LoginStateEnum} from "@/shared/enum/form/EN_LoginState.enum";
 import {LoginSchema} from "@/shared/validation/schema/login-schema";
 import {ActionResault} from "@/shared/model/base/action-resault";
 import {LoginDto} from "@/shared/model/dto/auth/login.dto";
-import {setUser} from "@/shared/redux/features";
 import {loginService, registerService} from "@/shared/service/login/login.service";
 import {Modal} from "react-bootstrap";
 import InputComponent from "@/shared/component/input.component";
 import OtpInput from 'react-otp-input';
 import ValidationErrorComponent from "@/shared/component/validationErrorComponent";
-import {store} from "@/shared/redux/store";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -48,7 +46,7 @@ const LoginModal = () => {
                 })
             } else {
                 registerService(fillModelValidCode()).then((res: ActionResault<LoginDto>) => {
-                    store.dispatch(setUser(res.data));
+                    // store.dispatch(setUser(res.data));
                     localStorage.setItem('isLoggedIn', 'true');
                     handleClose();
                     router.push('/');
@@ -73,7 +71,7 @@ const LoginModal = () => {
     }
 
     return (
-        <Modal show={show} onHide={handleClose} centered size="sm">
+        <Modal show={show} onHide={handleClose} centered size="lg">
             <Modal.Header closeButton>
                 <Modal.Title>تماس با ما</Modal.Title>
             </Modal.Header>
@@ -81,7 +79,7 @@ const LoginModal = () => {
                 <div className="d-flex align-items-center justify-content-center gap-3 w-25 mx-auto mb-4">
                     <div className="logo-header mostion logo-dark">
                         <Link href={'/'}>
-                            <Image
+                            <img
                                 src='/assets/images/logo.png'
                                 alt="Logo"
                                 width={150}

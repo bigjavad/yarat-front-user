@@ -60,7 +60,7 @@ const Homeslide = (props) => {
                                     </Link>
                                 </div>
                                 <div className="slider-img">
-                                    <Image
+                                    <img
                                         src={slide.imag1}
                                         alt={`Slide ${index + 1}`}
                                         fill

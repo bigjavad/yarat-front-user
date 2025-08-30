@@ -12085,14 +12085,14 @@ strong,
 }
 
 #loading-area.loading-page-2 {
-    background-image: url('./../images/logo.png');
+    background-image: url('/assets/images/logo.png');
     background-repeat: no-repeat;
     background-size: 150px;
     background-position: center;
 }
 
 #loading-area.loading-page-3 {
-    background-image: url('./../../assets/images/logo.png');
+    background-image: url('/assets/images/logo.png');
     background-repeat: no-repeat;
     background-size: 250px;
     background-position: center;
@@ -26136,7 +26136,7 @@ pre {
     top: 0;
     inset-inline-start: 0;
     z-index: -1;
-    background-image: url(../images/background/under-construct.jpg);
+    background-image: url(/assets/images/background/under-construct.jpg);
     background-position: center;
     background-size: cover;
 }
@@ -29371,8 +29371,7 @@ pre {
 
 footer {
     font-size: 18px;
-    background-image: url();
-}
+ }
 
 @media only screen and (max-width: 1600px) {
     footer {

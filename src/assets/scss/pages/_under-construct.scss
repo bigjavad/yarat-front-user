@@ -20,7 +20,7 @@
 		top:0;
 		inset-inline-start:0;
 		z-index:-1;
-		background-image: url(../images/background/under-construct.jpg);
+		background-image: url(/assets/images/background/under-construct.jpg);
 		background-position: center;
 		background-size: cover;
 		@include respond('phone'){

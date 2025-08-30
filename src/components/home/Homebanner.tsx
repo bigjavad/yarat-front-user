@@ -115,7 +115,7 @@ const Homebanner = () => {
                                 12 نفره </Link></li>
                         </ul>
                     </div>
-                    <Image className="img1 move-1" src={'/assets/images/pattern/pattern4.png'} alt="" width={100}
+                    <img className="img1 move-1" src={'/assets/images/pattern/pattern4.png'} alt="" width={100}
                            height={100}/>
                 </div>
             </div>

@@ -81,8 +81,8 @@ const Menus = ({setOpen}) => {
     }
 
     useEffect(() => {
-        MenusItem.forEach((data) => {
-            if (data?.subMenu?.length > 0) {
+        MenusItem.forEach((data: any) => {
+            if (data && data?.subMenu?.length > 0) {
                 data.subMenu.forEach((item) => {
                     if (item.link === pathname) {
                         setActiveLink(data.menu);
@@ -116,9 +116,13 @@ const Menus = ({setOpen}) => {
                                     <i className="fa fa-angle-down"></i>
                                 </Link>
                             ) : (
-                                <Link href={menu.link} onClick={() => setOpen && setOpen(false)}>
-                                    {menu.menu}
-                                </Link>
+                                 menu.link ? (
+                                        <Link href={menu.link} onClick={() => setOpen && setOpen(false)}>
+                                            {menu.menu}
+                                        </Link>
+                                    ) : (
+                                        <span>{menu.menu}</span>
+                                    )
                             )}
                             {hasSubMenu && (
                                 <ul className={`sub-menu ${state.activeSubmenu === menu.menu ? 'show' : ''}`}>

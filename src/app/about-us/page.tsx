@@ -104,16 +104,6 @@ const imageCard = [
     }
 ];
 
-const ourTeam = [
-    {img: IMAGE.teamPic1, name: 'Tommy Hank'},
-    {img: IMAGE.teamPic2, name: 'Emilia Johnson'},
-    {img: IMAGE.teamPic3, name: 'Mark Steven'},
-    {img: IMAGE.teamPic4, name: 'Cindy Stark'},
-    {img: IMAGE.teamPic5, name: 'Wanda Hummels'},
-    {img: IMAGE.teamPic6, name: 'David Lee'},
-    {img: IMAGE.teamPic7, name: 'Franklin Mc. Good'},
-    {img: IMAGE.teamPic8, name: 'James Rodriguez'},
-]
 
 
 const About = () => {

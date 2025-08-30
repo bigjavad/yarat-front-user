@@ -1,3 +1,3 @@
-export class BaseEntity{
-    id:number;
+export class BaseEntity {
+    id: number | undefined;
 }
