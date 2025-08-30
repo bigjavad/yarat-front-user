@@ -56,7 +56,7 @@ const SearchCarBanner = () => {
                                           <span className="d-flex justify-content-between w-100">FIND<i className="las la-long-arrow-alt-right"></i></span>
                                       </Link>
                                   </div>
-                                  <img className="img2 move-2" src={IMAGE.patternImg5} alt=""/>
+                                  <img className="img2 move-2" src={'/assets/images/pattern/pattern5.png'} alt=""/>
                               </div>
                           </div>
                           <div className={`tab-pane fade ${addactive == 2 ? 'active show' : ''}`} id="bg-modal">
@@ -89,7 +89,7 @@ const SearchCarBanner = () => {
                                           <span className="d-flex justify-content-between w-100">FIND<i className="las la-long-arrow-alt-right"></i></span>
                                       </Link>
                                   </div>
-                                  <img className="img2 move-2" src={IMAGE.patternImg5} alt=""/>
+                                  <img className="img2 move-2" src={'/assets/images/pattern/pattern5.png'} alt=""/>
                               </div>
                           </div>
                       </div>

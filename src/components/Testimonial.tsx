@@ -1,7 +1,6 @@
 "use client"
 import React from 'react'
 import {Swiper, SwiperSlide} from 'swiper/react'
-import {IMAGE} from '@/constent/theme'
 import {FaCaretLeft, FaCaretRight} from "react-icons/fa";
 
 
@@ -79,9 +78,11 @@ const Testimonial = () => {
                     })}
                     <div className="testimonial-pagination text-center m-t50">
                         <div className="btn-prev swiper-button-prev7 cursorPointer" onClick={() => {
+                            // @ts-ignore
                             swiperRef.current.swiper.slidePrev()
                         }}><FaCaretRight/></div>
                         <div className="btn-next swiper-button-next7 cursorPointer" onClick={() => {
+                            // @ts-ignore
                             swiperRef.current.swiper.slideNext()
                         }}><FaCaretLeft/></div>
                     </div>

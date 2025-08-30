@@ -1,10 +1,8 @@
 "use client"
 import React, {useState} from 'react';
 import CarListingBanner from "@/element/car-listing-banner";
-import {IMAGE} from "@/constent/theme";
-import ContectForm from "@/element/ContectForm";
-import {Accordion, Badge, Col, Container, Row} from "react-bootstrap";
-import {Metadata} from "next";
+
+import {Accordion, Col, Container, Row} from "react-bootstrap";
 import Head from "next/head";
 
 function Page() {
@@ -200,7 +198,13 @@ function Page() {
                                     <h2 className="h5 fw-semibold text-primary mb-0">{category.title}</h2>
                                 </div>
 
-                                <Accordion activeKey={activeKey} onSelect={(key) => setActiveKey(key || '0')} flush>
+                                <Accordion
+                                    activeKey={activeKey}
+                                    onSelect={(key: any) => {
+                                        if (key) setActiveKey(key);
+                                    }}
+                                    flush
+                                >
                                     {category.items.map((item, itemIndex) => {
                                         const eventKey = `${categoryIndex}-${itemIndex}`;
                                         return (

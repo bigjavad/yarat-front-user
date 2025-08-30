@@ -61,8 +61,8 @@ export default function Home() {
                     </div>
                 </section>
             </div>
-            <ModalVideo channel="youtube" autoplay
-                        isOpen={open} videoId="PkkV1vLHUvQ" onClose={() => setOpen(false)}/>
+            {/*<ModalVideo channel="youtube" autoplay*/}
+            {/*            isOpen={open} videoId="PkkV1vLHUvQ" onClose={() => setOpen(false)}/>*/}
         </>
     )
 }

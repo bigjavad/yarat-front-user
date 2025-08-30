@@ -2,8 +2,9 @@
 import React, {useState} from 'react';
 import CarListingBanner from "@/element/car-listing-banner";
 import {IMAGE} from "@/constent/theme";
-import { Container, Row, Col, Card, Accordion, Badge } from 'react-bootstrap';
+import {Container, Row, Col, Card, Accordion, Badge} from 'react-bootstrap';
 import ContectUs from "@/components/contect-us/ContectUs";
+
 function Page() {
     const [activeKey, setActiveKey] = useState('0');
 
@@ -51,7 +52,7 @@ function Page() {
             <div className="page-content bg-white">
 
                 <div className="page-content bg-white">
-                    <CarListingBanner img={'/assets/images/gallery/28.webp'} title={'قوانین خرید'} />
+                    <CarListingBanner img={'/assets/images/gallery/28.webp'} title={'قوانین خرید'}/>
                     <Container className="py-5">
 
                         <div className="terms-section">
@@ -129,33 +130,39 @@ function Page() {
                             </Col>
                         </Row>
 
-                            {rulesSections.map((category, categoryIndex) => (
-                                    <Row key={categoryIndex} className="mb-4">
-                                        <Col lg={10} className="mx-auto">
-                                            <div className="d-flex align-items-center mb-3">
-                                                <span className="fs-5 me-2">{category.icon}</span>
-                                                <h2 className="h5 fw-semibold text-primary mb-0">{category.title}</h2>
-                                            </div>
+                        {rulesSections.map((category, categoryIndex) => (
+                            <Row key={categoryIndex} className="mb-4">
+                                <Col lg={10} className="mx-auto">
+                                    <div className="d-flex align-items-center mb-3">
+                                        <span className="fs-5 me-2">{category.icon}</span>
+                                        <h2 className="h5 fw-semibold text-primary mb-0">{category.title}</h2>
+                                    </div>
 
-                                            <Accordion activeKey={activeKey} onSelect={(key) => setActiveKey(key || '0')} flush>
-                                                {category.items.map((item, itemIndex) => {
-                                                    const eventKey = `${categoryIndex}-${itemIndex}`;
-                                                    return (
-                                                        <Accordion.Item key={eventKey} eventKey={eventKey}
-                                                                        className="border-0 mb-2">
-                                                            <Accordion.Header className="p-3 rounded-1 ">
-                                                                <span className="fw-medium text-dark">{item.question}</span>
-                                                            </Accordion.Header>
-                                                            <Accordion.Body className="p-3 text-primary lh-lg">
-                                                                {item.answer}
-                                                            </Accordion.Body>
-                                                        </Accordion.Item>
-                                                    );
-                                                })}
-                                            </Accordion>
-                                        </Col>
-                                    </Row>
-                                ))}
+                                    <Accordion
+                                        activeKey={activeKey}
+                                        onSelect={(key: any) => {
+                                            if (key) setActiveKey(key);
+                                        }}
+                                        flush
+                                    >
+                                        {category.items.map((item, itemIndex) => {
+                                            const eventKey = `${categoryIndex}-${itemIndex}`;
+                                            return (
+                                                <Accordion.Item key={eventKey} eventKey={eventKey}
+                                                                className="border-0 mb-2">
+                                                    <Accordion.Header className="p-3 rounded-1 ">
+                                                        <span className="fw-medium text-dark">{item.question}</span>
+                                                    </Accordion.Header>
+                                                    <Accordion.Body className="p-3 text-primary lh-lg">
+                                                        {item.answer}
+                                                    </Accordion.Body>
+                                                </Accordion.Item>
+                                            );
+                                        })}
+                                    </Accordion>
+                                </Col>
+                            </Row>
+                        ))}
                     </Container>
                     <section className="content-inner">
                         <div className="container">

@@ -39,7 +39,7 @@ const CarDealerBanner = (props) => {
                               <span className="d-flex justify-content-between w-100">FIND<i className="las la-long-arrow-alt-right"></i></span>
                           </Link>
                       </div>
-                      <img className="img2 move-2" src={IMAGE.patternImg2} alt=""/>
+                      <img className="img2 move-2" src="/assets/images/pattern/pattern6.png" alt=""/>
                   </div>
               </div>
           </div>

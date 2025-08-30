@@ -1,6 +1,5 @@
 import React from 'react'
 
-import MultiRangeSlider from '../components/MultiRangeSlider';
 import { Form } from 'react-bootstrap';
 import Link from "next/link";
 
@@ -69,11 +68,7 @@ const CarListingFilter = (props) => {
                         <div className="widget widget_price_range">
                             <h5>Price range</h5>
 
-                            <MultiRangeSlider
-                                min={0}
-                                max={1000}
-                                onChange={({min,max})=>`${min},${max}`}
-                            />
+
 
                         </div>
                         <div className="widget">

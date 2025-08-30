@@ -73,7 +73,7 @@ const LoginModal = () => {
     }
 
     return (
-        <Modal show={show} onHide={handleClose} centered size="md">
+        <Modal show={show} onHide={handleClose} centered size="sm">
             <Modal.Header closeButton>
                 <Modal.Title>تماس با ما</Modal.Title>
             </Modal.Header>

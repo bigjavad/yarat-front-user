@@ -50,18 +50,22 @@ const Homebanner = () => {
             case "selectedButton":
                 setOptinActive(action.ind);
                 if (text.current) {
+                    // @ts-ignore
                     text.current.textContent = selectOption1[action.ind].title;
                 }
                 return {...state, Value1: false}
             case "selectedButton2":
                 setOptinActive2(action.ind);
                 if (text2.current) {
+                    // @ts-ignore
+
                     text2.current.textContent = selectOption2[action.ind].title;
                 }
                 return {...state, Value2: false}
             case "selectedButton3":
                 setOptinActive3(action.ind);
                 if (text3.current) {
+                    // @ts-ignore
                     text3.current.textContent = selectOption3[action.ind].title;
                 }
                 return {...state, Value3: false}
@@ -111,7 +115,8 @@ const Homebanner = () => {
                                 12 نفره </Link></li>
                         </ul>
                     </div>
-                    <Image className="img1 move-1" src={IMAGE.patternImg} alt="" width={100} height={100}/>
+                    <Image className="img1 move-1" src={'/assets/images/pattern/pattern4.png'} alt="" width={100}
+                           height={100}/>
                 </div>
             </div>
             <Homeslide/>
