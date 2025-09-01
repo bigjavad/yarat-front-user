@@ -12,8 +12,8 @@ import Footer from "@/components/base/footer";
 import Header from "@/components/base/header";
 import {SnackbarProvider} from "notistack";
 import React from "react";
-import ContactModal from "@/components/contact-modal/contact-modal";
 import NextTopLoader from "nextjs-toploader";
+import ContactButtonSide from "@/components/base/contact-button-side";
 
 
 const bakh = localFont({
@@ -80,6 +80,7 @@ export default function RootLayout({
             autoHideDuration={3000}
             anchorOrigin={{horizontal: 'right', vertical: 'top'}}>
             <Header/>
+            <ContactButtonSide />
             <article className="max-w-[1920px] mx-auto">{children}</article>
             <Footer/>
         </SnackbarProvider>
