@@ -1,6 +1,6 @@
 'use client'
 import React, {useReducer, useRef, useState} from 'react'
-import Homeslide from '../../element/Homeslide'
+import Homeslide from '../../element/homeslide'
 import {IMAGE} from '@/constent/theme'
 import Link from "next/link";
 import Image from 'next/image';

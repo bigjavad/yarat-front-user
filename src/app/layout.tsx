@@ -8,13 +8,12 @@ import 'lightgallery/css/lightgallery.css';
 import 'lightgallery/css/lg-zoom.css';
 import 'lightgallery/css/lg-thumbnail.css';
 import '../assets/css/style.css'
-import Footer from "@/components/base/Footer";
-import Header from "@/components/base/Header";
+import Footer from "@/components/base/footer";
+import Header from "@/components/base/header";
 import {SnackbarProvider} from "notistack";
 import React from "react";
 import ContactModal from "@/components/contact-modal/contact-modal";
 import NextTopLoader from "nextjs-toploader";
-import Head from "next/head";
 
 
 const bakh = localFont({
