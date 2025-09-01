@@ -12100,7 +12100,7 @@ strong,
 }
 
 #loading-area.loading-page-3 {
-    background-image: url('./../../assets/images/logo.png');
+    background-image: url('/assets/images/logo.png');
     background-repeat: no-repeat;
     background-size: 250px;
     background-position: center;

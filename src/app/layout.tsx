@@ -59,6 +59,7 @@ export default function RootLayout({
         >
         <title>یارات پلتفرم تولید باگی</title>
         <meta name="description" content="یارات پلتفرم تولید باگ‌های گروهی ۴، ۸ و ۱۲ نفره است."/>
+
         <NextTopLoader
             color="#EE3131"
             initialPosition={0.08}
@@ -72,8 +73,8 @@ export default function RootLayout({
             zIndex={1600}
             showAtBottom={false}
         />
-        <body suppressHydrationWarning={true}>
 
+        <body suppressHydrationWarning={true}>
         <SnackbarProvider
             maxSnack={3}
             autoHideDuration={3000}
