@@ -1,5 +1,6 @@
 import React, { useEffect, useReducer, useState } from 'react'
  import { MenusItem } from './menus';
+import Link from "next/link";
 
 const Menu_2 = () => {
 
