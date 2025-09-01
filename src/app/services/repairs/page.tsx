@@ -3,8 +3,7 @@ import React, {useState} from 'react';
 import Link from "next/link";
 import CarListingBanner from "@/element/car-listing-banner";
 import {IMAGE} from "@/constent/theme";
-import LocationCards from "@/element/LocationCards";
-
+import LocationCards from "@/element/location-cards";
 
 function Page() {
     const [addAcrtive, setActive] = useState(1);

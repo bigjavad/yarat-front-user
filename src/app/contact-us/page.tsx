@@ -3,7 +3,7 @@ import CarListingBanner from "@/element/car-listing-banner";
 import ContactModal from "@/components/contact-modal/contact-modal";
 
 
-const Contact = () => {
+const Page = () => {
     return (
         <>
             <title>یارات ارتباط با ما</title>
@@ -82,4 +82,4 @@ const Contact = () => {
     )
 }
 
-export default Contact
+export default Page

@@ -31,7 +31,7 @@ const selectOption3 = [
     {title: 'Macan '},
 ]
 
-const Homebanner = () => {
+const HomeBanner = () => {
     const [optinActive, setOptinActive] = useState(0);
     const [optinActive2, setOptinActive2] = useState(0);
     const [optinActive3, setOptinActive3] = useState(0);
@@ -115,4 +115,4 @@ const Homebanner = () => {
     )
 }
 
-export default Homebanner
+export default HomeBanner

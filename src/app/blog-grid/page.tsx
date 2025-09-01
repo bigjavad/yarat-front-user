@@ -4,10 +4,10 @@ import ModalVideo from 'react-modal-video'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { IMAGE } from "@/constent/theme";
 import CarListingBanner from "@/element/car-listing-banner";
-import BlogDridCard from "@/element/BlogDridCard";
 import Link from "next/link";
 import Image from 'next/image';
 import 'swiper/css';
+import BlogDridCard from "@/element/blog-drid-card";
 
 
 const blogSlider = [
@@ -16,7 +16,7 @@ const blogSlider = [
     { img: IMAGE.blogGridpic11 },
 ]
 
-const BlogGrid = () => {
+const Page = () => {
     const [open, setOpen] = useState(false);
     const swiperRef = useRef(null);
 
@@ -180,4 +180,4 @@ const BlogGrid = () => {
     )
 }
 
-export default BlogGrid
+export default Page

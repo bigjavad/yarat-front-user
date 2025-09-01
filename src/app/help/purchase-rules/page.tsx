@@ -2,7 +2,7 @@
 import React, {useState} from 'react';
 import CarListingBanner from "@/element/car-listing-banner";
 import { Container, Row, Col, Card, Accordion } from 'react-bootstrap';
-import ContectUs from "@/components/contect-us/ContectUs";
+import ContectUs from "@/components/contect-us/contect-us";
 function Page() {
     const [activeKey, setActiveKey] = useState('0');
 
@@ -136,7 +136,7 @@ function Page() {
                                                 <h2 className="h5 fw-semibold text-primary mb-0">{category.title}</h2>
                                             </div>
 
-                                            <Accordion activeKey={activeKey} onSelect={(key) => setActiveKey(key || '0')} flush>
+                                            <Accordion activeKey={activeKey} onSelect={(key) => setActiveKey(key.toString() || '0')} flush>
                                                 {category.items.map((item, itemIndex) => {
                                                     const eventKey = `${categoryIndex}-${itemIndex}`;
                                                     return (

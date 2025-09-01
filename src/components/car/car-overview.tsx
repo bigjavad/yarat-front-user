@@ -2,7 +2,6 @@
 import React, {useState} from 'react'
 import {Swiper, SwiperSlide} from "swiper/react";
 import {Navigation, FreeMode, Thumbs} from "swiper/modules";
-import ContectUs from "@/components/contect-us/ContectUs";
 import {jalaliPipe} from "@/shared/pipe/jalali-pipe";
 import {CarDto} from "@/shared/model/dto/car/car.dto";
 import {CarPropertyDto} from "@/shared/model/dto/car/car-property.dto";
@@ -13,6 +12,7 @@ import ContactModal from "@/components/contact-modal/contact-modal";
 import {currencyPipe} from "@/shared/pipe/currency-pipe";
 import {snackbarService} from "@/shared/service-ui/snackbar.service";
 import {ActionResault} from "@/shared/model/base/action-resault";
+import ContectUs from "@/components/contect-us/contect-us";
 
 
 const carOverview = (data: { car: CarDto }) => {

@@ -1,6 +1,5 @@
 import React from 'react'
-import AboutSlider from '../../element/AboutSlider'
-import {IMAGE} from "@/constent/theme";
+import AboutSlider from "@/element/about-slider";
 
 
 const About = () => {

@@ -1,7 +1,7 @@
 import React from 'react';
-import Ourproject from "@/element/Ourproject";
-import ContectUs from "@/components/contect-us/ContectUs";
+import OurProject from "@/element/our-project";
 import {Metadata} from "next";
+import ContectUs from "@/components/contect-us/contect-us";
 
 export const metadata: Metadata = {
     title: 'یارات گالری',
@@ -75,7 +75,7 @@ function Page() {
     return (
         <div>
             <div className="page-content bg-white">
-                <Ourproject/>
+                <OurProject/>
                 <div className="section-full bg-white content-inner" id="our-service">
                     <div className="container">
                         <div className="section-head text-center head-style-2 wow fadeIn">

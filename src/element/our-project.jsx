@@ -55,7 +55,7 @@ const gallery = [
     { category: 'twelve', img: '/assets/images/gallery/97.webp' },
  ];
 
-const Ourproject = () => {
+const OurProject = () => {
     const [imgGallery, setImgGallery] = useState(gallery);
     const [addactive, setAddactive] = useState('all');
 
@@ -131,4 +131,4 @@ const Ourproject = () => {
     );
 };
 
-export default Ourproject;
+export default OurProject;

@@ -1,13 +1,13 @@
 "use client"
 import React, {useState} from 'react'
-import Homebanner from '../components/home/Homebanner'
-import About from '../components/about/About'
-import CarFeatures from '../components/car/CarFeatures'
-import TopDeal from '../components/home/TopDeal'
-import Bestcar from '../components/car/Bestcar'
-import ContectUs from '../components/contect-us/ContectUs'
+import HomeBanner from '../components/home/home-banner'
 import '../../node_modules/react-modal-video/scss/modal-video.scss'
 import ModalVideo from 'react-modal-video'
+import CarFeatures from "@/components/car/car-features";
+import TopDeal from "@/components/home/top-deal";
+import BestCar from "@/components/car/best-car";
+import ContectUs from "@/components/contect-us/contect-us";
+import About from "@/components/about/about";
 
 
 
@@ -21,7 +21,7 @@ export default function Home() {
             <div className="page-content bg-white">
                 <div className="banner-one">
                     <div className="row">
-                        <Homebanner/>
+                        <HomeBanner/>
                     </div>
 
                 </div>
@@ -51,7 +51,7 @@ export default function Home() {
                 <section className="content-inner-2">
                     <div className="container">
                         <div className="row features-box">
-                            <Bestcar/>
+                            <BestCar/>
                         </div>
                     </div>
                 </section>

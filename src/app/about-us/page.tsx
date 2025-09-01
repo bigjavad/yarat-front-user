@@ -2,7 +2,7 @@
 import React, {useEffect, useState} from 'react';
 import {IMAGE} from "@/constent/theme";
 import CarListingBanner from "@/element/car-listing-banner";
-import ContectUs from "@/components/contect-us/ContectUs";
+import ContectUs from "@/components/contect-us/contect-us";
 
 const progressCard = [
     {
@@ -99,7 +99,7 @@ const ourTeam = [
 ]
 
 
-const About = () => {
+const Page = () => {
     const [addAcrtive, setActive] = useState(1);
     const [swiperWidth, setSwiperWidth] = useState(false);
 
@@ -210,4 +210,4 @@ const About = () => {
     )
 }
 
-export default About
+export default Page

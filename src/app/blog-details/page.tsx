@@ -2,10 +2,10 @@ import React from 'react'
 import CarListingBanner from "@/element/car-listing-banner";
 import {IMAGE} from "@/constent/theme";
 import Link from "next/link";
-import PageSider from "@/element/PageSider";
+import PageSider from "@/element/page-sider";
 
 
-const BlogDetail = () => {
+const Page = () => {
     return (
         <>
             <div className="page-content bg-white">
@@ -187,4 +187,4 @@ const BlogDetail = () => {
     )
 }
 
-export default BlogDetail
+export default Page

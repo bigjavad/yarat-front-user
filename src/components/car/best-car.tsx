@@ -3,7 +3,7 @@ import React from 'react'
 import Link from "next/link";
 
 
-const Bestcar = () => {
+const BestCar = () => {
     return (
         <>
             <div className="row features-box">
@@ -39,4 +39,4 @@ const Bestcar = () => {
     )
 }
 
-export default Bestcar
+export default BestCar

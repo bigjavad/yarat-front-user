@@ -1,11 +1,10 @@
 "use client"
 import React from 'react'
-import LatestCarBanner from "@/element/LatestCarBanner";
-import LatestCarSider from "@/components/car/LatestCarSider";
-import PopulerCars from "@/components/car/PopulerCars";
-import ContectUs from "@/components/contect-us/ContectUs";
+import LatestCarBanner from "@/element/latest-car-banner";
+import LatestCarSider from "@/components/car/latest-car-sider";
+import ContectUs from "@/components/contect-us/contect-us";
 
-const LetestCar = () => {
+const Page = () => {
     return (
         <>
             <title>یارات محصولات ما</title>
@@ -31,4 +30,4 @@ const LetestCar = () => {
     )
 }
 
-export default LetestCar
+export default Page

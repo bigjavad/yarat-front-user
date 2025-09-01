@@ -1,5 +1,5 @@
 import React from 'react'
-import CarFuturSlide from '../../element/CarFuturSlide'
+import CarFuturSlide from '../../element/car-futur-slide'
 import Link from "next/link";
 
 
