@@ -21,12 +21,6 @@ const counter = createSlice({
         setLoading: (state, action: PayloadAction<boolean>) => {
             state.loading = action.payload;
         },
-        userStore: (state, action: PayloadAction<{}>) => {
-            state.user = action.payload;
-        },
-        setToken: (state, action: PayloadAction<string>) => {
-            state.token = action.payload;
-        },
         logout:(state) => {
             state.user=null;
             state.token=null;
@@ -38,9 +32,6 @@ const counter = createSlice({
 
 export const {
     setUser,
-    setLoading,
-    userStore,
-    setToken,
     logout
 } = counter.actions;
 

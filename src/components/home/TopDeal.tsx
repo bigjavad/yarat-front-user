@@ -1,12 +1,17 @@
 "use client"
-import React, {useEffect, useState} from 'react'
-import Link from "next/link";
+import React, {useEffect, useState} from 'react';
 import {ActionResault} from "@/shared/model/base/action-resault";
 import {CarDto} from "@/shared/model/dto/car/car.dto";
 import {getListCar} from "@/shared/service/car/car.service";
+import {Swiper, SwiperSlide} from 'swiper/react';
+import {Autoplay, Pagination} from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/autoplay';
+import Link from "next/link";
 import {CarPropertyDto} from "@/shared/model/dto/car/car-property.dto";
 
-function LatestCarSider() {
+function TopDeal() {
     const [carList, setCarList] = useState<CarDto[]>([]);
 
     useEffect(() => {
@@ -17,9 +22,33 @@ function LatestCarSider() {
 
     return (
         <>
-            <div className="row lightgallery gap-3">
-                {carList.map((item, index) => {
-                    return ( <div key={index} className="car-list-box col-lg-4 overlay">
+            <Swiper
+                className="swiper-container deal-swiper swiper-dots-1"
+                modules={[Pagination, Autoplay]}
+                autoplay={{
+                    delay: 3000
+                }}
+                slidesPerView={4}
+                spaceBetween={30}
+                speed={1200}
+                breakpoints={{
+                    1500: {
+                        slidesPerView: 4,
+                    },
+                    1400: {
+                        slidesPerView: 3,
+                    },
+                    500: {
+                        slidesPerView: 2,
+                    },
+                    240: {
+                        slidesPerView: 1,
+                    },
+                }}
+            >
+                {carList.map((item: CarDto, index: number) => (
+                    <SwiperSlide className="swiper-slide" key={index}>
+                        <div className="car-list-box overlay">
                             <div className="media-box">
                                 <div className="image-wrapper">
                                     <img
@@ -63,18 +92,18 @@ function LatestCarSider() {
                                         <label>امکانات</label>
                                         <p className="value font-10">
                                             {item.facilitiesList?.slice(0, 3).map((facility: CarPropertyDto, idx: number) => (
-                                                <span key={idx}>{facility.title}{idx < Math.min(item.facilitiesList.length, 3) - 1 ? ' , ' : ''}</span>
+                                                <span key={idx}>{facility.content}{idx < Math.min(item.facilitiesList.length, 3) - 1 ? ' , ' : ''}</span>
                                             ))}
                                         </p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    )
-                })}
-            </div>
+                    </SwiperSlide>
+                ))}
+            </Swiper>
         </>
     )
 }
 
-export default LatestCarSider
+export default TopDeal;

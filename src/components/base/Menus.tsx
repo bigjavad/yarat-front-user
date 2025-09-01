@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation'
 
 export const MenusItem = [
     {
-        menu: 'یارات موتور',
+        menu: 'یارات موتورز',
         link: '/',
     },
     {
@@ -13,33 +13,33 @@ export const MenusItem = [
         link: '/products',
         subMenu: [
             { childe: 'لیست ماشین‌ها', link: '/car-listing' },
-            { childe: 'خرید و فروش دست دوم', link: '/used-cars' },
+            // { childe: 'خرید و فروش دست دوم', link: '/used-cars' },
         ]
     },
+    // {
+    //     menu: 'گالری',
+    //     link: '/gallery',
+    // },
+    // {
+    //     menu: 'خدمات',
+    //     subMenu: [
+    //         { childe: 'تعمیرات', link: '/services/repairs' },
+    //         { childe: 'تجربه مشتری‌ها', link: '/services/customer-experience' },
+    //     ]
+    // },
+    // {
+    //     menu: 'راهنما',
+    //     subMenu: [
+    //         { childe: 'قوانین خرید', link: '/help/purchase-rules' },
+    //         { childe: 'سوالات متداول', link: '/help/faq' },
+    //     ]
+    // },
     {
-        menu: 'گالری',
-        link: '/gallery',
-    },
-    {
-        menu: 'خدمات',
-        subMenu: [
-            { childe: 'تعمیرات', link: '/services/repairs' },
-            { childe: 'تجربه مشتری‌ها', link: '/services/customer-experience' },
-        ]
-    },
-    {
-        menu: 'راهنما',
-        subMenu: [
-            { childe: 'قوانین خرید', link: '/help/purchase-rules' },
-            { childe: 'سوالات متداول', link: '/help/faq' },
-        ]
-    },
-    {
-        menu: 'درباره ما',
+        menu: 'درباره',
         link: '/about-us',
     },
     {
-        menu: 'تماس با ما',
+        menu: 'تماس',
         link: '/contact-us',
     }
 ]
@@ -82,7 +82,7 @@ const Menus = ({ setOpen }) => {
 
     useEffect(() => {
         MenusItem.forEach((data) => {
-            if (data?.subMenu?.length > 0){
+            if (data?.subMenu?.length > 0) {
                 data.subMenu.forEach((item) => {
                     if (item.link === pathname) {
                         setActiveLink(data.menu);
@@ -93,9 +93,14 @@ const Menus = ({ setOpen }) => {
                         }
                     })
                 })
+            } else {
+                if (data.link === pathname) {
+                    setActiveLink(data.menu);
+                }
             }
         })
     }, [pathname])
+
 
     return (
         <>

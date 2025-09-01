@@ -1,15 +1,13 @@
 'use client'
-import React from 'react'
-
+import React, {useEffect, useState} from 'react'
 import {Swiper, SwiperSlide} from 'swiper/react'
-import Link from "next/link";
 
 
 const aboutSlider = [
     {
         icon: '...',
         title: 'تولیدکننده',
-        desc: 'یارات موتور سازنده دستگاه های باگی، طراحی و تولید اختصاصی برای کویر و مسیرهای سخت، بدون واسطه و با کیفیت تضمین‌شده.'
+        desc: 'یارات موتورز سازنده دستگاه های باگی، طراحی و تولید اختصاصی برای کویر و مسیرهای سخت، بدون واسطه و با کیفیت تضمین‌شده.'
     },
     {
         icon: '...',
@@ -25,39 +23,48 @@ const aboutSlider = [
 
 
 const AboutSlider = () => {
-    return (<Swiper className="swiper-container about-swiper"
-                    slidesPerView={3}
-                    speed={1200}
-                    breakpoints={{
-                        1280: {
-                            slidesPerView: 3,
-                        }, 768: {
-                            slidesPerView: 2,
-                        }, 320: {
-                            slidesPerView: 1,
-                        },
-                    }}
-    >
-        {aboutSlider.map((item, index) => (<SwiperSlide className="swiper-slide" key={index}>
-            <div className="icon-bx-wraper style-1 hover-overlay-effect">
-                {/*<div className="icon-md m-b40">*/}
-                {/*    <svg width="47" height="42" viewBox="0 0 47 42" fill="none"*/}
-                {/*         xmlns="http://www.w3.org/2000/svg">*/}
-                {/*        <path d={item.icon} fill="#0D3DE6"/>*/}
-                {/*    </svg>*/}
-                {/*</div>*/}
-                <div className="icon-content">
-                    <h3 className="title text-center text-white"><Link href="/services" id='about-title'
-                                                                       className="text-effect-1">{item.title}</Link>
-                    </h3>
-                    <p className="">
-                        {item.desc}
-                    </p>
-                </div>
-                <div className="effect bg-primary"></div>
-            </div>
-        </SwiperSlide>))}
-    </Swiper>)
+    const [isClient, setIsClient] = useState(false)
+
+    useEffect(() => {
+        setIsClient(true)
+    }, [])
+    return (
+        <>
+            {
+                isClient ?<Swiper className="swiper-container about-swiper"
+                                  slidesPerView={3}
+                                  speed={1200}
+                                  breakpoints={{
+                                      1280: {
+                                          slidesPerView: 3,
+                                      }, 768: {
+                                          slidesPerView: 2,
+                                      }, 320: {
+                                          slidesPerView: 1,
+                                      },
+                                  }}
+                >
+                    {aboutSlider.map((item, index) => (
+                        <SwiperSlide className="swiper-slide" key={index}>
+                            <div className="icon-bx-wraper style-1 hover-overlay-effect d-flex flex-column h-100 min-vh-40">
+                                <div className="icon-content d-flex flex-column flex-grow-1">
+                                    <h3 className="title text-center text-white">
+                                        {
+                                            item && <h4 className="text-effect-1">{item?.title}</h4>
+                                        }
+                                    </h3>
+                                    <p className="flex-grow-1">
+                                        {item.desc}
+                                    </p>
+                                </div>
+                                <div className="effect bg-primary"></div>
+                            </div>
+                        </SwiperSlide>
+                    ))}
+                </Swiper>:<div></div>
+            }
+        </>
+        )
 }
 
 export default AboutSlider

@@ -3,6 +3,13 @@ import {getCookie} from "cookies-next";
 
 const API_URL = 'http://localhost:3000'
 
+interface ErrorObject {
+    message: string;
+    statusCode?: number;
+
+    [key: string]: any;
+}
+
 const handlerExceptionError = async (response: any) => {
     switch (response.status) {
         case 511:
@@ -14,66 +21,87 @@ const handlerExceptionError = async (response: any) => {
         case 422:
             errorToast(await response.json());
             break;
+        case 500:
+            errorToast(await response.json());
+            break;
         default:
             return null;
     }
-
-    // throw new Error(response);
+    throw new Error(`HTTP error! status: ${response.status}`);
 };
 
-function errorToast(data: any) {
-    data.errors.map((res: any, key: number) => {
-        snackbarService.showSnackbar(res.message,'error');
-    })
+function errorToast(data: any): void {
+    if (typeof data === 'string') {
+        snackbarService.showSnackbar(data, 'error');
+        return;
+    }
+    if (Array.isArray(data) && data.every(item => typeof item === 'string')) {
+        data.forEach((message: string) => {
+            snackbarService.showSnackbar(message, 'error');
+        });
+        return;
+    }
+    if (data && typeof data === 'object' && !Array.isArray(data) && data.message) {
+        snackbarService.showSnackbar(data.message, 'error');
+        return;
+    }
+    if (Array.isArray(data) && data.every(item => item && item.message)) {
+        data.forEach((error: ErrorObject) => {
+            snackbarService.showSnackbar(error.message, 'error');
+        });
+        return;
+    }
+    if (data && typeof data === 'object' && 'errors' in data && Array.isArray(data.errors)) {
+        data.errors.forEach((error: ErrorObject) => {
+            if (error.message) {
+                snackbarService.showSnackbar(error.message, 'error');
+            }
+        });
+        return;
+    }
+    console.warn('فرمت داده نامعتبر برای errorToast:', data);
+    snackbarService.showSnackbar('خطای ناشناخته رخ داده است', 'error');
 }
 
 export async function fetchData(url: string, method: string = "post", body = {}) {
     try {
-        let response;
-        let token;
-
-        if (typeof window != 'undefined') {
-            token = getCookie('token');
-        } else {
-            const {cookies: serverCookies} = await import('next/headers');
-            token = serverCookies().get('token') ? serverCookies().get('token')?.value : null;
-        }
-
+        let response
+        let token
+        token = getCookie('token');
         const headers = {
-            'Content-Type': 'application/json',
+            'content-type': 'application/json',
             'accept': 'application/json',
-            'Cache-Control': 'no-cache',
-            'authorization': `Bearer ${token}`
-        };
+            'cache-control': 'no-cache',
+            'authorization': `Bearer ${token}`,
+        }
 
         if (method == 'get') {
             response = await fetch(API_URL + url, {
-                method,
-                headers,
-                cache: 'no-store',
-            });
-        } else {
+                    method,
+                    headers,
+                    cache: 'no-store',
+                }
+            );
+        }
+        if (method == 'post') {
             response = await fetch(API_URL + url, {
-                method,
-                headers,
-                body: JSON.stringify(body),
-                cache: 'no-store',
-            });
+                    method,
+                    headers,
+                    body: JSON.stringify(body),
+                    cache: 'no-store',
+                }
+            );
         }
 
-        if (response.status == 200 || response.status == 201) {
-            const data = await response.json();
-            if (data.toast) {
-                snackbarService.showSnackbar(data?.message, 'success');
-            }
-            return data;
-        } else {
-            await handlerExceptionError(response);
-            return [];
+        if (response?.status == 200 || response?.status == 201) {
+            return await response?.json();
         }
-    } catch (data) {
-        throw data;
+
+        await handlerExceptionError(response)
+        return [];
+
+    } catch
+        (data) {
+        throw data
     }
 }
-
-

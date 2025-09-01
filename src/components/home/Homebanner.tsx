@@ -80,11 +80,7 @@ const Homebanner = () => {
         <>
             <div className="col-lg-6 align-self-center">
                 <div className="banner-content">
-                    <div className="trending-box">
-                        <span className="text-btn">تجربه هیجان رانندگی</span>
-                        با یارات موتور
-                    </div>
-                    <h1 className="title">یارات موتور</h1>
+                    <h1 className="title">یارات موتورز</h1>
                     <p>
                         یارات فقط یک وسیله نقلیه نیست؛ یارات دعوتی است برای ساختن ماجراجویی‌های خودتان.
                         <br/>
@@ -96,7 +92,7 @@ const Homebanner = () => {
                     <div className="col-md-3 col-sm-6">
                         <Link href={'/car-listing'}
                               className="btn btn-sm effect-1 shadow-none text-sm-center btn-primary d-flex justify-content-between">
-                            <span className="d-flex justify-content-between ">مشاهده محصولات</span>
+                            <span className="d-flex justify-content-between mx-auto">مشاهده محصولات</span>
                         </Link>
                     </div>
                     <div className="d-block mt-5 ">

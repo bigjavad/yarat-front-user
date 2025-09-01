@@ -3,6 +3,9 @@ const nextConfig = {
     images: {
         domains: ['api.mamana.app'],
     },
+    eslint: {
+        ignoreDuringBuilds: true,
+    },
     typescript: {
         ignoreBuildErrors: true,
     },

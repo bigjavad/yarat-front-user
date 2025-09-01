@@ -1,6 +1,5 @@
 import React from 'react'
 import Link from "next/link";
-import {IMAGE} from "@/constent/theme";
 
 
 const Footer = () => {
@@ -41,7 +40,7 @@ const Footer = () => {
                                         <h5 className="title">لینک ها</h5>
                                     </div>
                                     <ul>
-                                        <li className="cat-item"><Link href="/contact-us">تماس با ما </Link></li>
+                                        <li className="cat-item"><Link href="/contact-us">تماس </Link></li>
                                         <li className="cat-item"><Link href="/about-us"> درباره ما </Link></li>
                                         <li className="cat-item"><Link href="/car-listing">لیست محصولات</Link></li>
                                         <li className="cat-item"><Link href={'/gallery'}>گالری تصاویر </Link></li>
@@ -54,16 +53,17 @@ const Footer = () => {
                                         <h5 className="title">محصولات</h5>
                                     </div>
                                     <ul>
-                                        <li className="cat-item"><Link href="/about-us">باگی 4 نفره</Link></li>
-                                        <li className="cat-item"><Link href={'/services'}>باگی 8 نفره</Link></li>
-                                        <li className="cat-item"><Link href={'/services'}>باگی 12 نفره</Link></li>
+                                        <li className="cat-item"><Link href={"/car/باگی-دو-نفره"}>باگی 2 نفره</Link></li>
+                                        <li className="cat-item"><Link href={'/car/باگی-چهار-نفره'}>باگی 4 نفره</Link></li>
+                                        <li className="cat-item"><Link href={'/car/باگی-هشت-نفره'}>باگی 8 نفره</Link></li>
+                                        <li className="cat-item"><Link href={'/car/باگی-دوازده-نفره'}>باگی 12 نفره</Link></li>
                                     </ul>
                                 </div>
                             </div>
                             <div className="col-lg-3 col-md-6 col-sm-12">
                                 <div className="widget">
                                     <div className="widget-title">
-                                        <h5 className="title">تماس با ما</h5>
+                                        <h5 className="title">تماس</h5>
                                     </div>
                                     <div className="icon-bx-wraper style-2 m-b20">
                                         <div className="icon-bx-sm radius">

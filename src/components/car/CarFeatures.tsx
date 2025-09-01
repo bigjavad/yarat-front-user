@@ -12,7 +12,7 @@ const CarFeatures = () => {
                     <div className="content-box">
                         <div className="section-head">
                             {/*<h6 className="sub-title style-1">We Bring You to The Future</h6>*/}
-                            <h2 className="title">یارات موتور</h2>
+                            <h2 className="title">یارات موتورز</h2>
                         </div>
                         <p className="m-b40">
                             یارات موتورز نه‌تنها به دنبال توسعه صنعت خودروهای تفریحی و آفرود در ایران است، بلکه با نگاه

@@ -1,7 +1,5 @@
 import React from 'react';
 import CarListingBanner from "@/element/car-listing-banner";
-import {IMAGE} from "@/constent/theme";
-import ContectForm from "@/element/ContectForm";
 import Testimonial from "@/components/Testimonial";
 import {Metadata} from "next";
 export const metadata: Metadata = {
@@ -18,9 +16,9 @@ function Page() {
                         <div className="section-head text-center wow fadeIn" data-wow-duration="2s"
                              data-wow-delay="0.2s">
                             <h2 className="title">نظر مشتریان ما</h2>
-                            <p>مشتریان ما درباره یارات موتور چه می‌گویند؟ از تجربه رانندگی در مسیرهای سخت کویری گرفته تا
+                            <p>مشتریان ما درباره یارات موتورز چه می‌گویند؟ از تجربه رانندگی در مسیرهای سخت کویری گرفته تا
                                 کیفیت بی‌نظیر باگی‌ها و خدمات پس از فروش، هر بازخوردی برای ما ارزشمند است. اینجا
-                                می‌توانید نظر واقعی افرادی که با یارات موتور ماجراجویی کرده‌اند، بخوانید و با اطمینان
+                                می‌توانید نظر واقعی افرادی که با یارات موتورز ماجراجویی کرده‌اند، بخوانید و با اطمینان
                                 انتخاب کنید.</p>
                         </div>
                         <Testimonial/>

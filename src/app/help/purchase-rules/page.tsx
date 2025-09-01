@@ -1,8 +1,7 @@
 "use client"
 import React, {useState} from 'react';
 import CarListingBanner from "@/element/car-listing-banner";
-import {IMAGE} from "@/constent/theme";
-import { Container, Row, Col, Card, Accordion, Badge } from 'react-bootstrap';
+import { Container, Row, Col, Card, Accordion } from 'react-bootstrap';
 import ContectUs from "@/components/contect-us/ContectUs";
 function Page() {
     const [activeKey, setActiveKey] = useState('0');
@@ -117,7 +116,7 @@ function Page() {
                                 <Card className="border-0 shadow-sm">
                                     <Card.Body className="p-4">
                                         <Card.Title as="h3" className="text-center mb-3">
-                                            یارات موتور
+                                            یارات موتورز
                                         </Card.Title>
                                         <Card.Text className="text-center fs-6">
                                             با تشکر از اعتماد شما، لطفاً قبل از استفاده از خدمات، قوانین و مقررات را به

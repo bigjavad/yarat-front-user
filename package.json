@@ -16,6 +16,7 @@
     "@types/video-react": "^0.15.8",
     "cookies-next": "^6.1.0",
     "formik": "^2.4.6",
+    "jalali-moment": "^3.3.11",
     "lightgallery": "^2.9.0-beta.1",
     "magnific-popup": "^1.2.0",
     "next": "15.3.3",

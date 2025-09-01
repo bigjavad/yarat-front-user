@@ -8,7 +8,7 @@ function ValidationErrorComponent({
     errorColor?: string;
 }) {
     return (
-        <div className="invalid-feedback" style={{ display: 'block', color: errorColor }}>
+        <div className="invalid-feedback font-10" style={{ display: 'block', color: errorColor }}>
             {msg}
         </div>
     );

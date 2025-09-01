@@ -1,5 +1,4 @@
 import React from 'react'
-import {IMAGE} from '@/constent/theme'
 import Link from "next/link";
 
 
@@ -25,7 +24,7 @@ const ContectUs = () => {
                 </div>
                 <div className="col-lg-6">
                     <div className="media-box">
-                        <img src="/assets/images/about/contact.webp" className="main-img" alt="تماس با ما یارات موتور"/>
+                        <img src="/assets/images/about/contact.webp" className="main-img" alt="تماس با ما یارات موتورز"/>
                         <img src={'/assets/images/pattern/pattern7.png'} className="pt-img move-1 z-1 " alt=""/>
                     </div>
                 </div>

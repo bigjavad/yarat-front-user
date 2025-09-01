@@ -7,6 +7,6 @@ export const loginService=async (data:LoginDto):Promise<ActionResault<LoginDto>>
     return await fetchData(REST_CONST.AUTH.LOGIN, 'post', data)
 }
 
-export const registerService = async (data:LoginDto):Promise<ActionResault<LoginDto>> => {
+export const verifyService = async (data:LoginDto):Promise<ActionResault<LoginDto>> => {
     return await fetchData(REST_CONST.AUTH.VALID_SECURITY_CODE, 'post', data)
 }

@@ -11,12 +11,12 @@ const Header = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            let scroll = window.scrollY;
+            let scroll = document.scrollY;
             scroll > 80 ? setHeader('is-fixed') : setHeader(null);
         };
-        window.addEventListener('scroll', handleScroll);
+        document.addEventListener('scroll', handleScroll);
         return () => {
-            window.removeEventListener('scroll', handleScroll);
+            document.removeEventListener('scroll', handleScroll);
         };
     }, []);
 
@@ -36,7 +36,6 @@ const Header = () => {
                                     />
                                 </Link>
                             </div>
-                            {/* <!-- Nav Toggle Button --> */}
                             <button
                                 onClick={() => { setOpen(!addOpen) }}
                                 className={`navbar-toggler collapsed navicon justify-content-end ${addOpen ? 'open' : ''}`}
@@ -49,12 +48,12 @@ const Header = () => {
                             <div className="extra-nav">
                                 <div className="extra-cell">
                                     <Link
-                                        href="tel:02432385348"
+                                        href="tel:09125475547"
                                         className="btn btn-primary light phone-no shadow-none effect-1 focusBtn"
                                     >
                                         <span>
                                             <i className="fas fa-phone-volume shake"></i>
-                                            024-32385348
+                                            09125475547
                                         </span>
                                     </Link>
                                 </div>

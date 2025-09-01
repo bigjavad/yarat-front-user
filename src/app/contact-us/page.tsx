@@ -1,7 +1,6 @@
 import React from 'react'
 import CarListingBanner from "@/element/car-listing-banner";
-import {IMAGE} from "@/constent/theme";
-import ContectForm from "@/element/ContectForm";
+import ContactModal from "@/components/contact-modal/contact-modal";
 
 
 const Contact = () => {
@@ -10,7 +9,7 @@ const Contact = () => {
             <title>یارات ارتباط با ما</title>
             <meta name="description" content="یارات پلتفرم تولید باگ‌های گروهی ۴، ۸ و ۱۲ نفره است."/>
             <div className="page-content bg-white">
-                <CarListingBanner  img={'/assets/images/gallery/6.webp'} title={'تماس با ما'}/>
+                <CarListingBanner  img={'/assets/images/gallery/6.webp'} title={'تماس'}/>
                 <section className="content-inner bg-gray bottom-shape">
                     <div className="container">
                         <div className="row">
@@ -24,7 +23,7 @@ const Contact = () => {
                                                 fill="white"/>
                                         </svg>
                                     </div>
-                                    <h2 className="title">تماس با ما</h2>
+                                    <h2 className="title">تماس</h2>
                                 </div>
                                 <p className="m-b50">
                                     یارات موتورز، نامی نوظهور و پویا در صنعت خودروسازی ایران، با تمرکز بر طراحی و تولید
@@ -74,7 +73,7 @@ const Contact = () => {
                                     </div>
                                 </div>
                             </div>
-                            <ContectForm/>
+                            <ContactModal isModal={false} />
                         </div>
                     </div>
                 </section>

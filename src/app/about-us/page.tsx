@@ -2,8 +2,6 @@
 import React, {useEffect, useState} from 'react';
 import {IMAGE} from "@/constent/theme";
 import CarListingBanner from "@/element/car-listing-banner";
-import {Swiper, SwiperSlide} from "swiper/react";
-import Link from "next/link";
 import ContectUs from "@/components/contect-us/ContectUs";
 
 const progressCard = [
@@ -23,7 +21,7 @@ const progressCard = [
                     d="M44 26.2499V39.375C44 40.8245 42.7685 42 41.25 42H27.5C25.9815 42 24.75 40.8245 24.75 39.375V26.2499C24.75 24.8004 25.9815 23.6249 27.5 23.6249H41.25C42.7685 23.6249 44 24.8004 44 26.2499ZM11 20.9999C4.92508 20.9999 0 25.7011 0 31.4999C0 37.2988 4.92508 42 11 42C17.0749 42 22 37.2988 22 31.4999C22 25.7011 17.0749 20.9999 11 20.9999ZM41.1666 18.3749C43.3443 18.3749 44.7055 16.1871 43.6167 14.4374L35.4501 1.3123C34.3613 -0.437434 31.6388 -0.437434 30.5499 1.3123L22.3833 14.4374C21.2945 16.1871 22.6557 18.3749 24.8334 18.3749H41.1666Z"
                     fill="#0D3DE5"></path>
             </svg>, title: 'تولید',
-        des: 'تولید یارات موتور با استفاده از بهترین مواد و تجهیزات روز انجام می‌شود. هر قطعه با کیفیت بالا ساخته شده و فرآیند تولید کاملاً کنترل شده است تا محصول نهایی بدون نقص و آماده استفاده باشد.'
+        des: 'تولید یارات موتورز با استفاده از بهترین مواد و تجهیزات روز انجام می‌شود. هر قطعه با کیفیت بالا ساخته شده و فرآیند تولید کاملاً کنترل شده است تا محصول نهایی بدون نقص و آماده استفاده باشد.'
     },
     {
         icon:
@@ -105,14 +103,17 @@ const About = () => {
     const [addAcrtive, setActive] = useState(1);
     const [swiperWidth, setSwiperWidth] = useState(false);
 
-    window.onresize = function () {
-        const isNarrowScreen = window.matchMedia("(max-width: 990px)");
-        if (isNarrowScreen.matches) {
-            setSwiperWidth(true);
-        } else {
-            setSwiperWidth(false);
-        }
-    }
+    useEffect(() => {
+        const handleResize = () => {
+            const mediaQuery = window.matchMedia("(max-width: 990px)");
+            setSwiperWidth(mediaQuery.matches);
+        };
+        handleResize();
+        window.addEventListener("resize", handleResize);
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
     return (
         <>
             <title>
@@ -129,7 +130,7 @@ const About = () => {
                             <div className="col-lg-5 me-auto">
                                 <div className="section-head">
                                     <h6 className="text-primary sub-title">خودرو سازی یارات</h6>
-                                    <h2 className="title">درباره یارات موتور</h2>
+                                    <h2 className="title">درباره یارات موتورز</h2>
                                 </div>
                             </div>
                             <div className="col-lg-6 m-b30">
@@ -163,7 +164,7 @@ const About = () => {
                 <section className="content-inner-2">
                     <div className="container">
                         <div className="section-head text-center">
-                            <h2 className="title">تاریخچه یارات موتور</h2>
+                            <h2 className="title">تاریخچه یارات موتورز</h2>
                             <p>
 
                                 از زمان تأسیس، هدف ما ایجاد خودروهای باگی با استانداردهای بالای ایمنی و عملکرد بوده است.
@@ -186,16 +187,9 @@ const About = () => {
                         </div>
                     </div>
                 </section>
-                {/* ======= */}
                 <section className="content-inner-2">
                     <div className="container">
                         <div className="row">
-                            <div className="col-lg-5 me-auto">
-                                {/*<div className="section-head">*/}
-                                {/*    <h6 className="text-primary sub-title">تیم ما</h6>*/}
-                                {/*    <h2 className="title">Our teams</h2>*/}
-                                {/*</div>*/}
-                            </div>
                             <div className="col-lg-6 m-b30">
                                 <p>
                                     یارات موتورز نه‌تنها به دنبال توسعه صنعت خودروهای تفریحی و آفرود در ایران است، بلکه
@@ -204,90 +198,6 @@ const About = () => {
                                 </p>
                             </div>
                         </div>
-                        {/*{swiperWidth == false &&*/}
-                        {/*    <div className="team-slider">*/}
-                        {/*        <div className="swiper-wrapper row">*/}
-                        {/*            {*/}
-                        {/*                ourTeam.map((team, tkey) => (*/}
-                        {/*                    <div className="swiper-slide col-xl-3 col-lg-4" key={tkey}>*/}
-                        {/*                        <div className="dlab-team style-1 m-b40">*/}
-                        {/*                            <div className="dlab-media">*/}
-                        {/*                                <Link href={'#'}>*/}
-                        {/*                                    <img src={team.img} alt=""/></Link>*/}
-                        {/*                                <div className="overlay-bx">*/}
-                        {/*                                    <div className="social-list style-2">*/}
-                        {/*                                        <ul>*/}
-                        {/*                                            <li><Link href="https://www.linkedin.com/"><i*/}
-                        {/*                                                className="fab fa-linkedin"></i></Link></li>*/}
-                        {/*                                            <li><Link href="https://twitter.com/"><i*/}
-                        {/*                                                className="fab fa-twitter"></i></Link></li>*/}
-                        {/*                                            <li><Link href="https://www.facebook.com/"><i*/}
-                        {/*                                                className="fab fa-facebook-f"></i></Link></li>*/}
-                        {/*                                            <li><Link href="https://www.instagram.com/"><i*/}
-                        {/*                                                className="fab fa-instagram"></i></Link></li>*/}
-                        {/*                                        </ul>*/}
-                        {/*                                    </div>*/}
-                        {/*                                </div>*/}
-                        {/*                            </div>*/}
-                        {/*                            <div className="dlab-content">*/}
-                        {/*                                <h4 className="dlab-name">{team.name}</h4>*/}
-                        {/*                            </div>*/}
-                        {/*                        </div>*/}
-                        {/*                    </div>*/}
-                        {/*                ))*/}
-                        {/*            }*/}
-                        {/*        </div>*/}
-                        {/*    </div>*/}
-                        {/*}*/}
-
-
-                        {swiperWidth == true &&
-                            <Swiper className="team-slider"
-                                    slidesPerView={3}
-                                    spaceBetween={20}
-                                    breakpoints={{
-                                        500: {
-                                            slidesPerView: 2
-                                        },
-                                        240: {
-                                            slidesPerView: 1
-                                        }
-                                    }}
-
-                            >
-                                <div className="swiper-wrapper row">
-                                    {
-                                        ourTeam.map((team, tkey) => (
-                                            <SwiperSlide className="swiper-slide col-xl-3 col-lg-4" key={tkey}>
-                                                <div className="dlab-team style-1 m-b40">
-                                                    <div className="dlab-media">
-                                                        <Link href={'#'}>
-                                                            <img src={team.img} alt=""/></Link>
-                                                        <div className="overlay-bx">
-                                                            <div className="social-list style-2">
-                                                                <ul>
-                                                                    <li><Link href="/https://www.linkedin.com/"><i
-                                                                        className="fab fa-linkedin"></i></Link></li>
-                                                                    <li><Link href="/https://twitter.com/"><i
-                                                                        className="fab fa-twitter"></i></Link></li>
-                                                                    <li><Link href="/https://www.facebook.com/"><i
-                                                                        className="fab fa-facebook-f"></i></Link></li>
-                                                                    <li><Link href="/https://www.instagram.com/"><i
-                                                                        className="fab fa-instagram"></i></Link></li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div className="dlab-content">
-                                                        <h4 className="dlab-name">Tommy Hank</h4>
-                                                    </div>
-                                                </div>
-                                            </SwiperSlide>
-                                        ))
-                                    }
-                                </div>
-                            </Swiper>
-                        }
                     </div>
                 </section>
                 <section className="content-inner">

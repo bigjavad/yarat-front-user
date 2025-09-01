@@ -11,9 +11,8 @@ import '../assets/css/style.css'
 import Footer from "@/components/base/Footer";
 import Header from "@/components/base/Header";
 import {SnackbarProvider} from "notistack";
-import LoginModal from "@/components/modal/login-modal";
 import React from "react";
-import NextTopLoader from "nextjs-toploader";
+import ContactModal from "@/components/contact-modal/contact-modal";
 
 
 const bakh = localFont({
@@ -59,19 +58,19 @@ export default function RootLayout({
         >
         <title>یارات پلتفرم تولید باگی</title>
         <meta name="description" content="یارات پلتفرم تولید باگ‌های گروهی ۴، ۸ و ۱۲ نفره است."/>
-        <NextTopLoader
-            color="#EE3131"
-            initialPosition={0.08}
-            crawlSpeed={200}
-            height={3}
-            crawl={true}
-            showSpinner={false}
-            easing="ease"
-            speed={200}
-            shadow="0 0 10px #EE3131,0 0 5px #EE3131"
-            zIndex={1600}
-            showAtBottom={false}
-        />
+        {/*<NextTopLoader*/}
+        {/*    color="#EE3131"*/}
+        {/*    initialPosition={0.08}*/}
+        {/*    crawlSpeed={200}*/}
+        {/*    height={3}*/}
+        {/*    crawl={true}*/}
+        {/*    showSpinner={false}*/}
+        {/*    easing="ease"*/}
+        {/*    speed={200}*/}
+        {/*    shadow="0 0 10px #EE3131,0 0 5px #EE3131"*/}
+        {/*    zIndex={1600}*/}
+        {/*    showAtBottom={false}*/}
+        {/*/>*/}
         <body suppressHydrationWarning={true}>
 
         <SnackbarProvider
@@ -80,7 +79,7 @@ export default function RootLayout({
             anchorOrigin={{horizontal: 'right', vertical: 'top'}}>
             <Header/>
             <article className="max-w-[1920px] mx-auto">{children}</article>
-            <LoginModal/>
+            <ContactModal/>
             <Footer/>
         </SnackbarProvider>
         </body>
