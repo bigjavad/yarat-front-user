@@ -10,11 +10,7 @@ export const MenusItem = [
     },
     {
         menu: 'محصولات',
-        link: '/products',
-        subMenu: [
-            { childe: 'لیست ماشین‌ها', link: '/car-listing' },
-            // { childe: 'خرید و فروش دست دوم', link: '/used-cars' },
-        ]
+        link: '/car-listing',
     },
     // {
     //     menu: 'گالری',

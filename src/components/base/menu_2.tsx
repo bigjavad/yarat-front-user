@@ -4,7 +4,7 @@ import React, { useEffect, useReducer, useState } from 'react'
 const Menu_2 = () => {
 
     const [addActive, setActive] = useState('');
-    const location = useLocation().pathname
+    const location = useLocation().pathname;
     //menu toggle
     const reducermenu = (menuPreviousState, menuUpdatedState) => ({
         ...menuPreviousState,
