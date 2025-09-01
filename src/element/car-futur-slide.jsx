@@ -7,12 +7,6 @@ import {Player} from 'video-react';
 import 'video-react/dist/video-react.css'; // import css
 
 
-const carFuturSlide = [
-    {img: IMAGE.aboutPic1},
-    {img: IMAGE.aboutPic2},
-    {img: IMAGE.aboutPic3},
-    {img: IMAGE.aboutPic4},
-]
 
 const CarFuturSlide = () => {
     const paginationRef = React.useRef(null)

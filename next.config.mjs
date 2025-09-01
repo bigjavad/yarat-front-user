@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-        domains: ['api.mamana.app'],
+        unoptimized: true,
+        domains: ['api.yaratmotors.com'],
     },
     eslint: {
         ignoreDuringBuilds: true,
@@ -9,6 +10,7 @@ const nextConfig = {
     typescript: {
         ignoreBuildErrors: true,
     },
+
 };
 
 export default nextConfig;

@@ -5,7 +5,6 @@ export const IMAGE = {
     slide_pic2: require('../assets/images/main-slider/pic2.jpg'),
     slide_pic3: require('../assets/images/main-slider/pic3.jpg'),
     patternImg: require('../assets/images/pattern/pattern4.png'),
-    about1: require('../assets/images/about/about1.jpg'),
     patternImg2: require('../assets/images/pattern/pattern6.png'),
     aboutPic1: require('../assets/images/about/pic1.jpg'),
     aboutPic2: require('../assets/images/about/pic2.jpg'),
