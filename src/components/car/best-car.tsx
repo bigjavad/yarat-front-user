@@ -27,8 +27,8 @@ const BestCar = () => {
                             در صورت هرگونه نقص فنی یا مشکل عملکرد، ما پشت شما هستیم تا سریع‌ترین خدمات را ارائه
                             دهیم.
                         </p>
-                        <Link href="/waranty"
-                              className="btn btn-primary effect-1"><span>شرایط گارانتی</span></Link>
+                        {/*<Link href="/waranty"*/}
+                        {/*      className="btn btn-primary effect-1"><span>شرایط گارانتی</span></Link>*/}
 
                     </div>
                 </div>
