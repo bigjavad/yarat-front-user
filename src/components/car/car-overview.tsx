@@ -264,13 +264,14 @@ const carOverview = (data: { car: CarDto }) => {
                             <div className="sticky-top nav-tabs-top">
                                 <div className="car-dl-info icon-bx-wraper style-1 m-b50">
                                     <div className="price m-b30">
-                                        <h6 className="fs-6 text-primary">برای اطلاع از قیمت و شرایط ثبت درخواست کنید کارشناسان ما در اسرع وقت با شما تماس خواهد گرفت.</h6>
+                                        <h5>قیمت</h5>
+                                        <h6 className="fs-6 text-primary">{currencyPipe.format(data.car.price)}</h6>
                                         <span className="text-secondary font-10">* برای اطلاع از اطلاعات تکمیلی ثبت سفارش ثبت کنید کارشناسان ما در اسرع وقت با شما تماس خواهند گرفت.</span>
                                     </div>
                                     <form>
                                         <div className="clearfix">
                                             <button onClick={()=>onSubmit()} type="button"
-                                                    className="btn-primary w-100 justify-content-center btn btn-block">ثبت درخواست
+                                                    className="btn-primary w-100 justify-content-center btn btn-block">ثبت سفارش
                                             </button>
                                         </div>
                                     </form>
