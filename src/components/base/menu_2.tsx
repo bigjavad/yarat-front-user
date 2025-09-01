@@ -1,5 +1,5 @@
 import React, { useEffect, useReducer, useState } from 'react'
- import { MenusItem } from './Menus';
+ import { MenusItem } from './menus';
 
 const Menu_2 = () => {
 

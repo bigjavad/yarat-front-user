@@ -1,6 +1,6 @@
 'use client'
 import React, { useState, useEffect } from 'react'
-import Menus from './Menus'
+import Menus from './menus'
 import Link from "next/link";
 import Image from 'next/image';
 import {IMAGE} from "@/constent/theme";
