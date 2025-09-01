@@ -73,9 +73,6 @@ function TopDeal() {
                                         {item.title}
                                     </Link>
                                 </h3>
-                                <span className="badge px-3 py-2 m-b5 fs-6">
-                                    {item.price} تومان
-                                </span>
                                 <div className="feature-list">
                                     <div>
                                         <label>ظرفیت</label>

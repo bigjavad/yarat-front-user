@@ -1,7 +1,7 @@
 import {snackbarService} from "@/shared/service-ui/snackbar.service";
 import {getCookie} from "cookies-next";
 
-const API_URL = 'http://localhost:3000'
+const API_URL = 'https://yarat-motors.com'
 
 interface ErrorObject {
     message: string;
