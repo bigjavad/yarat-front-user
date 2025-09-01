@@ -80,7 +80,6 @@ export default function RootLayout({
             anchorOrigin={{horizontal: 'right', vertical: 'top'}}>
             <Header/>
             <article className="max-w-[1920px] mx-auto">{children}</article>
-            <ContactModal/>
             <Footer/>
         </SnackbarProvider>
         </body>
