@@ -3,6 +3,7 @@ import CarListingBanner from "@/element/car-listing-banner";
 import {IMAGE} from "@/constent/theme";
 import Link from "next/link";
 import PageSider from "@/element/page-sider";
+import SocialMediaLinks from "@/components/social-media-links/social-media-links";
 
 
 const Page = () => {
@@ -79,11 +80,7 @@ const Page = () => {
                                     <div className="dlab-share-post">
                                         <div className="dlab-social-icon">
                                             <h6 className="title">Share:</h6>
-                                            <ul>
-                                                <li><Link className="fab fa-facebook-f" href={'#'}></Link></li>
-                                                <li><Link className="fab fa-instagram" href={'#'}></Link></li>
-                                                <li><Link className="fab fa-twitter" href={'#'}></Link></li>
-                                            </ul>
+                                            <SocialMediaLinks/>
                                         </div>
                                         <div className="post-tags">
                                             <Link href={'#'}>#Mobile</Link>
@@ -101,32 +98,7 @@ const Page = () => {
                                             <h4>Jake Johnson</h4>
                                             <p>We were making our way to the Rila Mountains, where we were visiting the
                                                 Rila Monastery where we enjoyed.</p>
-                                            <ul className="list-inline m-b0">
-                                                <li>
-                                                    <Link href="https://www.facebook.com" target="_blank"
-                                                          className="btn-link">
-                                                        <i className="fab fa-facebook-f"></i>
-                                                    </Link>
-                                                </li>
-                                                <li>
-                                                    <Link href="https://www.twitter.com" target="_blank"
-                                                          className="btn-link">
-                                                        <i className="fab fa-twitter"></i>
-                                                    </Link>
-                                                </li>
-                                                <li>
-                                                    <Link href="https://www.google.com" target="_blank"
-                                                          className="btn-link">
-                                                        <i className="fab fa-google-plus"></i>
-                                                    </Link>
-                                                </li>
-                                                <li>
-                                                    <Link href="https://www.youtube.com" target="_blank"
-                                                          className="btn-link">
-                                                        <i className="fab fa-youtube"></i>
-                                                    </Link>
-                                                </li>
-                                            </ul>
+                                            <SocialMediaLinks className="list-inline m-b0"/>
                                         </div>
                                     </div>
                                 </div>

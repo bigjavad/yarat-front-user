@@ -9,7 +9,6 @@ import {saveOrders} from "@/shared/service/orders/orders.service";
 import {OrdersDto} from "@/shared/model/dto/orders/orders.dto";
 import {store} from "@/shared/redux/store";
 import ContactModal from "@/components/contact-modal/contact-modal";
-import {currencyPipe} from "@/shared/pipe/currency-pipe";
 import {snackbarService} from "@/shared/service-ui/snackbar.service";
 import {ActionResault} from "@/shared/model/base/action-resault";
 import ContectUs from "@/components/contect-us/contect-us";
@@ -264,8 +263,6 @@ const carOverview = (data: { car: CarDto }) => {
                             <div className="sticky-top nav-tabs-top">
                                 <div className="car-dl-info icon-bx-wraper style-1 m-b50">
                                     <div className="price m-b30">
-                                        <h5>قیمت</h5>
-                                        <h6 className="fs-6 text-primary">{currencyPipe.format(data.car.price)}</h6>
                                         <span className="text-secondary font-10">* برای اطلاع از اطلاعات تکمیلی ثبت سفارش ثبت کنید کارشناسان ما در اسرع وقت با شما تماس خواهند گرفت.</span>
                                     </div>
                                     <form>
