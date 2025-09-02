@@ -6,7 +6,3 @@ import {LoginDto} from "@/shared/model/dto/auth/login.dto";
 export const loginService=async (data:LoginDto):Promise<ActionResault<LoginDto>> => {
     return await fetchData(REST_CONST.AUTH.LOGIN, 'post', data)
 }
-
-export const verifyService = async (data:LoginDto):Promise<ActionResault<LoginDto>> => {
-    return await fetchData(REST_CONST.AUTH.VALID_SECURITY_CODE, 'post', data)
-}

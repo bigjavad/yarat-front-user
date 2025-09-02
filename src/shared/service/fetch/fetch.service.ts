@@ -69,8 +69,8 @@ export async function fetchData(url: string, method: string = "post", body = {})
         let token
         token = getCookie('token');
         const headers = {
-            'content-type': 'application/json',
-            'accept': 'application/json',
+            'Content-Type': 'application/json',
+            'Accept': 'application/json, text/plain, */*',
             'cache-control': 'no-cache',
             'authorization': `Bearer ${token}`,
         }
