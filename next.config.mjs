@@ -6,7 +6,7 @@ const nextConfig = {
 
     images: {
         unoptimized: true,   // بهینه‌سازی خاموش
-        domains: ['api.yarat-motors.com'],
+        domains: ['http://api.yaratmotors.com'],
 
     },
 
