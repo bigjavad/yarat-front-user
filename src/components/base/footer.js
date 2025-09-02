@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from "next/link";
+import SocialMediaLinks from "@/components/social-media-links/social-media-links";
 
 
 const Footer = () => {
@@ -21,17 +22,8 @@ const Footer = () => {
                                         فناوری‌های نوین و طراحی‌های خلاقانه، محصولاتی ایمن، قدرتمند و متناسب با نیازهای
                                         مشتریان ایرانی و منطقه‌ای ارائه می‌دهیم.
                                     </p>
-                                    <ul className="social-list style-1">
-                                        <li><Link href="https://www.youtube.com/"><i
-                                            className="fab fa-youtube"></i></Link></li>
 
-                                        <li><Link href="https://twitter.com/"><i className="fab fa-twitter"></i></Link>
-                                        </li>
-                                        <li><Link href="https://www.facebook.com/"><i className="fab fa-facebook-f"></i></Link>
-                                        </li>
-                                        <li><Link href="https://www.instagram.com/"><i className="fab fa-instagram"></i></Link>
-                                        </li>
-                                    </ul>
+                                    <SocialMediaLinks />
                                 </div>
                             </div>
                             <div className="col-lg-3 col-md-6 col-sm-6">

@@ -2,6 +2,7 @@
 import React, { useEffect, useReducer, useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import SocialMediaLinks from "@/components/social-media-links/social-media-links";
 
 export const MenusItem = [
     {
@@ -164,12 +165,7 @@ const Menus = ({ setOpen }) => {
                 })}
             </ul>
             <div className="dlab-social-icon p-t50">
-                <ul>
-                    <li><Link href="#" className="fab fa-facebook-f"></Link></li>
-                    <li><Link href="#" className="fab fa-twitter"></Link></li>
-                    <li><Link href="#" className="fab fa-linkedin-in"></Link></li>
-                    <li><Link href="#" className="fab fa-instagram"></Link></li>
-                </ul>
+                <SocialMediaLinks />
             </div>
         </>
     )

@@ -96,18 +96,18 @@ const HomeBanner = () => {
                         </Link>
                     </div>
                     <div className="d-block mt-5 ">
-                        <ul className="d-flex gap-3 mt-2">
-                            <li><Link className="btn btn-sm btn-outline-primary " href={'/car-listing?brand=hondo'}>باگی
+                        <ul className="d-flex gap-md-3 gap-1 justify-content-between justify-content-md-start mt-2 ">
+                            <li><Link className="btn btn-sm btn-outline-primary font-12" href={'/car-listing?brand=hondo'}>باگی
                                 2</Link></li>
-                            <li><Link className="btn btn-sm btn-outline-primary " href={'/car-listing?brand=hondo'}>باگی
+                            <li><Link className="btn btn-sm btn-outline-primary font-12" href={'/car-listing?brand=hondo'}>باگی
                                 4 نفره</Link></li>
-                            <li><Link className="btn btn-sm btn-outline-primary " href={'/car-listing?brand=fort'}>باگی
+                            <li><Link className="btn btn-sm btn-outline-primary font-12" href={'/car-listing?brand=fort'}>باگی
                                 8 نفره</Link></li>
-                            <li><Link className="btn btn-sm btn-outline-primary " href={'/car-listing?brand=toyoto'}>باگی
+                            <li><Link className="btn btn-sm btn-outline-primary font-12" href={'/car-listing?brand=toyoto'}>باگی
                                 12 نفره </Link></li>
                         </ul>
                     </div>
-                    <Image className="img1 move-1" src={IMAGE.patternImg} alt="" width={100} height={100}/>
+                    <Image className="img1 move-1 d-md-block d-none" src={IMAGE.patternImg} alt="" width={100} height={100}/>
                 </div>
             </div>
             <Homeslide/>
