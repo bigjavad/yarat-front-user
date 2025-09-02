@@ -73,6 +73,7 @@ export async function fetchData(url: string, method: string = "post", body = {})
             'Accept': 'application/json, text/plain, */*',
             'cache-control': 'no-cache',
             'authorization': `Bearer ${token}`,
+            'Access-Control-Allow-Origin': '*'
         }
 
         if (method == 'get') {
