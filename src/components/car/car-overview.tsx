@@ -263,7 +263,7 @@ const carOverview = (data: { car: CarDto }) => {
                             <div className="sticky-top nav-tabs-top">
                                 <div className="car-dl-info icon-bx-wraper style-1 m-b50">
                                     <div className="price m-b30">
-                                        <span className="text-secondary font-10">* برای اطلاع از اطلاعات تکمیلی ثبت سفارش ثبت کنید کارشناسان ما در اسرع وقت با شما تماس خواهند گرفت.</span>
+                                        <span className="text-secondary font-14"> برای اطلاع از اطلاعات تکمیلی ثبت سفارش ثبت کنید کارشناسان ما در اسرع وقت با شما تماس خواهند گرفت.</span>
                                     </div>
                                     <form>
                                         <div className="clearfix">
