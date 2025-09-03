@@ -1,7 +1,6 @@
 'use client'
-import React, {useEffect, useState} from "react";
+import React from "react";
 import {useFormik} from "formik";
-import {EN_LoginStateEnum} from "@/shared/enum/form/EN_LoginState.enum";
 import {LoginSchema} from "@/shared/validation/schema/login-schema";
 import {ActionResault} from "@/shared/model/base/action-resault";
 import {LoginDto} from "@/shared/model/dto/auth/login.dto";
@@ -22,21 +21,7 @@ interface ContactModalProps {
     onClose: () => void;
 }
 const ContactModal: React.FC<ContactModalProps> = ({isModal = true, carId,onClose}) => {
-    const [show, setShow] = useState(false);
     const user = store.getState().globalReducer.user;
-
-    useEffect(() => {
-        if (!user && isModal) {
-            setShow(true);
-        }
-        if (user) {
-            formik.setErrors({
-                firstname: user.firstname,
-                lastname: user.lastname,
-                phoneNumber: user.phoneNumber
-            })
-        }
-    }, [user, isModal]);
 
     const handleClose = () => {
         onClose();
@@ -44,9 +29,9 @@ const ContactModal: React.FC<ContactModalProps> = ({isModal = true, carId,onClos
 
     const formik = useFormik({
         initialValues: {
-            phoneNumber: '',
-            firstname: '',
-            lastname: '',
+            phoneNumber: user.phoneNumber,
+            firstname: user.firstname,
+            lastname: user.lastname,
             content: '',
         },
         validateOnMount: true,
@@ -56,10 +41,11 @@ const ContactModal: React.FC<ContactModalProps> = ({isModal = true, carId,onClos
                 store.dispatch(setUser(res.data));
                 saveOrders(fillModeOrders()).then((res: ActionResault<OrdersDto>) => {
                     snackbarService.showSnackbar(res.message, 'success');
+                    if (isModal) {
+                        handleClose();
+                    }
                 });
-                if (isModal) {
-                    handleClose();
-                }
+
             });
         }
     });
@@ -164,7 +150,7 @@ const ContactModal: React.FC<ContactModalProps> = ({isModal = true, carId,onClos
 
     if (isModal) {
         return (
-            <Modal show={show} onHide={handleClose} centered>
+            <Modal show={true} onHide={handleClose} centered>
                 <Modal.Body>{formContent}</Modal.Body>
             </Modal>
         );

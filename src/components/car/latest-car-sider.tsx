@@ -17,9 +17,9 @@ function LatestCarSider() {
 
     return (
         <>
-            <div className="row lightgallery gap-3">
+            <div className="row col-12 lightgallery">
                 {carList.map((item, index) => {
-                    return ( <div key={index} className="car-list-box col-lg-4 overlay">
+                    return ( <div key={index} className="car-list-box col-sm-6 col-lg-3 my-2 col-xxl-4 overlay">
                             <div className="media-box">
                                 <div className="image-wrapper">
                                     <img
@@ -62,8 +62,8 @@ function LatestCarSider() {
                                     <div>
                                         <label>امکانات</label>
                                         <p className="value font-10">
-                                            {item.facilitiesList?.slice(0, 3).map((facility: CarPropertyDto, idx: number) => (
-                                                <span key={idx}>{facility.title}{idx < Math.min(item.facilitiesList.length, 3) - 1 ? ' , ' : ''}</span>
+                                            {item.facilitiesList?.slice(0, 1).map((facility: CarPropertyDto, idx: number) => (
+                                                <span key={idx}>{facility.title}{idx < Math.min(item.facilitiesList.length, 1) - 1 ? ' , ' : ''}</span>
                                             ))}
                                         </p>
                                     </div>

@@ -6,17 +6,10 @@ import {snackbarService} from "@/shared/service-ui/snackbar.service";
 import ContactModal from "@/components/contact-modal/contact-modal";
 
 function ContactButtonSide() {
-    const user = store.getState().globalReducer.user;
     const [modal, setModal] = useState<boolean>(false);
 
     function onSubmit() {
-        if (user) {
-            saveOrders().then(res => {
-                snackbarService.showSnackbar(res.message, 'success');
-            })
-        } else {
             setModal(true)
-        }
     }
 
     return (

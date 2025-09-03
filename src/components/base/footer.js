@@ -6,7 +6,7 @@ import SocialMediaLinks from "@/components/social-media-links/social-media-links
 const Footer = () => {
     return (
         <>
-            <footer className="site-footer style-1" id="footer">
+            <footer className="site-footer style-1 mb-5" id="footer">
                 <div className="footer-top">
                     <div className="container">
                         <div className="row justify-content-center">
@@ -35,7 +35,7 @@ const Footer = () => {
                                         <li className="cat-item"><Link href="/contact-us">تماس </Link></li>
                                         <li className="cat-item"><Link href="/about-us"> درباره ما </Link></li>
                                         <li className="cat-item"><Link href="/car-listing">لیست محصولات</Link></li>
-                                        <li className="cat-item"><Link href={'/gallery'}>گالری تصاویر </Link></li>
+                                        {/*<li className="cat-item"><Link href={'/gallery'}>گالری تصاویر </Link></li>*/}
                                     </ul>
                                 </div>
                             </div>

@@ -1,5 +1,6 @@
 import {snackbarService} from "@/shared/service-ui/snackbar.service";
 import {getCookie} from "cookies-next";
+import {headers} from "next/headers";
 
 const API_URL = 'https://api.yaratmotors.com'
 
@@ -68,13 +69,25 @@ export async function fetchData(url: string, method: string = "post", body = {})
         let response
         let token
         token = getCookie('token');
-        const headers = {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json, text/plain, */*',
-            'cache-control': 'no-cache',
-            'authorization': `Bearer ${token}`,
-            'Access-Control-Allow-Origin': '*'
+        let headers;
+        if (token){
+            headers={
+                'Content-Type': 'application/json',
+                'Accept': 'application/json, text/plain, */*',
+                'cache-control': 'no-cache',
+                'authorization': `Bearer ${token}`,
+                'Access-Control-Allow-Origin': '*'
+            }
         }
+        else {
+            headers={
+                'Content-Type': 'application/json',
+                'Accept': 'application/json, text/plain, */*',
+                'cache-control': 'no-cache',
+                'Access-Control-Allow-Origin': '*'
+            }
+        }
+
 
         if (method == 'get') {
             response = await fetch(API_URL + url, {

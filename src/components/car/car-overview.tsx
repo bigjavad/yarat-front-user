@@ -25,13 +25,7 @@ const carOverview = (data: { car: CarDto }) => {
     }
 
     function onSubmit() {
-        if (!user) {
-            setIsModalOpen(true);
-        } else {
-            saveOrders(fillModel()).then((res:ActionResault<OrdersDto>)=>{
-                snackbarService.showSnackbar(res.message, 'success');
-            });
-        }
+        setIsModalOpen(true);
     }
 
     function fillModel(): OrdersDto {
@@ -131,27 +125,48 @@ const carOverview = (data: { car: CarDto }) => {
                             </div>
                             <div className="product-description">
                                 <ul className="nav nav-tabs style-1 m-b20">
-                                    <li><div id='nav_one' onClick={navLinks}
-                                              className={`nav-link cursorPointer ${addActive === 'nav_one' ? 'active' : ''}`}>موتور</div>
+                                    <li>
+                                        <div id='nav_one' onClick={navLinks}
+                                             className={`nav-link cursorPointer ${addActive === 'nav_one' ? 'active' : ''}`}>موتور
+                                        </div>
                                     </li>
-                                    <li><div id='nav_two' onClick={navLinks}
-                                              className={`nav-link cursorPointer ${addActive === 'nav_two' ? 'active' : ''}`}>سیستم
-                                        تعلیق</div></li>
-                                    <li><div id='nav_three' onClick={navLinks}
-                                              className={`nav-link cursorPointer ${addActive === 'nav_three' ? 'active' : ''}`}>تایر
-                                        ها و چرخ ها</div></li>
-                                    <li><div id='nav_four' onClick={navLinks}
-                                              className={`nav-link cursorPointer ${addActive === 'nav_four' ? 'active' : ''}`}>سیستم
-                                        ترمز</div></li>
-                                    <li><div id='nav_five' onClick={navLinks}
-                                              className={`nav-link cursorPointer ${addActive === 'nav_five' ? 'active' : ''}`}>ابعاد و
-                                        ظرفیت</div></li>
-                                    <li><div id='nav_six' onClick={navLinks}
-                                              className={`nav-link cursorPointer ${addActive === 'nav_six' ? 'active' : ''}`}>ویژگی
-                                        ها</div></li>
-                                    <li><div id='nav_seven' onClick={navLinks}
-                                              className={`nav-link cursorPointer ${addActive === 'nav_seven' ? 'active' : ''}`}>گارانتی
-                                        ها</div></li>
+                                    <li>
+                                        <div id='nav_two' onClick={navLinks}
+                                             className={`nav-link cursorPointer ${addActive === 'nav_two' ? 'active' : ''}`}>سیستم
+                                            تعلیق
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div id='nav_three' onClick={navLinks}
+                                             className={`nav-link cursorPointer ${addActive === 'nav_three' ? 'active' : ''}`}>تایر
+                                            ها و چرخ ها
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div id='nav_four' onClick={navLinks}
+                                             className={`nav-link cursorPointer ${addActive === 'nav_four' ? 'active' : ''}`}>سیستم
+                                            ترمز
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div id='nav_five' onClick={navLinks}
+                                             className={`nav-link cursorPointer ${addActive === 'nav_five' ? 'active' : ''}`}>ابعاد
+                                            و
+                                            ظرفیت
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div id='nav_six' onClick={navLinks}
+                                             className={`nav-link cursorPointer ${addActive === 'nav_six' ? 'active' : ''}`}>ویژگی
+                                            ها
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div id='nav_seven' onClick={navLinks}
+                                             className={`nav-link cursorPointer ${addActive === 'nav_seven' ? 'active' : ''}`}>گارانتی
+                                            ها
+                                        </div>
+                                    </li>
                                 </ul>
                                 <div className="tab-content">
                                     <div id="specifications"
@@ -159,7 +174,7 @@ const carOverview = (data: { car: CarDto }) => {
                                         <div className="icon-bx-wraper bx-style-1 p-a30 p-sm-a0">
                                             <ul className="table-dl clearfix">
                                                 {
-                                                    data.car && data.car.engine.map((item,key:number)=>{
+                                                    data.car && data.car.engine.map((item, key: number) => {
                                                         return <li key={key}>
                                                             <div className="leftview">{item.title}</div>
                                                             <div className="rightview">{item.content}</div>
@@ -174,7 +189,7 @@ const carOverview = (data: { car: CarDto }) => {
                                         <div className="icon-bx-wraper bx-style-1 p-a30 p-sm-a0">
                                             <ul className="table-dl clearfix">
                                                 {
-                                                    data.car.suspensions && data.car.suspensions.map((item,key:number)=>{
+                                                    data.car.suspensions && data.car.suspensions.map((item, key: number) => {
                                                         return <li key={key}>
                                                             <div className="leftview">{item.title}</div>
                                                             <div className="rightview">{item.content}</div>
@@ -189,7 +204,7 @@ const carOverview = (data: { car: CarDto }) => {
                                         <div className="icon-bx-wraper bx-style-1 p-a30 p-sm-a0">
                                             <ul className="table-dl clearfix">
                                                 {
-                                                    data.car.tire && data.car.tire.map((item,key:number)=>{
+                                                    data.car.tire && data.car.tire.map((item, key: number) => {
                                                         return <li key={key}>
                                                             <div className="leftview">{item.title}</div>
                                                             <div className="rightview">{item.content}</div>
@@ -203,7 +218,7 @@ const carOverview = (data: { car: CarDto }) => {
                                         <div className="icon-bx-wraper bx-style-1 p-a30 p-sm-a0">
                                             <ul className="table-dl clearfix">
                                                 {
-                                                    data.car.break && data.car.break.map((item,key:number)=>{
+                                                    data.car.break && data.car.break.map((item, key: number) => {
                                                         return <li key={key}>
                                                             <div className="leftview">{item.title}</div>
                                                             <div className="rightview">{item.content}</div>
@@ -213,11 +228,12 @@ const carOverview = (data: { car: CarDto }) => {
                                             </ul>
                                         </div>
                                     </div>
-                                    <div id="dimensionsCapacity" className={`tab-pane ${addActive === 'nav_five' ? 'active' : ''}`}>
+                                    <div id="dimensionsCapacity"
+                                         className={`tab-pane ${addActive === 'nav_five' ? 'active' : ''}`}>
                                         <div className="icon-bx-wraper bx-style-1 p-a30 p-sm-a0">
                                             <ul className="table-dl clearfix">
                                                 {
-                                                    data.car.dimensionsCapacity && data.car.dimensionsCapacity.map((item,key:number)=>{
+                                                    data.car.dimensionsCapacity && data.car.dimensionsCapacity.map((item, key: number) => {
                                                         return <li key={key}>
                                                             <div className="leftview">{item.title}</div>
                                                             <div className="rightview">{item.content}</div>
@@ -231,7 +247,7 @@ const carOverview = (data: { car: CarDto }) => {
                                         <div className="icon-bx-wraper bx-style-1 p-a30 p-sm-a0">
                                             <ul className="table-dl clearfix">
                                                 {
-                                                    data.car.expert && data.car.expert.map((item,key:number)=>{
+                                                    data.car.expert && data.car.expert.map((item, key: number) => {
                                                         return <li key={key}>
                                                             <div className="leftview">{item.title}</div>
                                                             <div className="rightview">{item.content}</div>
@@ -241,11 +257,12 @@ const carOverview = (data: { car: CarDto }) => {
                                             </ul>
                                         </div>
                                     </div>
-                                    <div id="warranty" className={`tab-pane ${addActive === 'nav_seven' ? 'active' : ''}`}>
+                                    <div id="warranty"
+                                         className={`tab-pane ${addActive === 'nav_seven' ? 'active' : ''}`}>
                                         <div className="icon-bx-wraper bx-style-1 p-a30 p-sm-a0">
                                             <ul className="table-dl clearfix">
                                                 {
-                                                    data.car.warranty && data.car.warranty.map((item,key:number)=>{
+                                                    data.car.warranty && data.car.warranty.map((item, key: number) => {
                                                         return <li key={key}>
                                                             <div className="leftview">{item.title}</div>
                                                             <div className="rightview">{item.content}</div>
@@ -267,8 +284,9 @@ const carOverview = (data: { car: CarDto }) => {
                                     </div>
                                     <form>
                                         <div className="clearfix">
-                                            <button onClick={()=>onSubmit()} type="button"
-                                                    className="btn-primary w-100 justify-content-center btn btn-block">ثبت سفارش
+                                            <button onClick={() => onSubmit()} type="button"
+                                                    className="btn-primary w-100 justify-content-center btn btn-block">ثبت
+                                                سفارش
                                             </button>
                                         </div>
                                     </form>
