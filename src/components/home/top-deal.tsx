@@ -91,8 +91,8 @@ function TopDeal() {
                                     <div>
                                         <label>امکانات</label>
                                         <p className="value font-10">
-                                            {item.facilitiesList?.slice(0, 3).map((facility: CarPropertyDto, idx: number) => (
-                                                <span key={idx}>{facility.content}{idx < Math.min(item.facilitiesList.length, 3) - 1 ? ' , ' : ''}</span>
+                                            {item.facilitiesList?.slice(0, 2).map((facility: CarPropertyDto, idx: number) => (
+                                                <span key={idx}>{facility.title} ,</span>
                                             ))}
                                         </p>
                                     </div>
