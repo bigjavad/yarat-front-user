@@ -66,7 +66,7 @@ function errorToast(data: any): void {
 export async function fetchData(url: string, method: string = "post", body = {}) {
     try {
         let response
-        let token
+        let token={};
         token = getCookie('token');
         let headers;
         if (token){
