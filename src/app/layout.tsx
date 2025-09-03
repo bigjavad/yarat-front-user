@@ -14,6 +14,7 @@ import {SnackbarProvider} from "notistack";
 import React from "react";
 import NextTopLoader from "nextjs-toploader";
 import ContactButtonSide from "@/components/base/contact-button-side";
+import ScrollTop from "@/constent/scroll-top";
 
 
 const bakh = localFont({
@@ -80,6 +81,7 @@ export default function RootLayout({
             autoHideDuration={3000}
             anchorOrigin={{horizontal: 'right', vertical: 'top'}}>
             <Header/>
+            <ScrollTop />
             <ContactButtonSide />
             <article className="max-w-[1920px] mx-auto">{children}</article>
             <Footer/>

@@ -161,12 +161,12 @@ const carOverview = (data: { car: CarDto }) => {
                                             ها
                                         </div>
                                     </li>
-                                    <li>
-                                        <div id='nav_seven' onClick={navLinks}
-                                             className={`nav-link cursorPointer ${addActive === 'nav_seven' ? 'active' : ''}`}>گارانتی
-                                            ها
-                                        </div>
-                                    </li>
+                                    {/*<li>*/}
+                                    {/*    <div id='nav_seven' onClick={navLinks}*/}
+                                    {/*         className={`nav-link cursorPointer ${addActive === 'nav_seven' ? 'active' : ''}`}>گارانتی*/}
+                                    {/*        ها*/}
+                                    {/*    </div>*/}
+                                    {/*</li>*/}
                                 </ul>
                                 <div className="tab-content">
                                     <div id="specifications"
@@ -257,21 +257,21 @@ const carOverview = (data: { car: CarDto }) => {
                                             </ul>
                                         </div>
                                     </div>
-                                    <div id="warranty"
-                                         className={`tab-pane ${addActive === 'nav_seven' ? 'active' : ''}`}>
-                                        <div className="icon-bx-wraper bx-style-1 p-a30 p-sm-a0">
-                                            <ul className="table-dl clearfix">
-                                                {
-                                                    data.car.warranty && data.car.warranty.map((item, key: number) => {
-                                                        return <li key={key}>
-                                                            <div className="leftview">{item.title}</div>
-                                                            <div className="rightview">{item.content}</div>
-                                                        </li>
-                                                    })
-                                                }
-                                            </ul>
-                                        </div>
-                                    </div>
+                                    {/*<div id="warranty"*/}
+                                    {/*     className={`tab-pane ${addActive === 'nav_seven' ? 'active' : ''}`}>*/}
+                                    {/*    <div className="icon-bx-wraper bx-style-1 p-a30 p-sm-a0">*/}
+                                    {/*        <ul className="table-dl clearfix">*/}
+                                    {/*            {*/}
+                                    {/*                data.car.warranty && data.car.warranty.map((item, key: number) => {*/}
+                                    {/*                    return <li key={key}>*/}
+                                    {/*                        <div className="leftview">{item.title}</div>*/}
+                                    {/*                        <div className="rightview">{item.content}</div>*/}
+                                    {/*                    </li>*/}
+                                    {/*                })*/}
+                                    {/*            }*/}
+                                    {/*        </ul>*/}
+                                    {/*    </div>*/}
+                                    {/*</div>*/}
                                 </div>
                             </div>
                         </div>
