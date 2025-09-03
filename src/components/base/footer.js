@@ -35,7 +35,7 @@ const Footer = () => {
                                         <li className="cat-item"><Link href="/contact-us">تماس </Link></li>
                                         <li className="cat-item"><Link href="/about-us"> درباره ما </Link></li>
                                         <li className="cat-item"><Link href="/car-listing">لیست محصولات</Link></li>
-                                        <li className="cat-item"><Link href={'/gallery'}>گالری تصاویر </Link></li>
+                                        {/*<li className="cat-item"><Link href={'/gallery'}>گالری تصاویر </Link></li>*/}
                                     </ul>
                                 </div>
                             </div>
