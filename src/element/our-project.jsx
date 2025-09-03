@@ -55,6 +55,8 @@ const gallery = [
     { category: 'twelve', img: '/assets/images/gallery/97.webp' },
  ];
 
+
+
 const OurProject = () => {
     const [imgGallery, setImgGallery] = useState(gallery);
     const [addactive, setAddactive] = useState('all');

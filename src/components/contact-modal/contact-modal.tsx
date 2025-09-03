@@ -6,23 +6,22 @@ import {LoginSchema} from "@/shared/validation/schema/login-schema";
 import {ActionResault} from "@/shared/model/base/action-resault";
 import {LoginDto} from "@/shared/model/dto/auth/login.dto";
 import {setUser} from "@/shared/redux/features";
-import {loginService, verifyService} from "@/shared/service/login/login.service";
+import {loginService} from "@/shared/service/login/login.service";
 import {Modal} from "react-bootstrap";
 import InputComponent from "@/shared/component/input.component";
-import OtpInput from 'react-otp-input';
 import ValidationErrorComponent from "@/shared/component/validationErrorComponent";
 import {store} from "@/shared/redux/store";
 import {OrdersDto} from "@/shared/model/dto/orders/orders.dto";
 import {saveOrders} from "@/shared/service/orders/orders.service";
-import Image from "next/image";
 import {snackbarService} from "@/shared/service-ui/snackbar.service";
 
 interface ContactModalProps {
     isModal?: boolean;
     carId?: number;
+    show: boolean;
+    onClose: () => void;
 }
-
-const ContactModal: React.FC<ContactModalProps> = ({isModal = true, carId}) => {
+const ContactModal: React.FC<ContactModalProps> = ({isModal = true, carId,onClose}) => {
     const [show, setShow] = useState(false);
     const user = store.getState().globalReducer.user;
 
@@ -39,7 +38,9 @@ const ContactModal: React.FC<ContactModalProps> = ({isModal = true, carId}) => {
         }
     }, [user, isModal]);
 
-    const handleClose = () => setShow(false);
+    const handleClose = () => {
+        onClose();
+    };
 
     const formik = useFormik({
         initialValues: {
