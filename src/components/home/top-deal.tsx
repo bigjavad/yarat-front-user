@@ -82,13 +82,6 @@ function TopDeal() {
                                         <p className="value font-10">{item.capacity} نفر</p>
                                     </div>
                                     <div>
-                                        <label>گارانتی</label>
-                                        <p className="value font-10">
-                                            {item.warranty?.[0]?.content || '' +
-                                                ''}
-                                        </p>
-                                    </div>
-                                    <div>
                                         <label>امکانات</label>
                                         <p className="value font-10">
                                             {item.facilitiesList?.slice(0, 2).map((facility: CarPropertyDto, idx: number) => (
