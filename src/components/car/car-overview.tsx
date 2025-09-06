@@ -277,21 +277,21 @@ const carOverview = (data: { car: CarDto }) => {
                         </div>
 
                         <div className="col-xl-4  col-lg-5 col-md-6">
-                            <div className="sticky-top nav-tabs-top">
-                                <div className="car-dl-info icon-bx-wraper style-1 m-b50">
-                                    <div className="price m-b30">
-                                        <span className="text-secondary font-14"> برای اطلاع از اطلاعات تکمیلی ثبت سفارش ثبت کنید کارشناسان ما در اسرع وقت با شما تماس خواهند گرفت.</span>
-                                    </div>
-                                    <form>
-                                        <div className="clearfix">
-                                            <button onClick={() => onSubmit()} type="button"
-                                                    className="btn-primary w-100 justify-content-center btn btn-block">ثبت
-                                                سفارش
-                                            </button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
+                            {/*<div className="sticky-top nav-tabs-top">*/}
+                            {/*    <div className="car-dl-info icon-bx-wraper style-1 m-b50">*/}
+                            {/*        <div className="price m-b30">*/}
+                            {/*            <span className="text-secondary font-14"> برای اطلاع از اطلاعات تکمیلی ثبت سفارش ثبت کنید کارشناسان ما در اسرع وقت با شما تماس خواهند گرفت.</span>*/}
+                            {/*        </div>*/}
+                            {/*        <form>*/}
+                            {/*            <div className="clearfix">*/}
+                            {/*                <button onClick={() => onSubmit()} type="button"*/}
+                            {/*                        className="btn-primary w-100 justify-content-center btn btn-block">ثبت*/}
+                            {/*                    سفارش*/}
+                            {/*                </button>*/}
+                            {/*            </div>*/}
+                            {/*        </form>*/}
+                            {/*    </div>*/}
+                            {/*</div>*/}
                         </div>
                     </div>
                 </div>

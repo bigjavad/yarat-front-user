@@ -82,7 +82,7 @@ export default function RootLayout({
             anchorOrigin={{horizontal: 'right', vertical: 'top'}}>
             <Header/>
             <ScrollTop />
-            <ContactButtonSide />
+            {/*<ContactButtonSide />*/}
             <article className="max-w-[1920px] mx-auto">{children}</article>
             <Footer/>
         </SnackbarProvider>
