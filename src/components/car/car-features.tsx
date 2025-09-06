@@ -11,7 +11,6 @@ const CarFeatures = () => {
                 <div className="col-lg-6 align-self-center m-b30">
                     <div className="content-box">
                         <div className="section-head">
-                            {/*<h6 className="sub-title style-1">We Bring You to The Future</h6>*/}
                             <h2 className="title">یارات موتورز</h2>
                         </div>
                         <p className="m-b40">
