@@ -29,9 +29,9 @@ const ContactModal: React.FC<ContactModalProps> = ({isModal = true, carId,onClos
 
     const formik = useFormik({
         initialValues: {
-            phoneNumber: user.phoneNumber,
-            firstname: user.firstname,
-            lastname: user.lastname,
+            phoneNumber: user?.phoneNumber || "",
+            firstname: user?.firstname || "",
+            lastname: user?.lastname || "",
             content: '',
         },
         validateOnMount: true,
