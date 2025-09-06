@@ -1,4 +1,4 @@
-'use client'
+
 import './globals.css';
 import localFont from 'next/font/local';
 import '../assets/vendor/swiper/swiper-bundle.min.css'
@@ -58,34 +58,34 @@ export default function RootLayout({
             className={`max-w-[1920px] mx-auto   ${bakh.variable}`}
             lang="fa" dir="rtl"
         >
-        <title>یارات پلتفرم تولید باگی</title>
-        <meta name="description" content="یارات پلتفرم تولید باگ‌های گروهی ۴، ۸ و ۱۲ نفره است."/>
+        {/*<title>یارات پلتفرم تولید باگی</title>*/}
+        {/*<meta name="description" content="یارات پلتفرم تولید باگ‌های گروهی ۴، ۸ و ۱۲ نفره است."/>*/}
 
-        <NextTopLoader
-            color="#EE3131"
-            initialPosition={0.08}
-            crawlSpeed={200}
-            height={3}
-            crawl={true}
-            showSpinner={true}
-            easing="ease"
-            speed={200}
-            shadow="0 0 10px #EE3131,0 0 5px #EE3131"
-            zIndex={1600}
-            showAtBottom={false}
-        />
+        {/*<NextTopLoader*/}
+        {/*    color="#EE3131"*/}
+        {/*    initialPosition={0.08}*/}
+        {/*    crawlSpeed={200}*/}
+        {/*    height={3}*/}
+        {/*    crawl={true}*/}
+        {/*    showSpinner={true}*/}
+        {/*    easing="ease"*/}
+        {/*    speed={200}*/}
+        {/*    shadow="0 0 10px #EE3131,0 0 5px #EE3131"*/}
+        {/*    zIndex={1600}*/}
+        {/*    showAtBottom={false}*/}
+        {/*/>*/}
 
         <body suppressHydrationWarning={true}>
-        <SnackbarProvider
-            maxSnack={3}
-            autoHideDuration={3000}
-            anchorOrigin={{horizontal: 'right', vertical: 'top'}}>
-            <Header/>
-            <ScrollTop />
-            <ContactButtonSide />
+        {/*<SnackbarProvider*/}
+        {/*    maxSnack={3}*/}
+        {/*    autoHideDuration={3000}*/}
+        {/*    anchorOrigin={{horizontal: 'right', vertical: 'top'}}>*/}
+            {/*<Header/>*/}
+            {/*<ScrollTop />*/}
+            {/*<ContactButtonSide />*/}
             <article className="max-w-[1920px] mx-auto">{children}</article>
-            <Footer/>
-        </SnackbarProvider>
+            {/*<Footer/>*/}
+        {/*</SnackbarProvider>*/}
         </body>
         </html>
     );

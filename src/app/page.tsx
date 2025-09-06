@@ -1,5 +1,4 @@
-"use client"
-import React, {useState} from 'react'
+import React from 'react'
 import HomeBanner from '../components/home/home-banner'
 import '../../node_modules/react-modal-video/scss/modal-video.scss'
 import ModalVideo from 'react-modal-video'
@@ -11,12 +10,9 @@ import About from "@/components/about/about";
 
 
 export default function Home() {
-    const [open, setOpen] = useState(false);
 
     return (
         <>
-            <title>یارات پلتفرم تولید باگی</title>
-            <meta name="description" content="یارات پلتفرم تولید باگ‌های گروهی ۴، ۸ و ۱۲ نفره است."/>
             <div className="page-content bg-white">
                 <div className="banner-one">
                     <div className="row">
@@ -60,8 +56,8 @@ export default function Home() {
                     </div>
                 </section>
             </div>
-            <ModalVideo channel="youtube" autoplay
-                        isOpen={open} videoId="PkkV1vLHUvQ" onClose={() => setOpen(false)}/>
+            {/*<ModalVideo channel="youtube" autoplay*/}
+            {/*            isOpen={open} videoId="PkkV1vLHUvQ" onClose={() => setOpen(false)}/>*/}
         </>
     )
 }
