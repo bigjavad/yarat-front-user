@@ -1,17 +1,19 @@
 import React from 'react'
 import HomeBanner from '../components/home/home-banner'
 import '../../node_modules/react-modal-video/scss/modal-video.scss'
-import CarFeatures from "@/components/car/car-features";
 import CarStory from "@/components/car/car-story";
 import ContectUs from "@/components/contect-us/contect-us";
 import About from "@/components/about/about";
 import CarHomeList from "@/components/home/car-home-list";
-import HomeModalVideo from "@/components/home/home-modal-video";
+import {getListCar} from "@/shared/service/car/car.service";
+import {CarDto} from "@/shared/model/dto/car/car.dto";
+import CarFeatures from "@/components/car/car-features";
 
 
-export default function Home() {
+export default async function Home() {
 
-
+    const res = await getListCar();
+    const carList = res.data || []
     return (
         <>
             <div className="page-content bg-white">
@@ -28,7 +30,7 @@ export default function Home() {
                 </section>
                 <section className="content-inner-2">
                     <div className="container">
-                        <CarFeatures/>
+                        <CarFeatures />
                     </div>
                 </section>
                 <section className="content-inner-2">
@@ -41,7 +43,7 @@ export default function Home() {
                                 کیفیت، تنوع و کاربردی بودن محصولات یارات ما را از دیگران متمایز می‌کند.
                             </p>
                         </div>
-                        <CarHomeList/>
+                        <CarHomeList carList={carList}/>
                     </div>
                 </section>
                 <section className="content-inner-2">
@@ -57,7 +59,7 @@ export default function Home() {
                     </div>
                 </section>
             </div>
-            <HomeModalVideo />
+            {/*<HomeModalVideo />*/}
         </>
     )
 }

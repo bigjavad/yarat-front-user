@@ -29,36 +29,8 @@ const handlerExceptionError = async (response: any) => {
 };
 
 function errorToast(data: any): void {
-    if (typeof data === 'string') {
-        snackbarService.showSnackbar(data, 'error');
-        return;
-    }
-    if (Array.isArray(data) && data.every(item => typeof item === 'string')) {
-        data.forEach((message: string) => {
-            snackbarService.showSnackbar(message, 'error');
-        });
-        return;
-    }
-    if (data && typeof data === 'object' && !Array.isArray(data) && data.message) {
-        snackbarService.showSnackbar(data.message, 'error');
-        return;
-    }
-    if (Array.isArray(data) && data.every(item => item && item.message)) {
-        data.forEach((error: ErrorObject) => {
-            snackbarService.showSnackbar(error.message, 'error');
-        });
-        return;
-    }
-    if (data && typeof data === 'object' && 'errors' in data && Array.isArray(data.errors)) {
-        data.errors.forEach((error: ErrorObject) => {
-            if (error.message) {
-                snackbarService.showSnackbar(error.message, 'error');
-            }
-        });
-        return;
-    }
-    console.warn('فرمت داده نامعتبر برای errorToast:', data);
-    snackbarService.showSnackbar('خطای ناشناخته رخ داده است', 'error');
+
+
 }
 
 export async function fetchData(url: string, method: string = "post", body = {}) {

@@ -1,4 +1,4 @@
-'use client'
+
 import '../assets/vendor/swiper/swiper-bundle.min.css';
 import '../assets/vendor/switcher/switcher.css';
 import 'swiper/css';
@@ -20,11 +20,7 @@ export default function ClientWrapper({children}: { children: React.ReactNode })
         <>
             <ScrollTop/>
             <ContactButtonSide/>
-            <SnackbarProvider
-                maxSnack={3}
-                autoHideDuration={3000}
-                anchorOrigin={{horizontal: 'right', vertical: 'top'}}
-            >
+
                 <NextTopLoader
                     color="#EE3131"
                     initialPosition={0.08}
@@ -39,7 +35,6 @@ export default function ClientWrapper({children}: { children: React.ReactNode })
                     showAtBottom={false}
                 />
                 {children}
-            </SnackbarProvider>
         </>
     );
 }

@@ -50,7 +50,7 @@ const AboutSlider = () => {
                                 <div className="icon-content d-flex flex-column flex-grow-1">
                                     <h3 className="title text-center text-white">
                                         {
-                                            item && <h4 className="text-effect-1">{item?.title}</h4>
+                                            item && <span className="text-effect-1">{item?.title}</span>
                                         }
                                     </h3>
                                     <p className="flex-grow-1">
