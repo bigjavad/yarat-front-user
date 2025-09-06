@@ -13,7 +13,7 @@ const CarFuturSlide = () => {
                     fluid={true} // responsive
                     className="rounded-lg"
                 >
-                    <source src="/assets/movie.mp4" type="video/mp4" />
+                    <source src="/movie.mp4" type="video/mp4" />
                     <BigPlayButton position="center" />
                 </Player>
             </div>
