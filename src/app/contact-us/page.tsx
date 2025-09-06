@@ -97,7 +97,9 @@ const Page = () => {
                                     </div>
                                 </div>
                             </div>
-                            <ContactModal isModal={false} />
+                            {/*<ContactModal isModal={false} show={false} onClose={function (): void {*/}
+                            {/*    throw new Error('Function not implemented.');*/}
+                            {/*}} />*/}
                         </div>
                     </div>
                 </section>

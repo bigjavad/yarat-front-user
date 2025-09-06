@@ -1,5 +1,5 @@
 import {snackbarService} from "@/shared/service-ui/snackbar.service";
-import {getCookie} from "cookies-next";
+import {CookieValueTypes, getCookie} from "cookies-next";
 
 const API_URL = 'https://api.yaratmotors.com'
 
@@ -66,7 +66,7 @@ function errorToast(data: any): void {
 export async function fetchData(url: string, method: string = "post", body = {}) {
     try {
         let response
-        let token={};
+        let token: any ={};
         token = getCookie('token');
         let headers;
         if (token){
