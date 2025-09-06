@@ -19,7 +19,7 @@ function LatestCarSider() {
         <>
             <div className="row col-12 lightgallery">
                 {carList.map((item, index) => {
-                    return ( <div key={index} className="car-list-box col-sm-6 col-lg-4 my-2 col-xxl-4 overlay">
+                    return ( <div key={index} className="car-list-box col-sm-6 col-lg-3 my-2 col-xxl-4 overlay">
                             <div className="media-box">
                                 <div className="image-wrapper">
                                     <img

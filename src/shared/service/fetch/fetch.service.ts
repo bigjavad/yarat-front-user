@@ -1,5 +1,5 @@
 import {snackbarService} from "@/shared/service-ui/snackbar.service";
-import {CookieValueTypes, getCookie} from "cookies-next";
+import {getCookie} from "cookies-next";
 
 const API_URL = 'https://api.yaratmotors.com'
 
