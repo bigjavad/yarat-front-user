@@ -1,6 +1,4 @@
 import {snackbarService} from "@/shared/service-ui/snackbar.service";
-import {getCookie} from "cookies-next";
-
 const API_URL = 'https://api.yaratmotors.com'
 
 interface ErrorObject {
@@ -66,23 +64,10 @@ function errorToast(data: any): void {
 export async function fetchData(url: string, method: string = "post", body = {}) {
     try {
         let response
-        let token: any ={};
-        token = getCookie('token');
-        let headers;
-        if (token){
-            headers={
-                'Content-Type': 'application/json',
-                'Accept': 'application/json',
-                'cache-control': 'no-cache',
-                'authorization': `Bearer ${token}`
-            }
-        }
-        else {
-            headers={
-                'Content-Type': 'application/json',
-                'Accept': 'application/json',
-                'cache-control': 'no-cache'
-            }
+        let headers = {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json',
+            'cache-control': 'no-cache'
         }
 
 

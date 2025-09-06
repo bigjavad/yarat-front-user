@@ -1,11 +1,8 @@
 'use client'
 import React from "react";
 import {useFormik} from "formik";
-import {LoginSchema} from "@/shared/validation/schema/login-schema";
 import {ActionResault} from "@/shared/model/base/action-resault";
-import {LoginDto} from "@/shared/model/dto/auth/login.dto";
 import {setUser} from "@/shared/redux/features";
-import {loginService} from "@/shared/service/login/login.service";
 import {Modal} from "react-bootstrap";
 import InputComponent from "@/shared/component/input.component";
 import ValidationErrorComponent from "@/shared/component/validationErrorComponent";
@@ -13,6 +10,7 @@ import {store} from "@/shared/redux/store";
 import {OrdersDto} from "@/shared/model/dto/orders/orders.dto";
 import {saveOrders} from "@/shared/service/orders/orders.service";
 import {snackbarService} from "@/shared/service-ui/snackbar.service";
+import {OrdersSchema} from "@/shared/validation/orders/login-schema";
 
 interface ContactModalProps {
     isModal?: boolean;
@@ -20,7 +18,8 @@ interface ContactModalProps {
     show: boolean;
     onClose: () => void;
 }
-const ContactModal: React.FC<ContactModalProps> = ({isModal = true, carId,onClose}) => {
+
+const ContactModal: React.FC<ContactModalProps> = ({isModal = true, carId, onClose}) => {
     const user = store.getState().globalReducer.user;
 
     const handleClose = () => {
@@ -35,17 +34,14 @@ const ContactModal: React.FC<ContactModalProps> = ({isModal = true, carId,onClos
             content: '',
         },
         validateOnMount: true,
-        validationSchema: LoginSchema,
+        validationSchema: OrdersSchema,
         onSubmit: (values) => {
-            loginService(fillModel()).then((res: ActionResault<LoginDto>) => {
-                store.dispatch(setUser(res.data));
-                saveOrders(fillModeOrders()).then((res: ActionResault<OrdersDto>) => {
-                    snackbarService.showSnackbar(res.message, 'success');
-                    if (isModal) {
-                        handleClose();
-                    }
-                });
-
+            saveOrders(fillModeOrders()).then((res: ActionResault<OrdersDto>) => {
+                store.dispatch(setUser(fillModeOrders()));
+                snackbarService.showSnackbar(res.message, 'success');
+                if (isModal) {
+                    handleClose();
+                }
             });
         }
     });
@@ -53,15 +49,10 @@ const ContactModal: React.FC<ContactModalProps> = ({isModal = true, carId,onClos
     function fillModeOrders(): OrdersDto {
         let model: OrdersDto = new OrdersDto();
         model.content = formik.values.content;
-        model.carId = carId || null;
-        return model;
-    }
-
-    function fillModel(): LoginDto {
-        let model: LoginDto = new LoginDto();
         model.phoneNumber = formik.values.phoneNumber;
         model.firstname = formik.values.firstname;
         model.lastname = formik.values.lastname;
+        model.carId = carId || null;
         return model;
     }
 
@@ -86,7 +77,7 @@ const ContactModal: React.FC<ContactModalProps> = ({isModal = true, carId,onClos
                                 className="form-control"
                             />
                             {formik.errors.firstname && (formik.submitCount > 0 || formik.touched) && (
-                                <ValidationErrorComponent msg={formik.errors.firstname}/>
+                                <ValidationErrorComponent msg={formik.errors.firstname.toLocaleString()}/>
                             )}
                         </div>
                         <div className="col-sm-6">
@@ -100,7 +91,7 @@ const ContactModal: React.FC<ContactModalProps> = ({isModal = true, carId,onClos
                                 className="form-control"
                             />
                             {formik.errors.lastname && (formik.submitCount > 0 || formik.touched) && (
-                                <ValidationErrorComponent msg={formik.errors.lastname}/>
+                                <ValidationErrorComponent msg={formik.errors.lastname.toLocaleString()}/>
                             )}
                         </div>
                     </div>
@@ -118,7 +109,7 @@ const ContactModal: React.FC<ContactModalProps> = ({isModal = true, carId,onClos
                             className="form-control"
                         />
                         {formik.errors.phoneNumber && (formik.submitCount > 0 || formik.touched) && (
-                            <ValidationErrorComponent msg={formik.errors.phoneNumber}/>
+                            <ValidationErrorComponent msg={formik.errors.phoneNumber.toLocaleString()}/>
                         )}
                     </div>
                     <div className="form-group mt-3">

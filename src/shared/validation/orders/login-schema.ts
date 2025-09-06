@@ -3,7 +3,7 @@ import {TRANSLATE_WITH_LABEL, VALIDATION_ERROR_TYPES} from "@/shared/validation/
 const phoneRegExp =
     /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
 
-export const LoginSchema = Yup.object().shape({
+export const OrdersSchema = Yup.object().shape({
     phoneNumber: Yup.string()
         .label('شماره موبایل')
         .matches(phoneRegExp, (value) =>

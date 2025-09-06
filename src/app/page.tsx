@@ -1,15 +1,16 @@
 import React from 'react'
 import HomeBanner from '../components/home/home-banner'
 import '../../node_modules/react-modal-video/scss/modal-video.scss'
-import ModalVideo from 'react-modal-video'
 import CarFeatures from "@/components/car/car-features";
-import TopDeal from "@/components/home/top-deal";
-import BestCar from "@/components/car/best-car";
+import CarStory from "@/components/car/car-story";
 import ContectUs from "@/components/contect-us/contect-us";
 import About from "@/components/about/about";
+import CarHomeList from "@/components/home/car-home-list";
+import HomeModalVideo from "@/components/home/home-modal-video";
 
 
 export default function Home() {
+
 
     return (
         <>
@@ -40,13 +41,13 @@ export default function Home() {
                                 کیفیت، تنوع و کاربردی بودن محصولات یارات ما را از دیگران متمایز می‌کند.
                             </p>
                         </div>
-                        <TopDeal/>
+                        <CarHomeList/>
                     </div>
                 </section>
                 <section className="content-inner-2">
                     <div className="container">
                         <div className="row features-box">
-                            <BestCar/>
+                            <CarStory/>
                         </div>
                     </div>
                 </section>
@@ -56,8 +57,7 @@ export default function Home() {
                     </div>
                 </section>
             </div>
-            {/*<ModalVideo channel="youtube" autoplay*/}
-            {/*            isOpen={open} videoId="PkkV1vLHUvQ" onClose={() => setOpen(false)}/>*/}
+            <HomeModalVideo />
         </>
     )
 }
