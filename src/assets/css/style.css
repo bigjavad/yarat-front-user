@@ -666,7 +666,7 @@ progress {
 
 @media (min-width: 1200px) {
     .container, .container-sm, .container-md, .container-lg, .container-xl {
-        max-width: 1300px;
+        max-width: 1600px;
     }
 }
 
@@ -7354,6 +7354,10 @@ fieldset:disabled .wp-block-button__link {
 
 .min-vh-40 {
     min-height: 40vh !important;
+}
+
+.min-vh-30 {
+    min-height: 30vh !important;
 }
 
 .flex-fill {

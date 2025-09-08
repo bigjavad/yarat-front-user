@@ -1,7 +1,6 @@
 "use client"
 import React from 'react'
 import {Swiper, SwiperSlide} from 'swiper/react'
-import {IMAGE} from '@/constent/theme'
 import {FaCaretLeft, FaCaretRight} from "react-icons/fa";
 
 

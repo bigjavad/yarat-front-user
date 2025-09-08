@@ -10,16 +10,16 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 const slider = [
-    {imag1: '/assets/images/gallery/5.webp',
+    {imag1: '/assets/images/edited/edited-1.webp',
         name:"باگی دو نفره"
     },
-    {imag1: '/assets/images/gallery/15.webp',
+    {imag1: '/assets/images/edited/edited-2.webp',
         name:"باگی دو نفره"},
-    {imag1: '/assets/images/gallery/24.webp',
+    {imag1: '/assets/images/edited/edited-7.webp',
         name:"باگی دوازده نفره"},
-    {imag1: '/assets/images/gallery/88.webp',
+    {imag1: '/assets/images/edited/edited-4.webp',
         name:"باگی دوازده نفره"},
-    {imag1: '/assets/images/gallery/92.webp',
+    {imag1: '/assets/images/edited/edited-5.webp',
         name:"باگی دوازده نفره"},
 ];
 
@@ -47,7 +47,7 @@ const Homeslide = (props) => {
                                 <div className="silder-content">
                                     <div className="inner-content">
                                         <div className="left">
-                                            <p className="car-type">{slide.name}</p>
+                                            {/*<p className="car-type">{slide.name}</p>*/}
                                             {/*<p className="car-name slide-vertical">Porce 123 GT</p>*/}
                                         </div>
                                         {/*<div className="right">*/}

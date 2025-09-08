@@ -2,7 +2,20 @@ import './globals.css';
 import localFont from 'next/font/local';
 import Footer from "@/components/base/footer";
 import Header from "@/components/base/header";
-import ClientWrapper from "@/app/client-wrapper";
+import '../assets/vendor/swiper/swiper-bundle.min.css';
+import '../assets/vendor/switcher/switcher.css';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/autoplay';
+import 'swiper/css/effect-fade';
+import 'lightgallery/css/lightgallery.css';
+import 'lightgallery/css/lg-zoom.css';
+import 'lightgallery/css/lg-thumbnail.css';
+import '../assets/css/style.css';
+import ScrollTop from "@/constent/scroll-top";
+import ContactButtonSide from "@/components/base/contact-button-side";
+import React from "react";
+import NextTopLoader from "nextjs-toploader";
 
 const bakh = localFont({
     src: [
@@ -25,9 +38,22 @@ export default function RootLayout({children}: { children: React.ReactNode }) {
         </head>
         <body suppressHydrationWarning={true}>
         <Header/>
-        <ClientWrapper>
+        <ScrollTop/>
+        <ContactButtonSide/>
+        <NextTopLoader
+            color="#EE3131"
+            initialPosition={0.08}
+            crawlSpeed={200}
+            height={3}
+            crawl={true}
+            showSpinner={true}
+            easing="ease"
+            speed={200}
+            shadow="0 0 10px #EE3131,0 0 5px #EE3131"
+            zIndex={1600}
+            showAtBottom={false}
+        />
             <article className="max-w-[1920px] mx-auto">{children}</article>
-        </ClientWrapper>
         <Footer/>
         </body>
         </html>

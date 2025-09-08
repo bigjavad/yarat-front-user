@@ -14,7 +14,7 @@ export default async function LatestCarSider() {
             {carList.map((item, index) => (
                 <div
                     key={index}
-                    className="car-list-box col-sm-6 col-lg-3 my-2 col-xxl-4 overlay"
+                    className="car-list-box col-sm-6 col-lg-4 my-2 overlay"
                 >
                     <div className="media-box">
                         <div className="image-wrapper">

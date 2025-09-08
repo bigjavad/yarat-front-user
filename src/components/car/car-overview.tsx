@@ -51,7 +51,7 @@ const carOverview = (data: { car: CarDto }) => {
                                         return (
                                             <SwiperSlide className="swiper-slide" key={index}>
                                                 <div className="dlab-thum-bx">
-                                                    <img src={slide} alt={data.car.title}/>
+                                                    <img className="w-100 h-100" src={slide} alt={data.car.title}/>
                                                 </div>
                                             </SwiperSlide>
                                         )

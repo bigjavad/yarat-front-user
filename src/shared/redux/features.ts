@@ -1,7 +1,6 @@
 import {getCookie, setCookie} from "cookies-next";
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
-import {LoginDto} from "@/shared/model/dto/auth/login.dto";
-
+import {OrdersDto} from "@/shared/model/dto/orders/orders.dto";
 
 const initialState = {
     loading: false,
@@ -13,7 +12,7 @@ const counter = createSlice({
     name: 'storeManager',
     initialState,
     reducers: {
-        setUser: (state, action: PayloadAction<LoginDto>) => {
+        setUser: (state, action: PayloadAction<OrdersDto>) => {
             state.user=action.payload
             setCookie("user", action.payload, {maxAge: 3600 * 3600 * 24});
             setCookie("token", action.payload.token, {maxAge: 3600 * 3600 * 24});

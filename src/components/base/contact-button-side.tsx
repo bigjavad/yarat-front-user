@@ -1,9 +1,7 @@
 "use client"
 import React, {useState} from 'react';
-import {store} from "@/shared/redux/store";
-import {saveOrders} from "@/shared/service/orders/orders.service";
-import {snackbarService} from "@/shared/service-ui/snackbar.service";
 import ContactModal from "@/components/contact-modal/contact-modal";
+import {SnackbarProvider} from "notistack";
 
 function ContactButtonSide() {
     const [modal, setModal] = useState<boolean>(false);
@@ -13,6 +11,7 @@ function ContactButtonSide() {
     }
 
     return (
+        <SnackbarProvider>
         <div className="fixed-bottom bg-gray p-3 h-10 d-flex shadow-lg">
             <div className="d-flex gap-3 w-100 justify-content-between">
                 <p className="text-primary fs-6 d-md-flex d-none w-50 my-auto">جهت اطلاع از جزئیات محصولات با ثبت
@@ -29,9 +28,10 @@ function ContactButtonSide() {
                 modal && (<ContactModal
                     isModal={true}
                     onClose={() => setModal(false)}
-                />)
+                 show={true}/>)
             }
         </div>
+        </SnackbarProvider>
     );
 }
 

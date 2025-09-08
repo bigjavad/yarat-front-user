@@ -8,6 +8,7 @@ import CarHomeList from "@/components/home/car-home-list";
 import {getListCar} from "@/shared/service/car/car.service";
 import {CarDto} from "@/shared/model/dto/car/car.dto";
 import CarFeatures from "@/components/car/car-features";
+import HomeModalVideo from "@/components/home/home-modal-video";
 
 
 export default async function Home() {
@@ -59,7 +60,7 @@ export default async function Home() {
                     </div>
                 </section>
             </div>
-            {/*<HomeModalVideo />*/}
+            <HomeModalVideo />
         </>
     )
 }

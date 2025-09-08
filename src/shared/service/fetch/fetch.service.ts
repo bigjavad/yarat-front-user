@@ -1,4 +1,4 @@
-import {snackbarService} from "@/shared/service-ui/snackbar.service";
+// const API_URL = 'http://localhost:3000'
 const API_URL = 'https://api.yaratmotors.com'
 
 interface ErrorObject {
@@ -29,8 +29,6 @@ const handlerExceptionError = async (response: any) => {
 };
 
 function errorToast(data: any): void {
-
-
 }
 
 export async function fetchData(url: string, method: string = "post", body = {}) {

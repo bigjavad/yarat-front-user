@@ -9,7 +9,7 @@ const CarStory = () => {
             <div className="row features-box">
                 <div className="col-lg-6 m-b30 m-sm-b0">
                     <div className=" image-slider-box position-relative ">
-                        <img className="rounded-3" src="/assets/images/gallery/24.webp" alt="یارات موتورز"/>
+                        <img className="rounded-3" src="/assets/images/edited/edited-3.webp" alt="یارات موتورز"/>
                     </div>
                 </div>
                 <div className="col-lg-6 align-self-center m-b30">

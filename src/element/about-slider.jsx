@@ -46,14 +46,14 @@ const AboutSlider = () => {
                 >
                     {aboutSlider.map((item, index) => (
                         <SwiperSlide className="swiper-slide" key={index}>
-                            <div className="icon-bx-wraper style-1 hover-overlay-effect d-flex flex-column h-100 min-vh-40">
+                            <div className="icon-bx-wraper style-1 hover-overlay-effect d-flex flex-column h-100 min-vh-30">
                                 <div className="icon-content d-flex flex-column flex-grow-1">
-                                    <h3 className="title text-center text-white">
+                                    <h3 className="title text-center text-primary">
                                         {
                                             item && <span className="text-effect-1">{item?.title}</span>
                                         }
                                     </h3>
-                                    <p className="flex-grow-1">
+                                    <p className="flex-grow-1 mt-3">
                                         {item.desc}
                                     </p>
                                 </div>
