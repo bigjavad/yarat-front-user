@@ -1,10 +1,11 @@
-"use client"
-import React from 'react'
+import {getListCar} from "@/shared/service/car/car.service";
 import LatestCarBanner from "@/element/latest-car-banner";
 import LatestCarSider from "@/components/car/latest-car-sider";
 import ContectUs from "@/components/contect-us/contect-us";
 
-const Page = () => {
+async function Page() {
+    const res = await getListCar();
+    const carList = res.data || []
     return (
         <>
             <title>یارات محصولات ما</title>
@@ -15,7 +16,7 @@ const Page = () => {
                     <div className="container">
                         <div className="row">
                             <div className="col-12">
-                                <LatestCarSider/>
+                                <LatestCarSider carList={carList}/>
                             </div>
                         </div>
                     </div>
@@ -27,7 +28,7 @@ const Page = () => {
                 </section>
             </div>
         </>
-    )
+    );
 }
 
-export default Page
+export default Page;

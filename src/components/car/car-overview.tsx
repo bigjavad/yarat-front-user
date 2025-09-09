@@ -12,6 +12,7 @@ import ContactModal from "@/components/contact-modal/contact-modal";
 import {snackbarService} from "@/shared/service-ui/snackbar.service";
 import {ActionResault} from "@/shared/model/base/action-resault";
 import ContectUs from "@/components/contect-us/contect-us";
+import Link from "next/link";
 
 
 const carOverview = (data: { car: CarDto }) => {
@@ -38,6 +39,7 @@ const carOverview = (data: { car: CarDto }) => {
         <>
             <section className="content-inner-2">
                 <div className="container">
+
                     <div className="row">
                         <div className=" col-xl-8 col-lg-7 col-md-6 m-b0 m-md-b50">
                             <div className="product-gallery on-show-slider lightgallery m-b40" id="lightgallery">
@@ -57,8 +59,13 @@ const carOverview = (data: { car: CarDto }) => {
                                         )
                                     })}
                                 </Swiper>
-
-                                <h6 className="mt-5">گالری محصول</h6>
+                                <nav aria-label="breadcrumb" className="mt-5 fs-6">
+                                    <ol className="breadcrumb">
+                                        <li className="breadcrumb-item"><Link href={`/car-listing`}>محصولات</Link></li>
+                                        <li className="breadcrumb-item"><Link href={`/car/${data.car.slug}`}>{data.car.title}</Link></li>
+                                    </ol>
+                                </nav>
+                                <h6>گالری محصول</h6>
                                 <Swiper className="swiper-container thumb-slider sync2"
                                         onClick={setThumbsSwiper}
                                         spaceBetween={30}
@@ -277,7 +284,7 @@ const carOverview = (data: { car: CarDto }) => {
                         </div>
 
                         <div className="col-xl-4  col-lg-5 col-md-6">
-                            <div className="sticky-top nav-tabs-top">
+                            <div className="sticky-md-top nav-tabs-top">
                                 <div className="car-dl-info icon-bx-wraper style-1 m-b50">
                                     <div className="price m-b30">
                                         <span className="text-secondary font-14"> برای اطلاع از اطلاعات تکمیلی ثبت سفارش ثبت کنید کارشناسان ما در اسرع وقت با شما تماس خواهند گرفت.</span>

@@ -5,9 +5,7 @@ import { CarDto } from '@/shared/model/dto/car/car.dto';
 import { getListCar } from '@/shared/service/car/car.service';
 import { CarPropertyDto } from '@/shared/model/dto/car/car-property.dto';
 
-export default async function LatestCarSider() {
-    const res: ActionResault<CarDto[]> = await getListCar();
-    const carList = res.data;
+export default async function LatestCarSider({carList}:{carList:CarDto[]}) {
 
     return (
         <div className="row col-12 lightgallery">
@@ -19,7 +17,7 @@ export default async function LatestCarSider() {
                     <div className="media-box">
                         <div className="image-wrapper">
                             <img
-                                src={item.image[0]?.toString()}
+                                src={item.image[0]}
                                 alt={item.title}
                                 className="w-full object-cover img-main"
                             />
